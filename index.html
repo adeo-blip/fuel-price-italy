@@ -289,7 +289,32 @@
 <div id="tooltip" role="status" aria-live="polite"></div>
 
 <script>
-const DATA = {"dates": ["2021-10-21", "2021-10-22", "2021-10-23", "2021-10-24", "2021-10-25", "2021-10-26", "2021-10-27", "2022-01-03"], "timeseries": {"Benzina": {"self": [1.7338, 1.7349, 1.7358, 1.7361, 1.7355, 1.7364, 1.7383, 1.722], "served": [1.8567, 1.8578, 1.8588, 1.8591, 1.8593, 1.8603, 1.8622, 1.8503]}, "Gasolio": {"self": [1.6033, 1.6046, 1.6056, 1.606, 1.6056, 1.6066, 1.6086, 1.5942], "served": [1.735, 1.7363, 1.7376, 1.738, 1.7382, 1.7392, 1.7413, 1.7291]}, "GPL": {"self": [0.7853, 0.7849, 0.7852, 0.7856, 0.7854, 0.7873, 0.7885, 0.7958], "served": [0.8063, 0.8071, 0.808, 0.8084, 0.8086, 0.8094, 0.811, 0.8151]}, "Metano": {"self": [1.5474, 1.5474, 1.5474, 1.5509, 1.5612, 1.5637, 1.5813, 1.783], "served": [1.6077, 1.6102, 1.6144, 1.616, 1.6192, 1.6265, 1.6295, 1.7786]}}, "kpi": {"Benzina_latest_self": 1.722, "Benzina_first_self": 1.7338, "Benzina_delta": -0.0118, "Benzina_delta_pct": -0.68, "Gasolio_latest_self": 1.5942, "Gasolio_first_self": 1.6033, "Gasolio_delta": -0.0091, "Gasolio_delta_pct": -0.57}};
+// Populated at boot from data.json (live daily feed) — see loadLiveData().
+let DATA = {dates:[], timeseries:{Benzina:{self:[],served:[]},Gasolio:{self:[],served:[]},GPL:{self:[],served:[]},Metano:{self:[],served:[]}}, kpi:{}};
+let firstTrackedDate=null;
+
+async function loadLiveData(){
+  const res=await fetch('./data.json', {cache:'no-store'});
+  const json=await res.json();
+  const history=json.history||[];
+  DATA.dates=history.map(h=>h.date);
+  firstTrackedDate=DATA.dates[0]||null;
+  ['Benzina','Gasolio','GPL','Metano'].forEach(fuel=>{
+    DATA.timeseries[fuel]={
+      self: history.map(h=> (h[fuel]&&h[fuel].self!=null) ? h[fuel].self : null),
+      served: history.map(h=> (h[fuel]&&h[fuel].served!=null) ? h[fuel].served : null),
+    };
+  });
+  ['Benzina','Gasolio'].forEach(fuel=>{
+    const series=DATA.timeseries[fuel].self.filter(v=>v!=null);
+    const latest=series[series.length-1];
+    const prev=series.length>1 ? series[series.length-2] : null;
+    DATA.kpi[fuel+'_latest_self']=latest;
+    DATA.kpi[fuel+'_prev_self']=prev;
+    DATA.kpi[fuel+'_delta']= prev!=null ? latest-prev : null;
+    DATA.kpi[fuel+'_delta_pct']= prev!=null ? (latest-prev)/prev*100 : null;
+  });
+}
 
 const FUELS = ['Benzina','Gasolio','GPL','Metano'];
 const FUEL_VAR = {Benzina:'--f-benzina', Gasolio:'--f-gasolio', GPL:'--f-gpl', Metano:'--f-metano'};
@@ -310,13 +335,14 @@ const I18N = {
     hero_eyebrow:'ITALY · NATIONAL FUEL NETWORK', hero_cta:'View trends',
     hero_subtitle:"Track Italy's pump prices — Benzina, Gasolio, GPL and Metano — daily, weekly and monthly, straight from the national transparency feed.",
     kpi_note:'vs. previous update', kpi_updated:'Updated {date}',
+    kpi_first_day:'First day tracked — trend starts building tomorrow', kpi_loading:'Loading…',
     trends_title:'Price trends', trends_note:'Choose a timeframe and a fuel to see how the national self-service average has moved.',
     granularity_daily:'Daily', granularity_weekly:'Weekly', granularity_monthly:'Monthly',
     legend_self:'Self-service', legend_served:'Full service',
     weekly_prefix:'Week of {date}',
     gloss_benzina:'petrol', gloss_gasolio:'diesel', gloss_gpl:'LPG', gloss_metano:'CNG',
     about_title:'About this data',
-    about_text:"Prices come from Italy's Ministry of Enterprise (MIMIT) fuel-price transparency feed, covering 22,087 active stations nationwide. The current sample spans two survey windows — a full week in October 2021 and a single snapshot in January 2022 — so weekly and monthly views summarize those two periods rather than a continuous series. Placeholder prices from stations that haven't recently reported are excluded from every average.",
+    about_text:"Prices come from Italy's Ministry of Enterprise (MIMIT) fuel-price transparency feed, refreshed automatically once a day. Live daily tracking began on {startDate}, so early weekly and monthly views will cover just a few days and fill in as more data arrives. Placeholder prices from stations that haven't recently reported are excluded from every average.",
     contact_title:'Contact', contact_intro:'Questions about this data or the dashboard?',
     contact_email_label:'Email', contact_phone_label:'Phone',
     footer_rights:'© 2026 Fuel Dashboard. All rights reserved.', footer_cookie_link:'Cookie Policy',
@@ -337,13 +363,14 @@ const I18N = {
     hero_eyebrow:'ITALIA · RETE NAZIONALE CARBURANTI', hero_cta:'Vedi gli andamenti',
     hero_subtitle:'Segui i prezzi alla pompa in Italia — Benzina, Gasolio, GPL e Metano — su base giornaliera, settimanale e mensile, direttamente dal flusso di trasparenza nazionale.',
     kpi_note:'rispetto al rilevamento precedente', kpi_updated:'Aggiornato al {date}',
+    kpi_first_day:'Primo giorno monitorato — l\'andamento comincia da domani', kpi_loading:'Caricamento…',
     trends_title:'Andamento dei prezzi', trends_note:'Scegli un intervallo temporale e un carburante per vedere come si è mosso il prezzo medio nazionale self-service.',
     granularity_daily:'Giornaliero', granularity_weekly:'Settimanale', granularity_monthly:'Mensile',
     legend_self:'Self-service', legend_served:'Servito',
     weekly_prefix:'Settimana del {date}',
     gloss_benzina:'', gloss_gasolio:'', gloss_gpl:'', gloss_metano:'',
     about_title:'Sui dati',
-    about_text:"I prezzi provengono dal flusso di trasparenza carburanti del Ministero delle Imprese (MIMIT), che copre 22.087 impianti attivi in tutto il Paese. Il campione attuale copre due finestre di rilevazione — una settimana intera di ottobre 2021 e uno scatto singolo di gennaio 2022 — quindi le viste settimanale e mensile riassumono questi due periodi anziché una serie continua. I prezzi segnaposto degli impianti che non hanno comunicato di recente sono esclusi da ogni media.",
+    about_text:"I prezzi provengono dal flusso di trasparenza carburanti del Ministero delle Imprese (MIMIT), aggiornato automaticamente una volta al giorno. Il monitoraggio giornaliero in tempo reale è iniziato il {startDate}, quindi le viste settimanale e mensile dei primi giorni copriranno solo pochi dati e si arricchiranno man mano che ne arriveranno altri. I prezzi segnaposto degli impianti che non hanno comunicato di recente sono esclusi da ogni media.",
     contact_title:'Contatti', contact_intro:'Domande su questi dati o sulla dashboard?',
     contact_email_label:'Email', contact_phone_label:'Telefono',
     footer_rights:'© 2026 Fuel Dashboard. Tutti i diritti riservati.', footer_cookie_link:'Cookie Policy',
@@ -364,13 +391,14 @@ const I18N = {
     hero_eyebrow:'ITALIE · RÉSEAU NATIONAL DE CARBURANTS', hero_cta:'Voir les tendances',
     hero_subtitle:"Suivez les prix à la pompe en Italie — Benzina, Gasolio, GPL et Metano — au jour le jour, par semaine et par mois, directement depuis le flux de transparence national.",
     kpi_note:'par rapport au relevé précédent', kpi_updated:'Mis à jour le {date}',
+    kpi_first_day:'Premier jour suivi — la tendance commence à se dessiner demain', kpi_loading:'Chargement…',
     trends_title:'Évolution des prix', trends_note:"Choisissez une période et un carburant pour voir l'évolution du prix moyen national en libre-service.",
     granularity_daily:'Quotidien', granularity_weekly:'Hebdomadaire', granularity_monthly:'Mensuel',
     legend_self:'Libre-service', legend_served:'Avec service',
     weekly_prefix:'Semaine du {date}',
     gloss_benzina:'essence', gloss_gasolio:'diesel', gloss_gpl:'GPL', gloss_metano:'GNV',
     about_title:'À propos de ces données',
-    about_text:"Les prix proviennent du flux de transparence sur les carburants du ministère des Entreprises (MIMIT), couvrant 22 087 stations actives dans tout le pays. L'échantillon actuel couvre deux fenêtres d'observation — une semaine complète d'octobre 2021 et un instantané unique de janvier 2022 — les vues hebdomadaire et mensuelle résument donc ces deux périodes plutôt qu'une série continue. Les prix indicatifs des stations n'ayant pas communiqué récemment sont exclus de chaque moyenne.",
+    about_text:"Les prix proviennent du flux de transparence sur les carburants du ministère des Entreprises (MIMIT), actualisé automatiquement une fois par jour. Le suivi quotidien en direct a commencé le {startDate} : les vues hebdomadaire et mensuelle des premiers jours ne couvriront donc que peu de données, qui s'enrichiront au fil du temps. Les prix indicatifs des stations n'ayant pas communiqué récemment sont exclus de chaque moyenne.",
     contact_title:'Contact', contact_intro:'Des questions sur ces données ou sur le tableau de bord ?',
     contact_email_label:'E-mail', contact_phone_label:'Téléphone',
     footer_rights:'© 2026 Fuel Dashboard. Tous droits réservés.', footer_cookie_link:'Politique relative aux cookies',
@@ -391,13 +419,14 @@ const I18N = {
     hero_eyebrow:'ИТАЛИЯ · НАЦИОНАЛЬНАЯ ТОПЛИВНАЯ СЕТЬ', hero_cta:'Смотреть тренды',
     hero_subtitle:'Следите за ценами на бензоколонках Италии — Benzina, Gasolio, GPL и Metano — по дням, неделям и месяцам, напрямую из национального канала прозрачности цен.',
     kpi_note:'по сравнению с предыдущим замером', kpi_updated:'Обновлено {date}',
+    kpi_first_day:'Первый день наблюдений — динамика начнёт строиться завтра', kpi_loading:'Загрузка…',
     trends_title:'Динамика цен', trends_note:'Выберите период и вид топлива, чтобы увидеть динамику средней цены самообслуживания по стране.',
     granularity_daily:'По дням', granularity_weekly:'По неделям', granularity_monthly:'По месяцам',
     legend_self:'Самообслуживание', legend_served:'С обслуживанием',
     weekly_prefix:'Неделя от {date}',
     gloss_benzina:'бензин', gloss_gasolio:'дизель', gloss_gpl:'сжиженный газ', gloss_metano:'метан/КПГ',
     about_title:'Об этих данных',
-    about_text:'Данные о ценах поступают из канала прозрачности цен на топливо Министерства предприятий Италии (MIMIT), охватывающего 22 087 действующих заправок по всей стране. Текущая выборка охватывает два периода наблюдения — полную неделю октября 2021 года и один снимок за январь 2022 года — поэтому недельные и месячные представления обобщают именно эти два периода, а не непрерывный ряд. Заглушки цен заправок, давно не передававших данные, исключены из всех средних значений.',
+    about_text:'Данные о ценах поступают из канала прозрачности цен на топливо Министерства предприятий Италии (MIMIT) и обновляются автоматически раз в день. Ежедневный мониторинг в реальном времени начался {startDate}, поэтому недельные и месячные представления первых дней будут охватывать лишь несколько точек данных и постепенно пополняться. Заглушки цен заправок, давно не передававших данные, исключены из всех средних значений.',
     contact_title:'Контакты', contact_intro:'Вопросы по данным или панели мониторинга?',
     contact_email_label:'Эл. почта', contact_phone_label:'Телефон',
     footer_rights:'© 2026 Fuel Dashboard. Все права защищены.', footer_cookie_link:'Политика в отношении Cookie',
@@ -418,13 +447,14 @@ const I18N = {
     hero_eyebrow:'意大利 · 全国燃油网络', hero_cta:'查看趋势',
     hero_subtitle:'追踪意大利加油站油价——Benzina（汽油）、Gasolio（柴油）、GPL（液化石油气）和 Metano（天然气）——按日、按周、按月呈现,数据直接来自国家价格透明系统。',
     kpi_note:'较上次更新', kpi_updated:'更新于 {date}',
+    kpi_first_day:'首个记录日——趋势将从明天开始累积', kpi_loading:'加载中…',
     trends_title:'价格趋势', trends_note:'选择时间范围和燃油种类,查看全国自助加油平均价格的变化。',
     granularity_daily:'每日', granularity_weekly:'每周', granularity_monthly:'每月',
     legend_self:'自助', legend_served:'有人服务',
     weekly_prefix:'{date} 那一周',
     gloss_benzina:'汽油', gloss_gasolio:'柴油', gloss_gpl:'液化石油气', gloss_metano:'天然气',
     about_title:'关于本数据',
-    about_text:'价格数据来自意大利企业部（MIMIT）的燃油价格透明系统,覆盖全国 22,087 个在营加油站。当前样本涵盖两个采样窗口——2021年10月的完整一周和2022年1月的单次快照——因此周视图和月视图呈现的是这两个时间段的汇总,而非连续的时间序列。近期未上报价格的加油站所使用的占位价格已从所有平均值中剔除。',
+    about_text:'价格数据来自意大利企业部（MIMIT）的燃油价格透明系统,每天自动更新一次。实时每日追踪始于 {startDate},因此最初几天的周视图和月视图仅涵盖少量数据,会随着数据积累逐步完善。近期未上报价格的加油站所使用的占位价格已从所有平均值中剔除。',
     contact_title:'联系方式', contact_intro:'对数据或仪表盘有疑问吗？',
     contact_email_label:'电子邮箱', contact_phone_label:'电话',
     footer_rights:'© 2026 Fuel Dashboard 保留所有权利。', footer_cookie_link:'Cookie 政策',
@@ -516,15 +546,25 @@ function renderKPI(){
   ['Benzina','Gasolio'].forEach(fuel=>{
     const color=theme(FUEL_VAR[fuel]);
     const latest=DATA.kpi[fuel+'_latest_self'], delta=DATA.kpi[fuel+'_delta'], pct=DATA.kpi[fuel+'_delta_pct'];
-    const down=delta<0;
     const card=document.createElement('div');
     card.className='kpi-card';
-    card.innerHTML=`
-      <div class="kpi-tag"><span class="kpi-dot" style="background:${color}"></span>${fuel}</div>
-      <div class="kpi-value num">€${fmtPrice(latest)}</div>
-      <div class="kpi-delta ${down?'down':'up'}">${down?'↓':'↑'} ${fmtSigned(delta)} €/L (${fmtSigned(pct,2)}%)</div>
-      <div class="kpi-sub">${I18N[currentLang].kpi_note}</div>
-    `;
+    if(latest==null){
+      card.innerHTML=`<div class="kpi-tag"><span class="kpi-dot" style="background:${color}"></span>${fuel}</div><div class="kpi-sub">${I18N[currentLang].kpi_loading}</div>`;
+    }else if(delta==null){
+      card.innerHTML=`
+        <div class="kpi-tag"><span class="kpi-dot" style="background:${color}"></span>${fuel}</div>
+        <div class="kpi-value num">€${fmtPrice(latest)}</div>
+        <div class="kpi-sub">${I18N[currentLang].kpi_first_day}</div>
+      `;
+    }else{
+      const down=delta<0;
+      card.innerHTML=`
+        <div class="kpi-tag"><span class="kpi-dot" style="background:${color}"></span>${fuel}</div>
+        <div class="kpi-value num">€${fmtPrice(latest)}</div>
+        <div class="kpi-delta ${down?'down':'up'}">${down?'↓':'↑'} ${fmtSigned(delta)} €/L (${fmtSigned(pct,2)}%)</div>
+        <div class="kpi-sub">${I18N[currentLang].kpi_note}</div>
+      `;
+    }
     holder.appendChild(card);
   });
 }
@@ -665,8 +705,13 @@ function applyLanguage(lang){
   document.documentElement.lang=lang;
   document.title=I18N[lang].page_title;
   document.querySelectorAll('[data-i18n]').forEach(el=>{
-    const val=I18N[lang][el.dataset.i18n];
-    if(val!=null) el.textContent=val;
+    let val=I18N[lang][el.dataset.i18n];
+    if(val!=null){
+      if(val.indexOf('{startDate}')!==-1){
+        val=val.replace('{startDate}', firstTrackedDate ? fmtDate(firstTrackedDate, lang) : '—');
+      }
+      el.textContent=val;
+    }
   });
   document.querySelectorAll('[data-i18n-html]').forEach(el=>{
     const val=I18N[lang][el.dataset.i18nHtml];
@@ -741,7 +786,10 @@ function scheduleRenderAll(){
 
 renderGranularitySeg();
 renderFuelPills();
-initConsent();
+(async()=>{
+  try{ await loadLiveData(); }catch(e){ console.error('Failed to load data.json', e); }
+  initConsent();
+})();
 window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', scheduleRenderAll);
 new MutationObserver(scheduleRenderAll).observe(document.documentElement,{attributes:true, attributeFilter:['data-theme']});
 </script>
