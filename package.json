@@ -1,0 +1,24 @@
+{
+  "name": "fuel-price-italy",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/adeo-blip/fuel-price-italy.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/adeo-blip/fuel-price-italy/issues"
+  },
+  "homepage": "https://github.com/adeo-blip/fuel-price-italy#readme",
+  "dependencies": {
+    "pptxgenjs": "^4.0.1"
+  }
+}

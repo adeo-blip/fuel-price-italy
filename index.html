@@ -126,6 +126,31 @@
   .pill .dot{width:8px;height:8px;border-radius:50%;}
   .fuel-gloss{color:var(--text-muted);font-size:12.5px;margin:10px 0 4px;}
 
+  /* ---------- Scope picker ---------- */
+  .scope-panel{margin-bottom:14px;}
+  .scope-row{display:flex;flex-wrap:wrap;gap:14px;align-items:center;}
+  .combo{position:relative;flex:1 1 220px;max-width:340px;}
+  .combo input{
+    width:100%;font:600 13.5px var(--font-ui);padding:9px 13px;border-radius:10px;
+    border:1px solid var(--border);background:var(--surface-2);color:var(--text-primary);
+  }
+  .combo input:focus{outline:2px solid var(--accent);outline-offset:1px;}
+  .combo input::placeholder{color:var(--text-muted);font-weight:500;}
+  .combo-list{
+    position:absolute;top:calc(100% + 4px);left:0;right:0;max-height:260px;overflow-y:auto;
+    background:var(--surface);border:1px solid var(--border);border-radius:10px;box-shadow:var(--shadow);
+    z-index:30;display:none;
+  }
+  .combo-list.open{display:block;}
+  .combo-opt{padding:9px 13px;font-size:13.5px;cursor:pointer;color:var(--text-secondary);}
+  .combo-opt:hover, .combo-opt.active{background:var(--surface-2);color:var(--text-primary);}
+  .combo-empty{padding:9px 13px;font-size:13px;color:var(--text-muted);}
+  .scope-active-tag{
+    font:600 12.5px var(--font-ui);color:var(--text-secondary);display:flex;align-items:center;gap:6px;
+  }
+  .scope-active-tag b{color:var(--text-primary);}
+  .scope-note{color:var(--text-muted);font-size:12.5px;margin:10px 0 0;}
+
   .legend{display:flex;flex-wrap:wrap;gap:16px;font-size:12.5px;color:var(--text-secondary);margin:14px 0 6px;}
   .legend .item{display:flex;align-items:center;gap:6px;}
   .legend .swatch{width:16px;height:3px;border-radius:2px;}
@@ -225,6 +250,18 @@
 </div>
 
 <div class="shell">
+  <div class="panel scope-panel">
+    <div class="scope-row">
+      <div class="seg" id="scope-seg" role="group" aria-label="Geography"></div>
+      <div class="combo vis-hidden" id="scope-combo">
+        <input type="text" id="scope-search" autocomplete="off" role="combobox" aria-expanded="false">
+        <div class="combo-list" id="scope-list" role="listbox"></div>
+      </div>
+      <div class="scope-active-tag vis-hidden" id="scope-active-tag"></div>
+    </div>
+    <p class="scope-note" id="scope-note"></p>
+  </div>
+
   <div class="kpi-row" id="kpi-row"></div>
 
   <section id="trends">
@@ -298,6 +335,7 @@ async function loadLiveData(){
   const json=await res.json();
   const history=json.history||[];
   DATA.dates=history.map(h=>h.date);
+  DATA.rawHistory=history;
   firstTrackedDate=DATA.dates[0]||null;
   ['Benzina','Gasolio','GPL','Metano'].forEach(fuel=>{
     DATA.timeseries[fuel]={
@@ -314,11 +352,90 @@ async function loadLiveData(){
     DATA.kpi[fuel+'_delta']= prev!=null ? latest-prev : null;
     DATA.kpi[fuel+'_delta_pct']= prev!=null ? (latest-prev)/prev*100 : null;
   });
+  DATA.stationsLatest=null; DATA.stationsLatestDate=null;
+  for(let i=history.length-1;i>=0;i--){
+    if(history[i].stations){ DATA.stationsLatest=history[i].stations; DATA.stationsLatestDate=history[i].date; break; }
+  }
 }
 
 const FUELS = ['Benzina','Gasolio','GPL','Metano'];
 const FUEL_VAR = {Benzina:'--f-benzina', Gasolio:'--f-gasolio', GPL:'--f-gpl', Metano:'--f-metano'};
 const GLOSS_KEY = {Benzina:'gloss_benzina', Gasolio:'gloss_gasolio', GPL:'gloss_gpl', Metano:'gloss_metano'};
+
+/* ---------------- Geography / operator scope (Italia / Regione / Provincia / Comune / Gestore) ---------------- */
+const SCOPE_TYPES = ['italia','regione','provincia','comune','gestore'];
+const SCOPE_FILE_URL = {
+  regione: './data/data_regione.json',
+  provincia: './data/data_provincia.json',
+  comune: './data/data_comune.json',
+  gestore: './data/data_gestore.json',
+};
+const SCOPE_INDEXED = {regione:false, provincia:false, comune:true, gestore:true};
+const SCOPE_FUELS = {italia:FUELS, regione:FUELS, provincia:FUELS, comune:['Benzina','Gasolio'], gestore:['Benzina','Gasolio']};
+const SCOPE_SERVED = {italia:true, regione:true, provincia:true, comune:false, gestore:false};
+
+let SCOPE_CACHE = {};
+let SCOPE_NAME_IDX = {};
+let currentScopeType='italia';
+let currentScopeKey=null;
+let currentScopeSeries=null;
+
+async function loadScopeFile(scopeType){
+  if(SCOPE_CACHE[scopeType]) return SCOPE_CACHE[scopeType];
+  const res=await fetch(SCOPE_FILE_URL[scopeType], {cache:'no-store'});
+  const doc=await res.json();
+  SCOPE_CACHE[scopeType]=doc;
+  if(SCOPE_INDEXED[scopeType]){
+    const m=new Map();
+    (doc.names||[]).forEach((n,i)=>m.set(n,i));
+    SCOPE_NAME_IDX[scopeType]=m;
+  }
+  return doc;
+}
+
+function getScopeNames(scopeType){
+  const doc=SCOPE_CACHE[scopeType];
+  if(!doc) return [];
+  if(SCOPE_INDEXED[scopeType]) return (doc.names||[]).slice().sort((a,b)=>a.localeCompare(b));
+  const set=new Set();
+  (doc.history||[]).forEach(h=>Object.keys(h.entries||{}).forEach(k=>set.add(k)));
+  return [...set].sort((a,b)=>a.localeCompare(b));
+}
+
+function emptyScopeSeries(fuels, served){
+  const timeseries={}; fuels.forEach(f=>timeseries[f]={self:[],served:[]});
+  return {dates:[], timeseries, fuels, served, stations:null, stationsDate:null};
+}
+
+function buildScopeSeries(scopeType, key){
+  const fuels=SCOPE_FUELS[scopeType];
+  if(scopeType==='italia'){
+    const timeseries={};
+    fuels.forEach(f=> timeseries[f]=DATA.timeseries[f]);
+    return {dates:DATA.dates, timeseries, fuels, served:true, stations:DATA.stationsLatest, stationsDate:DATA.stationsLatestDate};
+  }
+  const doc=SCOPE_CACHE[scopeType];
+  if(!doc || key==null) return emptyScopeSeries(fuels, SCOPE_SERVED[scopeType]);
+  let entryKey=key;
+  if(SCOPE_INDEXED[scopeType]){
+    const idx=SCOPE_NAME_IDX[scopeType] && SCOPE_NAME_IDX[scopeType].get(key);
+    if(idx==null) return emptyScopeSeries(fuels, SCOPE_SERVED[scopeType]);
+    entryKey=String(idx);
+  }
+  const dates=[]; const timeseries={}; fuels.forEach(f=>timeseries[f]={self:[],served:[]});
+  let stations=null, stationsDate=null;
+  (doc.history||[]).forEach(h=>{
+    const e=(h.entries||{})[entryKey];
+    if(!e) return;
+    dates.push(h.date);
+    fuels.forEach(f=>{
+      timeseries[f].self.push(e[f] && e[f].self!=null ? e[f].self : null);
+      timeseries[f].served.push(SCOPE_SERVED[scopeType] && e[f] && e[f].served!=null ? e[f].served : null);
+    });
+    if(e.stations){ stations=e.stations; stationsDate=h.date; }
+  });
+  return {dates, timeseries, fuels, served:SCOPE_SERVED[scopeType], stations, stationsDate};
+}
 
 const MONTHS = {
   en: ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'],
@@ -339,6 +456,13 @@ const I18N = {
     trends_title:'Price trends', trends_note:'Choose a timeframe and a fuel to see how the national self-service average has moved.',
     granularity_daily:'Daily', granularity_weekly:'Weekly', granularity_monthly:'Monthly',
     legend_self:'Self-service', legend_served:'Full service',
+    scope_label_italia:'Italy', scope_label_regione:'Region', scope_label_provincia:'Province',
+    scope_label_comune:'Municipality', scope_label_gestore:'Operator',
+    scope_search_placeholder:'Type to search…', scope_no_match:'No matches',
+    scope_note_filtered:'Showing {scope} — {name}. Detailed tracking for this view started on {date}, so history will be short at first.',
+    kpi_stations_registered:'Registered stations', kpi_stations_reporting:'Reporting today',
+    kpi_stations_sub:'as of {date}', kpi_stations_none:'No station data yet for this view',
+    trend_no_data:'No price history yet for this selection — check back tomorrow.',
     weekly_prefix:'Week of {date}',
     gloss_benzina:'petrol', gloss_gasolio:'diesel', gloss_gpl:'LPG', gloss_metano:'CNG',
     about_title:'About this data',
@@ -367,6 +491,13 @@ const I18N = {
     trends_title:'Andamento dei prezzi', trends_note:'Scegli un intervallo temporale e un carburante per vedere come si è mosso il prezzo medio nazionale self-service.',
     granularity_daily:'Giornaliero', granularity_weekly:'Settimanale', granularity_monthly:'Mensile',
     legend_self:'Self-service', legend_served:'Servito',
+    scope_label_italia:'Italia', scope_label_regione:'Regione', scope_label_provincia:'Provincia',
+    scope_label_comune:'Comune', scope_label_gestore:'Gestore',
+    scope_search_placeholder:'Digita per cercare…', scope_no_match:'Nessun risultato',
+    scope_note_filtered:'Stai visualizzando {scope} — {name}. Il monitoraggio dettagliato per questa vista è iniziato il {date}, quindi lo storico sarà breve all\'inizio.',
+    kpi_stations_registered:'Impianti registrati', kpi_stations_reporting:'Attivi oggi',
+    kpi_stations_sub:'aggiornato al {date}', kpi_stations_none:'Nessun dato sugli impianti ancora disponibile per questa vista',
+    trend_no_data:'Ancora nessuno storico prezzi per questa selezione — ricontrolla domani.',
     weekly_prefix:'Settimana del {date}',
     gloss_benzina:'', gloss_gasolio:'', gloss_gpl:'', gloss_metano:'',
     about_title:'Sui dati',
@@ -395,6 +526,13 @@ const I18N = {
     trends_title:'Évolution des prix', trends_note:"Choisissez une période et un carburant pour voir l'évolution du prix moyen national en libre-service.",
     granularity_daily:'Quotidien', granularity_weekly:'Hebdomadaire', granularity_monthly:'Mensuel',
     legend_self:'Libre-service', legend_served:'Avec service',
+    scope_label_italia:'Italie', scope_label_regione:'Région', scope_label_provincia:'Province',
+    scope_label_comune:'Commune', scope_label_gestore:'Opérateur',
+    scope_search_placeholder:'Tapez pour rechercher…', scope_no_match:'Aucun résultat',
+    scope_note_filtered:"Affichage de {scope} — {name}. Le suivi détaillé de cette vue a commencé le {date}, l'historique sera donc court au début.",
+    kpi_stations_registered:'Stations enregistrées', kpi_stations_reporting:'Actives aujourd\'hui',
+    kpi_stations_sub:'au {date}', kpi_stations_none:'Pas encore de données de stations pour cette vue',
+    trend_no_data:'Aucun historique de prix pour cette sélection — revenez demain.',
     weekly_prefix:'Semaine du {date}',
     gloss_benzina:'essence', gloss_gasolio:'diesel', gloss_gpl:'GPL', gloss_metano:'GNV',
     about_title:'À propos de ces données',
@@ -423,6 +561,13 @@ const I18N = {
     trends_title:'Динамика цен', trends_note:'Выберите период и вид топлива, чтобы увидеть динамику средней цены самообслуживания по стране.',
     granularity_daily:'По дням', granularity_weekly:'По неделям', granularity_monthly:'По месяцам',
     legend_self:'Самообслуживание', legend_served:'С обслуживанием',
+    scope_label_italia:'Италия', scope_label_regione:'Регион', scope_label_provincia:'Провинция',
+    scope_label_comune:'Коммуна', scope_label_gestore:'Оператор',
+    scope_search_placeholder:'Введите для поиска…', scope_no_match:'Совпадений нет',
+    scope_note_filtered:'Просмотр: {scope} — {name}. Подробный учёт для этого фильтра начался {date}, поэтому сначала история будет короткой.',
+    kpi_stations_registered:'Зарегистрированные АЗС', kpi_stations_reporting:'Активны сегодня',
+    kpi_stations_sub:'по состоянию на {date}', kpi_stations_none:'Данных по АЗС для этого фильтра пока нет',
+    trend_no_data:'Для этого выбора пока нет истории цен — загляните завтра.',
     weekly_prefix:'Неделя от {date}',
     gloss_benzina:'бензин', gloss_gasolio:'дизель', gloss_gpl:'сжиженный газ', gloss_metano:'метан/КПГ',
     about_title:'Об этих данных',
@@ -451,6 +596,13 @@ const I18N = {
     trends_title:'价格趋势', trends_note:'选择时间范围和燃油种类,查看全国自助加油平均价格的变化。',
     granularity_daily:'每日', granularity_weekly:'每周', granularity_monthly:'每月',
     legend_self:'自助', legend_served:'有人服务',
+    scope_label_italia:'意大利', scope_label_regione:'大区', scope_label_provincia:'省份',
+    scope_label_comune:'市镇', scope_label_gestore:'运营商',
+    scope_search_placeholder:'输入以搜索…', scope_no_match:'无匹配结果',
+    scope_note_filtered:'当前查看：{scope} — {name}。该视图的详细追踪始于 {date}，因此初期历史数据较少。',
+    kpi_stations_registered:'注册加油站', kpi_stations_reporting:'今日活跃',
+    kpi_stations_sub:'截至 {date}', kpi_stations_none:'该筛选条件暂无加油站数据',
+    trend_no_data:'该筛选条件暂无价格历史记录——请明天再查看。',
     weekly_prefix:'{date} 那一周',
     gloss_benzina:'汽油', gloss_gasolio:'柴油', gloss_gpl:'液化石油气', gloss_metano:'天然气',
     about_title:'关于本数据',
@@ -520,7 +672,7 @@ function bucketize(dates, self, served, keyFn){
     const g=groups.get(k);
     g.dates.push(d); g.self.push(self[i]); g.served.push(served[i]);
   });
-  const avg=arr=>arr.reduce((a,b)=>a+b,0)/arr.length;
+  const avg=arr=>{ const v=arr.filter(x=>x!=null); return v.length ? v.reduce((a,b)=>a+b,0)/v.length : null; };
   return [...groups.keys()].sort().map(k=>{
     const g=groups.get(k);
     return {key:k, firstDate:g.dates[0], self:avg(g.self), served:avg(g.served)};
@@ -540,29 +692,61 @@ let currentFuel='Benzina';
 let consentChoice=null; // null | 'accepted' | 'rejected'
 
 /* ---------------- KPI cards ---------------- */
+function computeFuelKPI(selfArr){
+  const series=(selfArr||[]).filter(v=>v!=null);
+  const latest=series.length ? series[series.length-1] : null;
+  const prev=series.length>1 ? series[series.length-2] : null;
+  return {
+    latest, prev,
+    delta: (latest!=null && prev!=null) ? latest-prev : null,
+    deltaPct: (latest!=null && prev!=null) ? (latest-prev)/prev*100 : null,
+  };
+}
 function renderKPI(){
   const holder=document.getElementById('kpi-row');
   holder.innerHTML='';
+  const scope=currentScopeSeries || emptyScopeSeries(FUELS, true);
+
   ['Benzina','Gasolio'].forEach(fuel=>{
     const color=theme(FUEL_VAR[fuel]);
-    const latest=DATA.kpi[fuel+'_latest_self'], delta=DATA.kpi[fuel+'_delta'], pct=DATA.kpi[fuel+'_delta_pct'];
+    const raw=scope.timeseries[fuel];
+    const kpi=computeFuelKPI(raw && raw.self);
     const card=document.createElement('div');
     card.className='kpi-card';
-    if(latest==null){
+    if(kpi.latest==null){
       card.innerHTML=`<div class="kpi-tag"><span class="kpi-dot" style="background:${color}"></span>${fuel}</div><div class="kpi-sub">${I18N[currentLang].kpi_loading}</div>`;
-    }else if(delta==null){
+    }else if(kpi.delta==null){
       card.innerHTML=`
         <div class="kpi-tag"><span class="kpi-dot" style="background:${color}"></span>${fuel}</div>
-        <div class="kpi-value num">€${fmtPrice(latest)}</div>
+        <div class="kpi-value num">€${fmtPrice(kpi.latest)}</div>
         <div class="kpi-sub">${I18N[currentLang].kpi_first_day}</div>
       `;
     }else{
-      const down=delta<0;
+      const down=kpi.delta<0;
       card.innerHTML=`
         <div class="kpi-tag"><span class="kpi-dot" style="background:${color}"></span>${fuel}</div>
-        <div class="kpi-value num">€${fmtPrice(latest)}</div>
-        <div class="kpi-delta ${down?'down':'up'}">${down?'↓':'↑'} ${fmtSigned(delta)} €/L (${fmtSigned(pct,2)}%)</div>
+        <div class="kpi-value num">€${fmtPrice(kpi.latest)}</div>
+        <div class="kpi-delta ${down?'down':'up'}">${down?'↓':'↑'} ${fmtSigned(kpi.delta)} €/L (${fmtSigned(kpi.deltaPct,2)}%)</div>
         <div class="kpi-sub">${I18N[currentLang].kpi_note}</div>
+      `;
+    }
+    holder.appendChild(card);
+  });
+
+  [
+    {key:'registered', dotVar:'--accent', label:I18N[currentLang].kpi_stations_registered},
+    {key:'reporting', dotVar:'--good', label:I18N[currentLang].kpi_stations_reporting},
+  ].forEach(spec=>{
+    const card=document.createElement('div');
+    card.className='kpi-card';
+    if(!scope.stations){
+      card.innerHTML=`<div class="kpi-tag"><span class="kpi-dot" style="background:${theme(spec.dotVar)}"></span>${spec.label}</div><div class="kpi-sub">${I18N[currentLang].kpi_stations_none}</div>`;
+    }else{
+      const sub=I18N[currentLang].kpi_stations_sub.replace('{date}', scope.stationsDate ? fmtDate(scope.stationsDate, currentLang) : '—');
+      card.innerHTML=`
+        <div class="kpi-tag"><span class="kpi-dot" style="background:${theme(spec.dotVar)}"></span>${spec.label}</div>
+        <div class="kpi-value num">${scope.stations[spec.key].toLocaleString('en-US')}</div>
+        <div class="kpi-sub">${sub}</div>
       `;
     }
     holder.appendChild(card);
@@ -602,8 +786,11 @@ function renderFuelPills(){
   updateFuelPills();
 }
 function updateFuelPills(){
+  const allowed = currentScopeSeries ? currentScopeSeries.fuels : FUELS;
+  if(!allowed.includes(currentFuel)) currentFuel='Benzina';
   document.querySelectorAll('#fuel-pills .pill').forEach(btn=>{
     const f=btn.dataset.fuel;
+    btn.classList.toggle('vis-hidden', !allowed.includes(f));
     btn.setAttribute('aria-pressed', f===currentFuel ? 'true':'false');
     btn.querySelector('.dot').style.background=theme(FUEL_VAR[f]);
     btn.querySelector('.label').textContent=f;
@@ -617,21 +804,32 @@ function renderTrend(){
   const holder=document.getElementById('trend-chart-holder');
   const legend=document.getElementById('trend-legend');
   const color=theme(FUEL_VAR[currentFuel]);
-  const raw=DATA.timeseries[currentFuel];
+  const scope=currentScopeSeries || emptyScopeSeries(FUELS, true);
+  const hasServed=!!scope.served;
+  const raw=scope.timeseries[currentFuel] || {self:[],served:[]};
+
   const keyFn = currentGranularity==='daily' ? (d=>d) : currentGranularity==='weekly' ? isoWeekKey : monthKey;
-  const buckets=bucketize(DATA.dates, raw.self, raw.served, keyFn);
+  let buckets=bucketize(scope.dates, raw.self, raw.served, keyFn);
+  buckets=buckets.filter(b=>b.self!=null);
+
+  if(!buckets.length){
+    legend.innerHTML='';
+    holder.innerHTML=`<p class="scope-note">${I18N[currentLang].trend_no_data}</p>`;
+    return;
+  }
+
   const labels=buckets.map(b=>labelFor(b, currentGranularity, currentLang));
   const self=buckets.map(b=>b.self), served=buckets.map(b=>b.served);
 
   legend.innerHTML=`
     <span class="item"><span class="swatch" style="background:${color}"></span>${I18N[currentLang].legend_self}</span>
-    <span class="item" style="color:${color}"><span class="swatch dashed"></span>${I18N[currentLang].legend_served}</span>
+    ${hasServed ? `<span class="item" style="color:${color}"><span class="swatch dashed"></span>${I18N[currentLang].legend_served}</span>` : ''}
   `;
 
   const n=labels.length;
   const W=760,H=300, padL=52, padR=64, padT=16, padB=30;
   const plotW=W-padL-padR, plotH=H-padT-padB;
-  const allVals=self.concat(served);
+  const allVals = hasServed ? self.concat(served.filter(v=>v!=null)) : self.slice();
   const minV=Math.min(...allVals), maxV=Math.max(...allVals);
   const span=maxV-minV || 0.1;
   const lo=minV-span*0.15, hi=maxV+span*0.18;
@@ -651,18 +849,21 @@ function renderTrend(){
     xLabels += `<text class="axis-label" x="${x(i)}" y="${H-8}" text-anchor="middle">${esc(lab)}</text>`;
   });
 
-  const pathOf=arr=>arr.map((v,i)=>(i===0?'M':'L')+x(i).toFixed(1)+','+y(v).toFixed(1)).join(' ');
-  const selfPath=pathOf(self), servedPath=pathOf(served);
+  const pathOf=arr=>{
+    const pts=arr.map((v,i)=>[i,v]).filter(([,v])=>v!=null);
+    return pts.map(([i,v],j)=>(j===0?'M':'L')+x(i).toFixed(1)+','+y(v).toFixed(1)).join(' ');
+  };
+  const selfPath=pathOf(self), servedPath=hasServed?pathOf(served):'';
 
   const svg=svgns('svg',{class:'chart',viewBox:`0 0 ${W} ${H}`,role:'img','aria-label':`${currentFuel} price trend`});
   svg.innerHTML=`
     ${gridSvg}
     <line class="grid-line" x1="${padL}" x2="${W-padR}" y1="${padT+plotH}" y2="${padT+plotH}" style="stroke:var(--baseline)"></line>
     ${xLabels}
-    <path d="${servedPath}" fill="none" stroke="${color}" stroke-width="2" stroke-linecap="round" stroke-dasharray="1 7" opacity="0.75"></path>
+    ${hasServed ? `<path d="${servedPath}" fill="none" stroke="${color}" stroke-width="2" stroke-linecap="round" stroke-dasharray="1 7" opacity="0.75"></path>` : ''}
     <path d="${selfPath}" fill="none" stroke="${color}" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"></path>
     <circle cx="${x(n-1)}" cy="${y(self[n-1])}" r="4.5" fill="${color}" stroke="var(--surface)" stroke-width="2"></circle>
-    <circle cx="${x(n-1)}" cy="${y(served[n-1])}" r="4" fill="${color}" opacity="0.75" stroke="var(--surface)" stroke-width="2"></circle>
+    ${hasServed && served[n-1]!=null ? `<circle cx="${x(n-1)}" cy="${y(served[n-1])}" r="4" fill="${color}" opacity="0.75" stroke="var(--surface)" stroke-width="2"></circle>` : ''}
   `;
 
   labels.forEach((lab,i)=>{
@@ -677,9 +878,10 @@ function renderTrend(){
   });
 
   function showTrendTip(e,i){
-    showTip(`<div style="font-weight:600;margin-bottom:4px">${esc(labels[i])}</div>
-      <div class="tt-row"><span>${I18N[currentLang].legend_self}</span><b>€${fmtPrice(self[i])}</b></div>
-      <div class="tt-row"><span>${I18N[currentLang].legend_served}</span><b>€${fmtPrice(served[i])}</b></div>`, e.clientX, e.clientY);
+    let html=`<div style="font-weight:600;margin-bottom:4px">${esc(labels[i])}</div>
+      <div class="tt-row"><span>${I18N[currentLang].legend_self}</span><b>€${fmtPrice(self[i])}</b></div>`;
+    if(hasServed) html+=`<div class="tt-row"><span>${I18N[currentLang].legend_served}</span><b>€${fmtPrice(served[i])}</b></div>`;
+    showTip(html, e.clientX, e.clientY);
   }
 
   holder.innerHTML=''; holder.appendChild(svg);
@@ -718,6 +920,14 @@ function applyLanguage(lang){
     if(val!=null) el.innerHTML=val;
   });
   renderLangSwitch();
+  updateScopeSeg();
+  if(currentScopeType!=='italia'){
+    document.getElementById('scope-search').placeholder=I18N[lang].scope_search_placeholder;
+    if(currentScopeKey){
+      document.getElementById('scope-active-tag').innerHTML=`<span>${I18N[lang]['scope_label_'+currentScopeType]}: <b>${esc(currentScopeKey)}</b></span>`;
+    }
+  }
+  updateScopeNote();
   renderKPI();
   updateGranularitySeg();
   updateFuelPills();
@@ -725,6 +935,109 @@ function applyLanguage(lang){
   if(consentChoice==='accepted'){
     try{ localStorage.setItem(LANG_KEY, lang); }catch(e){}
   }
+}
+
+/* ---------------- Scope picker UI ---------------- */
+function renderScopeSeg(){
+  const holder=document.getElementById('scope-seg');
+  if(!holder.childElementCount){
+    SCOPE_TYPES.forEach(s=>{
+      const btn=document.createElement('button');
+      btn.type='button'; btn.dataset.scope=s;
+      btn.addEventListener('click', ()=>selectScopeType(s));
+      holder.appendChild(btn);
+    });
+  }
+  updateScopeSeg();
+}
+function updateScopeSeg(){
+  document.querySelectorAll('#scope-seg button').forEach(btn=>{
+    btn.setAttribute('aria-pressed', btn.dataset.scope===currentScopeType ? 'true':'false');
+    btn.textContent=I18N[currentLang]['scope_label_'+btn.dataset.scope];
+  });
+}
+
+function closeScopeList(){
+  document.getElementById('scope-list').classList.remove('open');
+  document.getElementById('scope-search').setAttribute('aria-expanded','false');
+}
+function openScopeList(query){
+  const list=document.getElementById('scope-list');
+  const names=getScopeNames(currentScopeType);
+  const q=(query||'').trim().toLowerCase();
+  const matches = q ? names.filter(n=>n.toLowerCase().includes(q)).slice(0,50) : names.slice(0,50);
+  list.innerHTML='';
+  if(!matches.length){
+    list.innerHTML=`<div class="combo-empty">${I18N[currentLang].scope_no_match}</div>`;
+  }else{
+    matches.forEach(n=>{
+      const opt=document.createElement('div');
+      opt.className='combo-opt'; opt.setAttribute('role','option'); opt.textContent=n;
+      opt.addEventListener('mousedown', (e)=>{ e.preventDefault(); chooseScopeValue(n); });
+      list.appendChild(opt);
+    });
+  }
+  list.classList.add('open');
+  document.getElementById('scope-search').setAttribute('aria-expanded','true');
+}
+function updateScopeNote(){
+  const note=document.getElementById('scope-note');
+  if(currentScopeType==='italia' || !currentScopeKey){ note.textContent=''; return; }
+  const dateLabel = currentScopeSeries && currentScopeSeries.dates.length ? fmtDate(currentScopeSeries.dates[0], currentLang) : '—';
+  note.textContent = I18N[currentLang].scope_note_filtered
+    .replace('{scope}', I18N[currentLang]['scope_label_'+currentScopeType])
+    .replace('{name}', currentScopeKey)
+    .replace('{date}', dateLabel);
+}
+function chooseScopeValue(name){
+  currentScopeKey=name;
+  document.getElementById('scope-search').value=name;
+  closeScopeList();
+  const tag=document.getElementById('scope-active-tag');
+  tag.classList.remove('vis-hidden');
+  tag.innerHTML=`<span>${I18N[currentLang]['scope_label_'+currentScopeType]}: <b>${esc(name)}</b></span>`;
+  currentScopeSeries=buildScopeSeries(currentScopeType, currentScopeKey);
+  updateScopeNote();
+  renderAll();
+}
+async function selectScopeType(scopeType){
+  currentScopeType=scopeType;
+  currentScopeKey=null;
+  const combo=document.getElementById('scope-combo');
+  const tag=document.getElementById('scope-active-tag');
+  const searchInput=document.getElementById('scope-search');
+  tag.classList.add('vis-hidden');
+  updateScopeSeg();
+  if(scopeType==='italia'){
+    combo.classList.add('vis-hidden');
+    currentScopeSeries=buildScopeSeries('italia', null);
+    updateScopeNote();
+    renderAll();
+    return;
+  }
+  combo.classList.remove('vis-hidden');
+  searchInput.value='';
+  searchInput.placeholder=I18N[currentLang].scope_search_placeholder;
+  closeScopeList();
+  currentScopeSeries=emptyScopeSeries(SCOPE_FUELS[scopeType], SCOPE_SERVED[scopeType]);
+  updateScopeNote();
+  renderAll();
+  try{ await loadScopeFile(scopeType); }catch(e){ console.error('Failed to load scope file', scopeType, e); }
+}
+function initScopeUI(){
+  renderScopeSeg();
+  const input=document.getElementById('scope-search');
+  input.addEventListener('input', ()=>openScopeList(input.value));
+  input.addEventListener('focus', ()=>openScopeList(input.value));
+  input.addEventListener('blur', ()=>setTimeout(closeScopeList, 120));
+  input.addEventListener('keydown', (e)=>{
+    if(e.key==='Enter'){
+      const first=document.querySelector('#scope-list .combo-opt');
+      if(first) chooseScopeValue(first.textContent);
+      e.preventDefault();
+    }else if(e.key==='Escape'){ closeScopeList(); }
+  });
+  currentScopeSeries=buildScopeSeries('italia', null);
 }
 
 /* ---------------- Cookie consent ---------------- */
@@ -788,6 +1101,7 @@ renderGranularitySeg();
 renderFuelPills();
 (async()=>{
   try{ await loadLiveData(); }catch(e){ console.error('Failed to load data.json', e); }
+  initScopeUI();
   initConsent();
 })();
 window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', scheduleRenderAll);
