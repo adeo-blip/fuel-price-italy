@@ -1,7 +1,12 @@
-"""Fetch today's Italian fuel data from the MIMIT open-data feeds — prices
-(prezzo_alle_8) and the active station registry (anagrafica_impianti_attivi) —
-and update the national, Regione, Provincia, Comune and Gestore level JSON
-datasets that power the Fuel Dashboard.
+"""Update the national, Regione, Provincia, Comune and Gestore level JSON datasets
+that power the Fuel Dashboard, from two MIMIT exports — prices (prezzo_alle_8) and
+the active station registry (anagrafica_impianti_attivi).
+
+Each source is read from a same-named CSV manually dropped in the repo root
+(prezzo_alle_8.csv / anagrafica_impianti_attivi.csv, or a dated/"(1)" variant —
+the most recently modified match wins) if present, otherwise fetched live from
+MIMIT. This lets a human refresh the local file each morning ahead of the
+scheduled run without the pipeline depending on it.
 
 Deliberately stdlib-only (no pandas) to minimize failure modes when run from an
 unattended scheduled context where extra packages may not be installed.
@@ -18,6 +23,7 @@ import json
 import os
 import sys
 import csv
+import glob
 import statistics
 from collections import defaultdict, Counter
 from datetime import datetime, timezone
@@ -64,6 +70,29 @@ def fetch_text(url):
         return r.read().decode('utf-8', errors='replace')
 
 
+def find_local_file(base_name):
+    """A manually-downloaded MIMIT export dropped in the repo root (e.g. prezzo_alle_8.csv,
+    or a dated variant like prezzo_alle_8-20260722.csv / prezzo_alle_8 (1).csv) takes
+    priority over the live feed — picks the most recently modified match, if any."""
+    exact = os.path.join(BASE_DIR, base_name + '.csv')
+    if os.path.exists(exact):
+        return exact
+    candidates = glob.glob(os.path.join(BASE_DIR, base_name + '*.csv'))
+    if not candidates:
+        return None
+    candidates.sort(key=os.path.getmtime, reverse=True)
+    return candidates[0]
+
+
+def load_source_text(base_name, url):
+    """Returns (text, source_description) — local file wins over the live URL."""
+    local_path = find_local_file(base_name)
+    if local_path:
+        with open(local_path, encoding='utf-8', errors='replace') as f:
+            return f.read(), f"local file {os.path.basename(local_path)}"
+    return fetch_text(url), "live MIMIT feed"
+
+
 def load_province_map():
     sigla_to_provincia = {}
     sigla_to_regione = {}
@@ -89,9 +118,8 @@ def resolve_provincia(raw, sigla_to_provincia, sigla_to_regione, name_to_sigla):
     return UNSPECIFIED, UNSPECIFIED
 
 
-def load_registry(sigla_to_provincia, sigla_to_regione, name_to_sigla):
-    raw = fetch_text(REGISTRY_URL)
-    lines = raw.splitlines()
+def load_registry(raw_text, sigla_to_provincia, sigla_to_regione, name_to_sigla):
+    lines = raw_text.splitlines()
     if len(lines) < 2:
         print("ERROR: registry feed has no data rows", file=sys.stderr)
         sys.exit(1)
@@ -206,9 +234,13 @@ def write_scope_file_indexed(path, date_str, buckets_map, registered_counter, re
 
 def main():
     sigla_to_provincia, sigla_to_regione, name_to_sigla = load_province_map()
-    registry = load_registry(sigla_to_provincia, sigla_to_regione, name_to_sigla)
 
-    raw = fetch_text(PRICE_URL)
+    registry_text, registry_source = load_source_text('anagrafica_impianti_attivi', REGISTRY_URL)
+    print(f"Registry source: {registry_source}")
+    registry = load_registry(registry_text, sigla_to_provincia, sigla_to_regione, name_to_sigla)
+
+    raw, price_source = load_source_text('prezzo_alle_8', PRICE_URL)
+    print(f"Price source: {price_source}")
     lines = raw.splitlines()
     if len(lines) < 2:
         print("ERROR: fetched file has no data rows", file=sys.stderr)
