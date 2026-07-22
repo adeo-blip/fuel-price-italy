@@ -77,19 +77,20 @@
   .lang-btn:hover{border-color:var(--accent);}
 
   /* ---------- Hero ---------- */
-  .hero{padding:64px 20px 48px;text-align:center;}
-  .eyebrow{font:600 11px/1 var(--font-ui);letter-spacing:.12em;text-transform:uppercase;color:var(--accent-strong);margin:0 0 16px;}
-  .hero h1{font-size:clamp(36px,6vw,58px);font-weight:800;letter-spacing:-0.02em;margin:0 0 16px;text-wrap:balance;}
-  .hero p{max-width:56ch;margin:0 auto 28px;color:var(--text-secondary);font-size:17px;}
+  .hero{padding:44px 20px 28px;text-align:center;}
+  .eyebrow{font:600 11px/1 var(--font-ui);letter-spacing:.12em;text-transform:uppercase;color:var(--accent-strong);margin:0 0 14px;}
+  .hero h1{font-size:clamp(32px,5vw,46px);font-weight:800;letter-spacing:-0.02em;margin:0 0 12px;text-wrap:balance;}
+  .hero p{max-width:56ch;margin:0 auto 20px;color:var(--text-secondary);font-size:16px;}
   .cta{
     display:inline-flex;align-items:center;gap:8px;background:var(--text-primary);color:var(--bg);
     font-weight:700;font-size:14px;padding:12px 22px;border-radius:99px;text-decoration:none;
     transition:transform .15s;
   }
   .cta:hover{transform:translateY(-1px);}
+  .last-updated-line{margin:14px 0 0;font-size:12.5px;color:var(--text-muted);}
 
   /* ---------- KPI row ---------- */
-  .kpi-row{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:0 0 40px;}
+  .kpi-row{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:0 0 28px;}
   @media (max-width:600px){.kpi-row{grid-template-columns:1fr;}}
   .kpi-card{
     background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:20px 22px;
@@ -247,6 +248,7 @@
   <h1>Fuel Dashboard</h1>
   <p data-i18n="hero_subtitle">Track Italy's pump prices — Benzina, Gasolio, GPL and Metano — daily, weekly and monthly, straight from the national transparency feed.</p>
   <a class="cta" href="#trends" data-i18n="hero_cta">View trends</a>
+  <p class="last-updated-line" id="last-updated-line"></p>
 </div>
 
 <div class="shell">
@@ -336,6 +338,7 @@ async function loadLiveData(){
   const history=json.history||[];
   DATA.dates=history.map(h=>h.date);
   DATA.rawHistory=history;
+  DATA.lastUpdated=json.last_updated||null;
   firstTrackedDate=DATA.dates[0]||null;
   ['Benzina','Gasolio','GPL','Metano'].forEach(fuel=>{
     DATA.timeseries[fuel]={
@@ -460,6 +463,8 @@ const I18N = {
     scope_label_comune:'Municipality', scope_label_gestore:'Operator',
     scope_search_placeholder:'Type to search…', scope_no_match:'No matches',
     scope_note_filtered:'Showing {scope} — {name}. Detailed tracking for this view started on {date}, so history will be short at first.',
+    scope_prompt:'Search and select a {scope} above to see its data.', kpi_select_prompt:'Select above',
+    last_updated_label:'Last updated {date}',
     kpi_stations_registered:'Registered stations', kpi_stations_reporting:'Reporting today',
     kpi_stations_sub:'as of {date}', kpi_stations_none:'No station data yet for this view',
     trend_no_data:'No price history yet for this selection — check back tomorrow.',
@@ -495,6 +500,8 @@ const I18N = {
     scope_label_comune:'Comune', scope_label_gestore:'Gestore',
     scope_search_placeholder:'Digita per cercare…', scope_no_match:'Nessun risultato',
     scope_note_filtered:'Stai visualizzando {scope} — {name}. Il monitoraggio dettagliato per questa vista è iniziato il {date}, quindi lo storico sarà breve all\'inizio.',
+    scope_prompt:'Cerca e seleziona {scope} qui sopra per vedere i dati.', kpi_select_prompt:'Seleziona qui sopra',
+    last_updated_label:'Aggiornato al {date}',
     kpi_stations_registered:'Impianti registrati', kpi_stations_reporting:'Attivi oggi',
     kpi_stations_sub:'aggiornato al {date}', kpi_stations_none:'Nessun dato sugli impianti ancora disponibile per questa vista',
     trend_no_data:'Ancora nessuno storico prezzi per questa selezione — ricontrolla domani.',
@@ -530,6 +537,8 @@ const I18N = {
     scope_label_comune:'Commune', scope_label_gestore:'Opérateur',
     scope_search_placeholder:'Tapez pour rechercher…', scope_no_match:'Aucun résultat',
     scope_note_filtered:"Affichage de {scope} — {name}. Le suivi détaillé de cette vue a commencé le {date}, l'historique sera donc court au début.",
+    scope_prompt:'Recherchez et sélectionnez {scope} ci-dessus pour voir ses données.', kpi_select_prompt:'Sélectionnez ci-dessus',
+    last_updated_label:'Mis à jour le {date}',
     kpi_stations_registered:'Stations enregistrées', kpi_stations_reporting:'Actives aujourd\'hui',
     kpi_stations_sub:'au {date}', kpi_stations_none:'Pas encore de données de stations pour cette vue',
     trend_no_data:'Aucun historique de prix pour cette sélection — revenez demain.',
@@ -565,6 +574,8 @@ const I18N = {
     scope_label_comune:'Коммуна', scope_label_gestore:'Оператор',
     scope_search_placeholder:'Введите для поиска…', scope_no_match:'Совпадений нет',
     scope_note_filtered:'Просмотр: {scope} — {name}. Подробный учёт для этого фильтра начался {date}, поэтому сначала история будет короткой.',
+    scope_prompt:'Найдите и выберите {scope} выше, чтобы увидеть данные.', kpi_select_prompt:'Выберите выше',
+    last_updated_label:'Обновлено {date}',
     kpi_stations_registered:'Зарегистрированные АЗС', kpi_stations_reporting:'Активны сегодня',
     kpi_stations_sub:'по состоянию на {date}', kpi_stations_none:'Данных по АЗС для этого фильтра пока нет',
     trend_no_data:'Для этого выбора пока нет истории цен — загляните завтра.',
@@ -600,6 +611,8 @@ const I18N = {
     scope_label_comune:'市镇', scope_label_gestore:'运营商',
     scope_search_placeholder:'输入以搜索…', scope_no_match:'无匹配结果',
     scope_note_filtered:'当前查看：{scope} — {name}。该视图的详细追踪始于 {date}，因此初期历史数据较少。',
+    scope_prompt:'请在上方搜索并选择{scope}以查看数据。', kpi_select_prompt:'请在上方选择',
+    last_updated_label:'更新于 {date}',
     kpi_stations_registered:'注册加油站', kpi_stations_reporting:'今日活跃',
     kpi_stations_sub:'截至 {date}', kpi_stations_none:'该筛选条件暂无加油站数据',
     trend_no_data:'该筛选条件暂无价格历史记录——请明天再查看。',
@@ -633,6 +646,16 @@ function esc(s){ return (s==null?'':String(s)).replace(/[&<>"']/g, c=>({'&':'&am
 function svgns(tag,attrs){ const el=document.createElementNS('http://www.w3.org/2000/svg',tag); for(const k in attrs) el.setAttribute(k,attrs[k]); return el; }
 function fmtPrice(v,dec=3){ return v==null? '—' : v.toFixed(dec); }
 function fmtSigned(v,dec=3){ const s=v>=0?'+':''; return s+v.toFixed(dec); }
+function fmtLastUpdated(iso){
+  const d=new Date(iso);
+  const pad=n=>String(n).padStart(2,'0');
+  return `${pad(d.getDate())}/${pad(d.getMonth()+1)}/${d.getFullYear()} ${pad(d.getHours())}:${pad(d.getMinutes())}`;
+}
+function renderLastUpdated(){
+  const el=document.getElementById('last-updated-line');
+  if(!el) return;
+  el.textContent = DATA.lastUpdated ? I18N[currentLang].last_updated_label.replace('{date}', fmtLastUpdated(DATA.lastUpdated)) : '';
+}
 
 const tooltip = document.getElementById('tooltip');
 function positionTip(x,y){
@@ -706,6 +729,7 @@ function renderKPI(){
   const holder=document.getElementById('kpi-row');
   holder.innerHTML='';
   const scope=currentScopeSeries || emptyScopeSeries(FUELS, true);
+  const noSelection = currentScopeType!=='italia' && !currentScopeKey;
 
   ['Benzina','Gasolio'].forEach(fuel=>{
     const color=theme(FUEL_VAR[fuel]);
@@ -713,7 +737,9 @@ function renderKPI(){
     const kpi=computeFuelKPI(raw && raw.self);
     const card=document.createElement('div');
     card.className='kpi-card';
-    if(kpi.latest==null){
+    if(noSelection){
+      card.innerHTML=`<div class="kpi-tag"><span class="kpi-dot" style="background:${color}"></span>${fuel}</div><div class="kpi-sub">${I18N[currentLang].kpi_select_prompt}</div>`;
+    }else if(kpi.latest==null){
       card.innerHTML=`<div class="kpi-tag"><span class="kpi-dot" style="background:${color}"></span>${fuel}</div><div class="kpi-sub">${I18N[currentLang].kpi_loading}</div>`;
     }else if(kpi.delta==null){
       card.innerHTML=`
@@ -739,7 +765,9 @@ function renderKPI(){
   ].forEach(spec=>{
     const card=document.createElement('div');
     card.className='kpi-card';
-    if(!scope.stations){
+    if(noSelection){
+      card.innerHTML=`<div class="kpi-tag"><span class="kpi-dot" style="background:${theme(spec.dotVar)}"></span>${spec.label}</div><div class="kpi-sub">${I18N[currentLang].kpi_select_prompt}</div>`;
+    }else if(!scope.stations){
       card.innerHTML=`<div class="kpi-tag"><span class="kpi-dot" style="background:${theme(spec.dotVar)}"></span>${spec.label}</div><div class="kpi-sub">${I18N[currentLang].kpi_stations_none}</div>`;
     }else{
       const sub=I18N[currentLang].kpi_stations_sub.replace('{date}', scope.stationsDate ? fmtDate(scope.stationsDate, currentLang) : '—');
@@ -807,6 +835,12 @@ function renderTrend(){
   const scope=currentScopeSeries || emptyScopeSeries(FUELS, true);
   const hasServed=!!scope.served;
   const raw=scope.timeseries[currentFuel] || {self:[],served:[]};
+
+  if(currentScopeType!=='italia' && !currentScopeKey){
+    legend.innerHTML='';
+    holder.innerHTML=`<p class="scope-note">${I18N[currentLang].scope_prompt.replace('{scope}', I18N[currentLang]['scope_label_'+currentScopeType])}</p>`;
+    return;
+  }
 
   const keyFn = currentGranularity==='daily' ? (d=>d) : currentGranularity==='weekly' ? isoWeekKey : monthKey;
   let buckets=bucketize(scope.dates, raw.self, raw.served, keyFn);
@@ -932,6 +966,7 @@ function applyLanguage(lang){
   updateGranularitySeg();
   updateFuelPills();
   renderTrend();
+  renderLastUpdated();
   if(consentChoice==='accepted'){
     try{ localStorage.setItem(LANG_KEY, lang); }catch(e){}
   }
@@ -982,7 +1017,11 @@ function openScopeList(query){
 }
 function updateScopeNote(){
   const note=document.getElementById('scope-note');
-  if(currentScopeType==='italia' || !currentScopeKey){ note.textContent=''; return; }
+  if(currentScopeType==='italia'){ note.textContent=''; return; }
+  if(!currentScopeKey){
+    note.textContent = I18N[currentLang].scope_prompt.replace('{scope}', I18N[currentLang]['scope_label_'+currentScopeType]);
+    return;
+  }
   const dateLabel = currentScopeSeries && currentScopeSeries.dates.length ? fmtDate(currentScopeSeries.dates[0], currentLang) : '—';
   note.textContent = I18N[currentLang].scope_note_filtered
     .replace('{scope}', I18N[currentLang]['scope_label_'+currentScopeType])
@@ -1089,6 +1128,7 @@ function renderAll(){
   renderGranularitySeg();
   renderFuelPills();
   renderTrend();
+  renderLastUpdated();
 }
 let renderScheduled=false;
 function scheduleRenderAll(){
