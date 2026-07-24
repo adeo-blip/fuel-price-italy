@@ -1,0 +1,12 @@
+Today's regional spotlight: Basilicata. Benzina €1.984/L, Gasolio €2.175/L — both a few cents above the national self-service average, and both climbing for a third straight day.
+
+I built Fuel Dashboard (https://adeo-blip.github.io/fuel-price-italy/) to catch exactly this kind of local detail automatically: national trends, or drilled down to any Regione, Provincia, Comune or Gestore, with live registered-vs-reporting station counts. Basilicata alone has 267 registered stations, 239 of them reporting today.
+
+What used to take a manual spreadsheet and someone remembering to refresh it is now a live, self-updating dashboard — built entirely with Claude Code, in English, Italiano, Français, Русский and 中文.
+
+Take a look: https://adeo-blip.github.io/fuel-price-italy/
+
+#FuelPrices #Italy #Basilicata #DataVisualization #ClaudeCode #Automation #Dashboard
+
+--
+Draft only — review before posting. Adeo Patapo · adeopatapo@gmail.com

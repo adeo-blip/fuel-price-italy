@@ -19,6 +19,6 @@
   },
   "homepage": "https://github.com/adeo-blip/fuel-price-italy#readme",
   "dependencies": {
-    "pptxgenjs": "^4.0.1"
+    "docx": "^9.7.1"
   }
 }
