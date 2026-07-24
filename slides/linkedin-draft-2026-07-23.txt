@@ -1,0 +1,12 @@
+Today's Italy fuel prices — Benzina €1.970/L, Gasolio €2.167/L (national self-service average).
+
+I built Fuel Dashboard (https://adeo-blip.github.io/fuel-price-italy/) to track this automatically — daily, weekly and monthly trends for the whole country, or drilled down to a specific Regione, Provincia, Comune or Gestore, with live counts of registered vs. actively reporting stations (23,954 registered / 21,732 reporting today).
+
+What used to be a manual spreadsheet refreshed by hand is now a live, multi-language, self-updating dashboard — built entirely with Claude Code. No manual data pulls, no stale Excel file: the pipeline fetches, computes and republishes itself every day.
+
+Take a look: https://adeo-blip.github.io/fuel-price-italy/
+
+#FuelPrices #Italy #DataVisualization #ClaudeCode #Automation #Dashboard
+
+--
+Draft only — review before posting. Adeo Patapo · adeopatapo@gmail.com
