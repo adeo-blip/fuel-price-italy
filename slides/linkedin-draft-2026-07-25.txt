@@ -1,0 +1,11 @@
+Today's Fuel Dashboard spotlight: Calabria, where diesel is closing in on €2.20 a litre.
+
+Self-service Gasolio in Calabria hit €2.2044 per litre on July 24 — up nearly 6 cents in just four days and now running above Italy's €2.1856 national average. Benzina told the same story, climbing to €1.9933 against a €1.9807 national average.
+
+Fuel Dashboard tracks self-service and served prices for Benzina, Gasolio, GPL, and Metano across all 20 Italian regions, refreshed daily straight from the MIMIT open-data feed. Take a look: https://adeo-blip.github.io/fuel-price-italy/
+
+What I find most interesting isn't the price move itself — it's how it was built. This entire dashboard, including today's regional writeup, is generated automatically every morning by Claude Code: no manual Excel file, no copy-pasting yesterday's numbers, no human recalculating averages. A few years ago this would have been a part-time analyst's job. Now it's a script that runs before breakfast. That's the real story of what AI coding tools change — not replacing analysis, but making daily, granular, per-region reporting cheap enough to actually do.
+
+#FuelPrices #Italy #DataVisualization #ClaudeCode #AI #Automation #EnergyMarkets #OpenData
+
+Draft only — review before posting. Adeo Patapo · adeopatapo@gmail.com
