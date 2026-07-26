@@ -1,0 +1,11 @@
+Today's Fuel Dashboard spotlight: Campania, where self-service diesel has jumped 6.7 cents a liter in just five days and now edges past Italy's national average.
+
+Fuel Dashboard tracks daily petrol and diesel prices across all 20 Italian regions, pulling directly from Italy's official MIMIT price feed. Today Campania's self-service Benzina sits at €1.988/L (just under the national €1.992 average) while Gasolio has climbed to €2.204/L, now slightly above the national €2.203 mark — a real shift from where the region started the week.
+
+What makes this possible: the entire dashboard, data ingestion, regional rotation, and daily article generation runs itself. No manual spreadsheet, no copy-pasting numbers into Excel every morning. I built it with Claude Code, and it rebuilds and republishes automatically every day. It's a small but concrete example of what's possible when you let an AI coding tool own an entire pipeline instead of just writing one script.
+
+Check out the live dashboard: https://adeo-blip.github.io/fuel-price-italy/
+
+#FuelPrices #Italy #DataViz #ClaudeCode #AI #BuildInPublic #Automation #Campania
+
+Draft only — review before posting. Adeo Patapo · adeopatapo@gmail.com
