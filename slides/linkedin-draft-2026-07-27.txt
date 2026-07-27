@@ -1,0 +1,9 @@
+Today's Fuel Dashboard spotlight: Emilia-Romagna, where self-service diesel has risen for six straight days — up almost 7 cents since July 21 — yet still sits eight-tenths of a cent below Italy's national average.
+
+Fuel Dashboard tracks Benzina, Gasolio, GPL and Metano prices across all 20 Italian regions, rotating a daily regional spotlight and rebuilding itself every morning straight from the MIMIT open data feed. No manual spreadsheet, no copy-pasting CSVs by hand — just a dashboard that updates on its own. Check today's numbers and the full regional history at https://adeo-blip.github.io/fuel-price-italy/
+
+This is also a small case study in what's now possible with AI coding tools: the entire pipeline — data ingestion, regional rotation logic, daily article generation, and the site itself — was built with Claude Code instead of a hand-maintained Excel workbook. What used to be a recurring manual chore is now a self-updating product.
+
+#FuelPrices #Italy #DataViz #ClaudeCode #AI #OpenData #EnergyMarkets #BuildInPublic
+
+Draft only — review before posting. Adeo Patapo · adeopatapo@gmail.com

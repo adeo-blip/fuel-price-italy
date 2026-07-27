@@ -1,4 +1,4 @@
-Today's Fuel Dashboard spotlight: Campania, where self-service diesel has jumped 6.7 cents a liter in just five days and now edges past Italy's national average.
+Fuel Dashboard spotlight (update in 25/07/2026): Campania, where self-service diesel has jumped 6.7 cents a liter in just five days and now edges past Italy's national average.
 
 Fuel Dashboard tracks daily petrol and diesel prices across all 20 Italian regions, pulling directly from Italy's official MIMIT price feed. Today Campania's self-service Benzina sits at €1.988/L (just under the national €1.992 average) while Gasolio has climbed to €2.204/L, now slightly above the national €2.203 mark — a real shift from where the region started the week.
 
