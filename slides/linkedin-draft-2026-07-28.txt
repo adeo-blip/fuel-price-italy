@@ -1,0 +1,11 @@
+Today's Fuel Dashboard spotlight: Friuli-Venezia Giulia, where self-service diesel has jumped 3.6% in just seven days and both Benzina and Gasolio now sit above Italy's national average.
+
+Fuel Dashboard is a free, self-updating site that tracks gas and diesel prices across all 20 Italian regions, pulling directly from the official MIMIT feed every day. No manual data entry, no stale spreadsheet — it rebuilds itself automatically each morning. Take a look: https://adeo-blip.github.io/fuel-price-italy/
+
+This project is also a small case study in what's possible right now with AI coding tools. The entire pipeline — data ingestion, trend analysis, region rotation, article generation, and site deployment — was built with Claude Code instead of a manually maintained Excel file. What used to take a recurring block of someone's time each day now runs unattended, and the result is a richer, more current product than a spreadsheet could ever be.
+
+If you're curious how AI-assisted development can turn a manual reporting task into a living dashboard, I'm happy to talk through how this one works.
+
+#FuelPrices #Italy #DataDashboard #ClaudeCode #AITools #Automation #EnergyMarkets
+
+Draft only — review before posting. Adeo Patapo · adeopatapo@gmail.com
