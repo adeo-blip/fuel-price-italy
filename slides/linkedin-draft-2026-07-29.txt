@@ -1,0 +1,13 @@
+Today's Fuel Dashboard spotlight: Lazio, where self-service gasoline is up nearly 4 cents this week to €1.985/L — yet still under Italy's national average of €1.998/L.
+
+Fuel Dashboard (https://adeo-blip.github.io/fuel-price-italy/) tracks daily fuel prices across all 20 Italian regions, every province, and every comune, pulled straight from MIMIT's public feed with no manual data entry.
+
+Here's the part I find most interesting: this entire pipeline — the daily data pull, the region-of-the-day rotation, the charts, even this article — runs itself. I built it with Claude Code instead of maintaining a spreadsheet by hand. A tool like this used to be a part-time job: downloading CSVs, cleaning them, updating charts, writing a summary. Now it's a script that runs every morning before I'm at my desk.
+
+That's the bigger story here — not just what gas costs in Lazio today, but what's possible when AI handles the repetitive parts of building and maintaining a live data product.
+
+Check out the live dashboard: https://adeo-blip.github.io/fuel-price-italy/
+
+#FuelPrices #Italy #DataViz #ClaudeCode #AI #Automation #OpenData #Lazio
+
+Draft only — review before posting. Adeo Patapo · adeopatapo@gmail.com
