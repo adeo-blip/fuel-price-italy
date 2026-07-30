@@ -1,0 +1,9 @@
+Today's Fuel Dashboard spotlight: Liguria, where self-service diesel just posted its sharpest single-day drop of the week — down nearly 12 cents a liter overnight — even as gasoline kept climbing.
+
+Fuel Dashboard tracks daily fuel prices across all of Italy's regions, pulling directly from the official MIMIT feed and rotating a regional spotlight every day. No manual data entry, no stale spreadsheet — just today's real numbers, every day. Take a look: https://adeo-blip.github.io/fuel-price-italy/
+
+The part I like best: this entire dashboard, from data pipeline to daily article generation, was built with Claude Code. What used to be the kind of thing you'd track in a manually updated Excel sheet — checking a feed, copying numbers, writing a summary — now runs itself. That's the real case for AI coding tools right now: not just writing code faster, but building small systems that keep themselves current so you don't have to.
+
+#FuelPrices #Italy #DataJournalism #ClaudeCode #AI #Automation #EnergyPrices #Liguria
+
+Draft only — review before posting. Adeo Patapo · adeopatapo@gmail.com
