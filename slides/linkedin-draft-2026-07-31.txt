@@ -1,0 +1,9 @@
+Today's Fuel Dashboard spotlight: Lombardia, where self-service diesel just reversed a full month of gains — dropping over 12 cents a liter in three days — while gasoline kept its slow, steady climb toward the national average.
+
+Fuel Dashboard tracks daily fuel prices across all of Italy's regions, pulling directly from the official MIMIT feed and rotating a regional spotlight every day. No manual spreadsheet, no stale numbers — just today's real figures, every day. Take a look: https://adeo-blip.github.io/fuel-price-italy/
+
+What I like most about this project: the entire thing, from data pipeline to daily regional articles, was built with Claude Code instead of a manually maintained Excel file. It's a good example of what AI coding tools are actually good for right now — not just writing code faster, but building small systems that stay current on their own, so nobody has to remember to update anything.
+
+#FuelPrices #Italy #DataJournalism #ClaudeCode #AI #Automation #EnergyPrices #Lombardia
+
+Draft only — review before posting. Adeo Patapo · adeopatapo@gmail.com
