@@ -1,0 +1,9 @@
+Molise is today's spotlight on Fuel Dashboard: self-service gasoline at €2.007/L (basically the Italian average), while diesel — at €2.1328/L — is still recovering from a sudden 10-cent drop on July 29, having clawed back almost 2.4 cents in three days.
+
+Fuel Dashboard tracks self-service and served prices for Benzina, Gasolio, GPL, and Metano across every Italian region, province, and comune, updated daily from the national MIMIT fuel-price feed. Today's numbers: 175 registered stations in Molise, 153 of them (87%) reporting live prices — compared to 21,735 of 23,964 stations (91%) nationwide. Explore the full map and regional history at https://adeo-blip.github.io/fuel-price-italy/
+
+The part I still find most interesting: this entire pipeline — data ingestion, regional rotation, the article you're reading, even this caption — rebuilds itself every morning with Claude Code. No manual Excel sheet, no copy-pasted charts, no stale numbers. Just a system that keeps itself current so the interesting question every day is "what changed," not "did anyone update the spreadsheet."
+
+#FuelPrices #Italy #DataVisualization #ClaudeCode #AI #Automation #EnergyData #Molise
+
+Draft only — review before posting. Adeo Patapo · adeopatapo@gmail.com
