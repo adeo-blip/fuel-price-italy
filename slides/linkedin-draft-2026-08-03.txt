@@ -1,0 +1,9 @@
+Today's Fuel Dashboard spotlight: Piemonte, where diesel just lived through a wild week. Self-service Gasolio plunged 5.1% in a single day on July 29, then spent four straight days climbing back — while Benzina quietly crept up 0.87% over the same week. Both fuels are still running slightly below Italy's national self-service average.
+
+Fuel Dashboard is a free, self-updating site tracking petrol and diesel prices across all 20 Italian regions, refreshed every morning straight from the MIMIT national feed. No spreadsheet, no manual re-entry — just a pipeline that pulls the data, picks a different region to spotlight each day, and republishes itself automatically. Take a look: https://adeo-blip.github.io/fuel-price-italy/
+
+The part I keep coming back to: this entire thing — data ingestion, daily region rotation, article writing, site rebuild — runs end-to-end with Claude Code. A few years ago this would've been a recurring manual task or a small dev project. Now it's a standing automation that just... works, every morning, without anyone opening Excel. That's the real story here as much as the fuel prices are.
+
+#FuelPrices #Italy #Piemonte #DataAutomation #ClaudeCode #AI #OpenData #Dashboard
+
+Draft only — review before posting. Adeo Patapo · adeopatapo@gmail.com
