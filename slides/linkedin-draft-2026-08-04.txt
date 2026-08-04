@@ -1,0 +1,9 @@
+Today's regional spotlight on Fuel Dashboard: Puglia, where self-service diesel just closed out its fourth straight day of gains, recovering roughly a third of the sharp drop it took at the end of July. Petrol, meanwhile, has quietly climbed every single day this week — now sitting a touch above the national self-service average at €2.02/liter.
+
+Fuel Dashboard tracks Benzina, Gasolio, GPL and Metano prices across all 20 Italian regions using the official MIMIT price feed, with a new region featured every day. Take a look: https://adeo-blip.github.io/fuel-price-italy/
+
+What I like about this project isn't the data itself, it's how it's built. There's no analyst updating a spreadsheet every morning — Claude Code handles the entire pipeline: pulling the feed, recomputing regional and national averages, picking the day's featured region, and writing the article you're reading the caption of right now. It's a real example of AI tools turning what used to be a manual reporting chore into something that just runs itself, every day, without anyone touching Excel.
+
+#FuelPrices #Italy #DataDashboard #AI #ClaudeCode #EnergyPrices #Automation #Puglia
+
+Draft only — review before posting. Adeo Patapo · adeopatapo@gmail.com
