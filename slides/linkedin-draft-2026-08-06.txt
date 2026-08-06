@@ -1,0 +1,9 @@
+Today's Fuel Dashboard spotlight: Sicilia, where self-service Benzina (€2.011) and Gasolio (€2.151) are now sitting almost exactly on Italy's national averages after two straight days of gentle declines.
+
+Fuel Dashboard tracks self-service and full-service prices for Benzina, Gasolio, GPL and Metano across all 20 Italian regions, updating every single day with a fresh regional spotlight like this one. Take a look: https://adeo-blip.github.io/fuel-price-italy/
+
+What I like most about this project isn't the data itself, it's how it gets produced. There's no analyst copying MIMIT exports into Excel every morning. I built the entire pipeline — ingestion, region rotation, article generation, deployment — with Claude Code, and it just runs. That's the real case for using AI coding tools on projects like this: not a one-off script, but a small piece of infrastructure that keeps itself current without anyone babysitting it.
+
+#FuelPrices #Italy #DataJournalism #ClaudeCode #AI #Automation #Sicilia #EnergyPrices
+
+Draft only — review before posting. Adeo Patapo · adeopatapo@gmail.com
