@@ -1,0 +1,11 @@
+Today's Fuel Dashboard spotlight is Toscana, and it produced an unusually clean number: self-service Benzina at €2.0065, which is exactly the national self-service average, matching to the fourth decimal place. Diesel is barely distinguishable too, €2.1205 regionally against €2.1199 nationally.
+
+Underneath that stillness there is movement. Self-service petrol in Toscana has fallen for three days running, down 0.39 cents from its August 4th peak, with diesel off 0.63 cents over the same stretch. Metano went the other way entirely: up 1.67 cents in twenty-four hours to €1.6140, now almost six cents above the national average. And the region does break away on full service, €2.1794 versus €2.1459 nationally. Of 1,648 registered stations in Toscana, 1,490 reported prices today.
+
+These figures come from Fuel Dashboard, a project that tracks Italian fuel prices daily from MIMIT open data — national and regional averages across Benzina, Gasolio, GPL and Metano, self and full service, with day-by-day history and a different region in the spotlight every morning. You can browse it here: https://adeo-blip.github.io/fuel-price-italy/
+
+The more interesting part is not the data, it's the method. A dashboard like this maintained by hand in Excel dies within two weeks: download the CSV, clean it, recompute, re-export the charts, repeat forever. Instead the whole pipeline runs itself every morning — ingest, aggregate, regenerate, republish — and I built all of it with Claude Code. That is the real argument for AI coding tools: not writing code faster, but making projects sustainable that otherwise would not be worth starting.
+
+#FuelPrices #Italy #OpenData #DataVisualization #ClaudeCode #AI #Automation #Toscana #MIMIT #DataEngineering
+
+Draft only — review before posting. Adeo Patapo · adeopatapo@gmail.com
