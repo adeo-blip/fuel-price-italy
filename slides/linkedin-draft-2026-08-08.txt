@@ -1,0 +1,11 @@
+Today's Fuel Dashboard spotlight falls on Trentino-Alto Adige, and it carries a clear alpine premium: self-service Benzina at €2.0495 against a national average of €2.0026, nearly five cents more. Diesel tells the same story on a smaller scale, €2.1504 regionally versus €2.1139 nationally.
+
+But the trend is heading the other way. Self-service petrol in the region has now fallen three days in a row, down 0.67 cents from its August 4th peak, with diesel off 0.89 cents over the same stretch. Metano is the eye-catcher on the other side of the ledger: €1.7993 self-service against €1.5610 nationally, a gap of almost 24 cents. And the region reports better than anywhere the national average would suggest — 372 of 392 registered stations filed prices today, a 94.9% reporting rate versus 90.7% across Italy.
+
+All of this comes from Fuel Dashboard, a project tracking Italian fuel prices daily from MIMIT open data: national and regional averages across Benzina, Gasolio, GPL and Metano, self and full service, with day-by-day history and a different region in the spotlight every morning. Have a look: https://adeo-blip.github.io/fuel-price-italy/
+
+The project is really an argument about method. Maintained by hand in Excel, a dashboard like this lasts about two weeks — download the CSV, clean it, recompute the averages, re-export the charts, then do it all again tomorrow. Instead the whole pipeline runs itself each morning: ingest, aggregate, regenerate, republish. I built it with Claude Code, and that is the honest case for AI coding tools — not typing code faster, but making a project sustainable that otherwise would never have been worth starting.
+
+#FuelPrices #Italy #OpenData #DataVisualization #ClaudeCode #AI #Automation #TrentinoAltoAdige #MIMIT #DataEngineering
+
+Draft only — review before posting. Adeo Patapo · adeopatapo@gmail.com
