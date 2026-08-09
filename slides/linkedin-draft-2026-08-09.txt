@@ -1,0 +1,11 @@
+Today's Fuel Dashboard spotlight falls on Umbria, and it just dipped back under the two-euro line: self-service Benzina at €1.9984 on August 8th, its first sub-€2 reading since July 30th.
+
+The more interesting number is diesel. Gasolio self-service averaged €2.0865 in Umbria against €2.1090 nationally, so drivers there pay 2.25 cents per litre less than the Italian average — and 2.97 cents less on full service. Both main fuels have now fallen four tracked days running, with Benzina off 0.88 cents from its August 4th peak and Gasolio down 1.39 cents. Metano moved the opposite way, climbing from €1.4336 to €1.4761 since August 5th. Reporting held up well too: 438 of Umbria's 481 registered stations filed prices, a 91.1% rate against 90.6% nationally.
+
+All of this comes from Fuel Dashboard, a project tracking Italian fuel prices daily from MIMIT open data: national and regional averages across Benzina, Gasolio, GPL and Metano, self and full service, with day-by-day history and a different region in the spotlight every morning. Have a look: https://adeo-blip.github.io/fuel-price-italy/
+
+The project is really an argument about method. Maintained by hand in Excel, a dashboard like this lasts about two weeks — download the CSV, clean it, recompute the averages, re-export the charts, then do it all again tomorrow. Instead the whole pipeline runs itself each morning: ingest, aggregate, regenerate, republish. I built it with Claude Code, and that is the honest case for AI coding tools — not typing code faster, but making a project sustainable that otherwise would never have been worth starting.
+
+#FuelPrices #Italy #OpenData #DataVisualization #ClaudeCode #AI #Automation #Umbria #MIMIT #DataEngineering
+
+Draft only — review before posting. Adeo Patapo · adeopatapo@gmail.com
