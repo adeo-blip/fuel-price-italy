@@ -1,0 +1,13 @@
+Today's Fuel Dashboard spotlight lands on Valle d'Aosta, and Italy's smallest region is paying a mountain premium: self-service Benzina at €2.0242 per litre on August 9th, 2.56 cents above the national average of €1.9986. That's a euro or so extra on a 40-litre fill, every fill.
+
+Diesel is tighter — €2.1223 regionally against €2.1078 nationally, 1.45 cents dearer. But the number that stopped me was methane. It sat completely still at €1.5590 per kg for seventeen consecutive readings, then stepped up 4 cents on August 7th and froze again. That is the kind of move you simply never see in a national average.
+
+The local network explains a lot of it: 70 of Valle d'Aosta's 85 registered stations reported prices, an 82.4% rate against 90.5% nationally. In a region with 85 pumps, fifteen quiet ones matter.
+
+All of this comes from Fuel Dashboard, a project tracking Italian fuel prices daily from MIMIT open data — national and regional averages across Benzina, Gasolio, GPL and Metano, self and full service, with day-by-day history and a different region featured every morning. Take a look: https://adeo-blip.github.io/fuel-price-italy/
+
+Today's run processed 93,144 price rows from 23,958 stations. Maintained by hand in Excel, that lasts about two weeks before you quietly stop: download the CSV, clean it, recompute the averages, re-export the charts, repeat tomorrow. Instead the whole pipeline runs itself each morning — ingest, aggregate, regenerate, republish. I built it with Claude Code, and that is the honest case for AI coding tools: not typing code faster, but making a project sustainable that otherwise would never have been worth starting.
+
+#FuelPrices #Italy #OpenData #DataVisualization #ClaudeCode #AI #Automation #ValledAosta #MIMIT #DataEngineering
+
+Draft only — review before posting. Adeo Patapo · adeopatapo@gmail.com
