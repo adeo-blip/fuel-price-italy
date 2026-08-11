@@ -1,0 +1,17 @@
+Today's Fuel Dashboard spotlight falls on Veneto, which has quietly slipped under a psychological line: self-service petrol at €1.9953 per litre on August 10th, below both the two-euro mark and the national average of €1.9981. Diesel is a touch friendlier still — €2.0984 regionally against €2.1071 nationally.
+
+It is the sixth consecutive day of falling prices in the region, off a peak on August 4th. But the moves are getting smaller: less than a tenth of a cent between yesterday and today, which usually means a slide running out of road rather than a trend building.
+
+The contrarian number is methane. While petrol drifted down, Veneto's Metano climbed 6.86 cents since July 21st to €1.6162 per kg — over 5 cents above the national figure. Two fuels, same region, opposite directions, same three weeks.
+
+One more sign of a live network: 1,836 of Veneto's 1,997 registered stations reported a price this morning, 91.9% against 90.5% nationally.
+
+Fuel Dashboard tracks Italian fuel prices daily from official MIMIT open data — Benzina, Gasolio, GPL and Metano, self and full service, filterable by region, province, comune and brand, with day-by-day history. Have a look: https://adeo-blip.github.io/fuel-price-italy/
+
+Here is the part worth arguing about. Today's run processed 93,091 price rows from 23,958 stations. Maintained by hand in Excel, that is a morning of downloading, pasting, repairing broken joins and re-dragging formulas — and by the time the chart looks right, the data is a day old. I built the pipeline with Claude Code instead: fetch, join, aggregate, regenerate, redeploy, every morning, unattended. AI tooling did not make the spreadsheet faster. It made the spreadsheet unnecessary.
+
+If you are still babysitting a manual reporting file every morning, that is the first workflow to point an AI coding tool at.
+
+#FuelPrices #Italy #OpenData #DataVisualization #ClaudeCode #AI #Automation #Veneto #MIMIT #DataEngineering
+
+Draft only — review before posting. Adeo Patapo · adeopatapo@gmail.com
