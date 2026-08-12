@@ -1,0 +1,17 @@
+Today's Fuel Dashboard spotlight lands on Abruzzo, and the striking thing is how unremarkable it is: self-service petrol at €1.9944 per litre on August 11th, just 0.16 cents below the national €1.9960. Diesel is closer still and on the wrong side — €2.1049 regionally against €2.1044 nationally, a gap of five hundredths of a cent. If you wanted a region that simply is the Italian average, this is it.
+
+Petrol has now fallen for eight consecutive days, off a €2.0097 peak on August 4th, dropping back under two euros on the 8th. But the momentum is gone: less than a tenth of a cent of movement between yesterday and today on both petrol and diesel.
+
+The number that actually moved is methane. Abruzzo's Metano jumped 11.11 cents across two days in early August, to €1.5154 per kg — and has then printed exactly the same figure for six straight days. It is still the region's one real discount, 5.20 cents below the national average.
+
+Network check: 602 of Abruzzo's 669 registered stations reported a price this morning, a 90.0% rate against 90.5% nationally.
+
+Fuel Dashboard tracks Italian fuel prices daily from official MIMIT open data — Benzina, Gasolio, GPL and Metano, self and full service, filterable by region, province, comune and brand, with day-by-day history. Take a look: https://adeo-blip.github.io/fuel-price-italy/
+
+And here is the argument I keep making. Today's run chewed through 93,095 price rows from 23,957 stations. Done by hand in Excel that is a morning of downloading, pasting, fixing broken lookups and re-dragging formulas — and a gap of 0.16 cents between a region and the national average is meaningless if the sheet is a day behind. I built the whole pipeline with Claude Code: fetch, join, aggregate, rebuild, redeploy, every morning, with nobody watching. AI tooling did not make my spreadsheet faster. It removed the need for one.
+
+If you are still hand-feeding a reporting file every morning, that is the first thing to point an AI coding tool at.
+
+#FuelPrices #Italy #OpenData #DataVisualization #ClaudeCode #AI #Automation #Abruzzo #MIMIT #DataEngineering
+
+Draft only — review before posting. Adeo Patapo · adeopatapo@gmail.com
