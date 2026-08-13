@@ -1,0 +1,13 @@
+Today's Fuel Dashboard spotlight: Basilicata, where self-service petrol averages €2.0116 a litre — about 1.4 cents above the national average of €1.9977.
+
+That's a quietly strange number. Basilicata sits on top of Val d'Agri, the largest onshore oilfield in Italy. Producing the crude apparently does nothing for what you pay at the pump. Diesel follows the same pattern at €2.1180 locally versus €2.1063 nationally, and LPG is nearly 6 cents dearer than the national average.
+
+There's also a turn worth flagging. Petrol in Basilicata had fallen for seven consecutive days from its 4 August peak of €2.0242. Yesterday it ticked back up, and diesel did the same on the same day. Across the region's 267 registered stations, 238 reported a price — an 89% participation rate that has been rock-steady for three weeks.
+
+Fuel Dashboard tracks all four fuels across all 20 Italian regions using the official MIMIT daily price export — around 93,000 price rows from nearly 24,000 stations, reprocessed every morning. Have a look: https://adeo-blip.github.io/fuel-price-italy/
+
+The part I'd argue for: I built this with Claude Code, and that is the only reason it still exists. A manual Excel sheet with this data would have been abandoned by week three — someone has to download the export, clean it, recompute the aggregates, redraw the charts, every single day, forever. Instead the whole pipeline reruns itself and republishes the site. The AI tooling didn't just write the code faster; it made a self-maintaining thing feasible for one person, which is a different category of project than a spreadsheet you promise yourself you'll keep updated.
+
+#FuelPrices #Basilicata #Italy #DataViz #OpenData #ClaudeCode #AI #Automation #Dashboard #Energy
+
+Draft only — review before posting. Adeo Patapo · adeopatapo@gmail.com
