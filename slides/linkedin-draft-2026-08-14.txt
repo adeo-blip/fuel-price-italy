@@ -1,0 +1,9 @@
+Today's Fuel Dashboard spotlight: Calabria, where self-service diesel is running about 2.7 cents/L above the Italian national average (€2.140 vs €2.113) and self-service gasoline about 1.7 cents higher.
+
+Fuel Dashboard tracks daily fuel prices across all 20 Italian regions, pulling fresh data straight from Italy's official MIMIT feed every day and rebuilding itself automatically — no manual spreadsheet, no copy-pasting, no stale numbers. See today's full regional breakdown here: https://adeo-blip.github.io/fuel-price-italy/
+
+This is what keeps pulling me back to AI coding tools like Claude Code: a project like this — the data pipeline, the regional rotation logic, a self-updating dashboard, even the article you're reading right now — is something one person can build and keep running with zero manual maintenance. A few years ago this was a small team's job. Now it's a script that runs itself every morning.
+
+#FuelPrices #Italy #DataViz #ClaudeCode #AI #Automation #OpenData
+
+Draft only — review before posting. Adeo Patapo · adeopatapo@gmail.com
