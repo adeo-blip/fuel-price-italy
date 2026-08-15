@@ -1,0 +1,9 @@
+Campania is beating the national average at the pump today — self-service Benzina at €1.995/L and Gasolio at €2.114/L, each a touch below Italy's €2.002/L and €2.118/L benchmarks.
+
+That's today's spotlight from Fuel Dashboard, a free interactive tracker of Italian fuel prices by region, province, comune, and gestore — updated every single day. Check today's numbers, browse historical trends, and explore your own region at https://adeo-blip.github.io/fuel-price-italy/.
+
+The dashboard behind this post refreshes itself automatically: no manual spreadsheet, no copy-pasting CSVs into pivot tables. I built the entire pipeline — data ingestion, regional rotation, and even this article — with Claude Code. It's a real example of how far an AI coding tool can take a side project: what used to be a weekly chore is now a daily, zero-touch publish.
+
+#FuelPrices #Italy #DataViz #ClaudeCode #AI #OpenData #Automation #EnergyPrices
+
+Draft only — review before posting. Adeo Patapo · adeopatapo@gmail.com
