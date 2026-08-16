@@ -1,0 +1,11 @@
+Today's Fuel Dashboard spotlight: Emilia-Romagna, where self-service Benzina (€2.002/L) and Gasolio (€2.116/L) both sit just below Italy's national self-service averages — despite four consecutive days of price increases at the pump.
+
+Fuel Dashboard tracks daily petrol, diesel, GPL and methane prices across all 20 Italian regions, rotating a different region into the spotlight each day and pulling fresh numbers straight from the Ministry's MIMIT feed every morning. Take a look: https://adeo-blip.github.io/fuel-price-italy/
+
+The part I like most about this project isn't the data — it's how it's built. Instead of a manually updated Excel sheet that goes stale the moment someone forgets to touch it, the entire site rebuilds itself automatically every day using Claude Code. No dashboard maintenance, no copy-pasting numbers, no broken formulas. Just AI handling the boring, repetitive part of data journalism so the focus stays on what the numbers actually mean.
+
+If you're curious what a self-updating, AI-built data project looks like in practice, this is a small but real example.
+
+#FuelPrices #Italy #DataJournalism #AI #ClaudeCode #Automation #EnergyPrices #EmiliaRomagna
+
+Draft only — review before posting. Adeo Patapo · adeopatapo@gmail.com
