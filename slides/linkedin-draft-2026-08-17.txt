@@ -1,0 +1,9 @@
+Today's Fuel Dashboard spotlight: Friuli-Venezia Giulia, where self-service diesel has climbed for six straight days and now costs 2.4 cents more per liter than the Italian average.
+
+Fuel Dashboard is a free, self-updating site that tracks Benzina, Gasolio, GPL and Metano prices across all 20 Italian regions, pulling directly from the official MIMIT feed every day. No manual spreadsheet, no copy-pasting numbers — just fresh, structured pricing data you can actually browse. Take a look: https://adeo-blip.github.io/fuel-price-italy/
+
+This is also a small case study in what's now possible with AI coding tools. The entire pipeline — data ingestion, regional rotation logic, the article you're reading the caption for, and the site deployment — runs through Claude Code instead of a hand-maintained Excel file. What used to be a recurring manual chore is now a system that reports on itself, every single morning.
+
+#FuelPrices #Italy #DataViz #ClaudeCode #AI #Automation #EnergyPrices #OpenData
+
+Draft only — review before posting. Adeo Patapo · adeopatapo@gmail.com
