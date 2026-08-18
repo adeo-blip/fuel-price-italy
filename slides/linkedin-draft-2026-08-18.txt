@@ -1,0 +1,11 @@
+Today's Fuel Dashboard spotlight: Lazio, where self-service petrol is holding at €1.992/litre — still under the psychological €2 mark, and about 1.3 cents cheaper than the Italian national average.
+
+Fuel Dashboard is a free, self-updating site that tracks petrol, diesel, LPG and methane prices across all of Italy's 20 regions, pulling directly from the official MIMIT government feed every single day. No manual data entry, no stale spreadsheet — just a live picture of where fuel is cheapest and how prices are moving, region by region.
+
+The part I find genuinely useful to share: this entire pipeline — data ingestion, region selection, article writing, and the dashboard itself — is built and maintained with Claude Code. What used to be a manually updated Excel file is now a system that fetches, analyzes, and publishes itself daily. It's a small but concrete example of what AI-assisted development makes practical for a solo builder: a live analytics product with zero ongoing manual upkeep.
+
+Check today's numbers and explore any region at https://adeo-blip.github.io/fuel-price-italy/
+
+#FuelPrices #Italy #DataViz #ClaudeCode #AI #Automation #Dashboard #Energy
+
+Draft only — review before posting. Adeo Patapo · adeopatapo@gmail.com
