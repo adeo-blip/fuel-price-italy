@@ -1,0 +1,11 @@
+⛽ Today's Fuel Dashboard spotlight: Molise, where self-service Gasolio is averaging €2.1629/L — about 1.3 cents above Italy's national average, and still climbing after six days of gains.
+
+Fuel Dashboard is a free, self-updating website that tracks fuel prices across all of Italy's 20 regions, station by station, day by day. Every morning it pulls the latest MIMIT price data, rebuilds itself, and spotlights a new region — today it's Molise's turn. Take a look: https://adeo-blip.github.io/fuel-price-italy/
+
+The interesting part isn't just the prices — it's how this gets built. No manual Excel sheet, no copy-pasting numbers every day. I built the entire pipeline — data ingestion, regional rotation, charts, even this article — with Claude Code, an AI coding tool that writes and maintains the automation itself. What used to be hours of manual spreadsheet work is now a script that runs unattended every morning.
+
+If you're still tracking prices, inventory, or any recurring dataset in a spreadsheet that someone has to update by hand, it might be worth asking whether an AI-built pipeline could do it for you instead.
+
+#FuelPrices #Italy #DataViz #AI #ClaudeCode #Automation #OpenData #Molise
+
+Draft only — review before posting. Adeo Patapo · adeopatapo@gmail.com
