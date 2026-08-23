@@ -1,0 +1,11 @@
+Today's Fuel Dashboard spotlight: Piemonte, where self-service diesel (Gasolio) has climbed nearly 3.2 cents in the past week — more than double the pace of petrol's rise over the same stretch. Both fuels in the region sit just a touch below Italy's national self-service averages.
+
+Fuel Dashboard is a side project that tracks daily fuel prices across all 20 Italian regions, pulling directly from Italy's official MIMIT price feed. Each day it spotlights a different region, charts its 7-day price trend, and compares local prices to the national average — no manual spreadsheet required.
+
+That last part is what I actually want to highlight: the entire pipeline — pulling the data, picking the day's region, writing the article, even this caption — runs itself using Claude Code. No manual CSV wrangling, no Excel upkeep. It's a concrete example of what's possible when you hand the daily-grind parts of a project to an AI agent and put your own time elsewhere.
+
+Check out the live dashboard: https://adeo-blip.github.io/fuel-price-italy/
+
+#FuelPrices #Italy #DataAutomation #ClaudeCode #AI #BuildInPublic #Piemonte #EnergyPrices
+
+Draft only — review before posting. Adeo Patapo · adeopatapo@gmail.com
