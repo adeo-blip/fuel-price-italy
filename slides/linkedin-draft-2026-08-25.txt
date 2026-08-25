@@ -1,0 +1,9 @@
+🇮🇹 Today's regional spotlight: Sardegna, where self-service diesel just climbed past €2.16/litre — now pricier than the Italian mainland average, after a steady week-long rise of nearly 6 cents.
+
+That's the kind of granular, day-by-day signal you get from Fuel Dashboard, a project that tracks self-service and full-service prices for Benzina, Gasolio, GPL and Metano across all 20 Italian regions — rebuilt automatically every single morning from Italy's official MIMIT price feed. No manual data entry, no stale spreadsheet. Check today's numbers, and every region, at https://adeo-blip.github.io/fuel-price-italy/.
+
+Here's the part I think is genuinely interesting: this entire pipeline — data ingestion, regional rotation, article writing, and the live site — is built and maintained with Claude Code. What used to be a manually-updated Excel sheet is now a dashboard that fetches, processes, and republishes itself daily, with an AI agent even drafting the daily regional write-up. It's a small but concrete example of what AI-assisted development makes practical: infrastructure that would never have been worth building by hand.
+
+#FuelPrices #Italy #Sardegna #DataViz #ClaudeCode #AI #Automation #EnergyPrices #BuildInPublic
+
+Draft only — review before posting. Adeo Patapo · adeopatapo@gmail.com
