@@ -1,0 +1,9 @@
+Today's Fuel Dashboard spotlight: Sicilia, where self-service diesel has climbed nearly 4 cents in a week and now sits almost 2 cents above Italy's national average, while gasoline is holding right in line with the rest of the country.
+
+Fuel Dashboard is a free, self-updating dashboard tracking fuel prices across all of Italy's regions, pulling directly from the official MIMIT feed every day. No manual data entry, no stale spreadsheet — just the current national and regional picture for Benzina, Gasolio, GPL and Metano, updated automatically. Take a look at today's numbers and the full regional breakdown at https://adeo-blip.github.io/fuel-price-italy/
+
+The part I find genuinely useful here isn't just the data — it's how it gets produced. This entire dashboard, including the daily region rotation, the price processing, and even the article you're reading a summary of right now, is built and run with Claude Code. A year ago this would have been a recurring chore: downloading a CSV, updating a sheet, writing up the numbers by hand. Now it's a pipeline that rebuilds itself every morning. That's the real case for using AI coding tools on projects like this — not replacing analysis, but removing the manual maintenance that used to make daily, per-region reporting impractical.
+
+#FuelPrices #Italy #DataDashboard #ClaudeCode #AITools #EnergyPrices #Sicilia #BuildInPublic
+
+Draft only — review before posting. Adeo Patapo · adeopatapo@gmail.com
