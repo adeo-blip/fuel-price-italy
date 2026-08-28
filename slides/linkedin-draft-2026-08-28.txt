@@ -1,11 +1,9 @@
-⛽ Today's Fuel Dashboard spotlight: Trentino-Alto Adige, where self-service diesel just pushed past €2.20/liter — about 4 cents above Italy's national average, and climbing for over a week straight.
+Today's Fuel Dashboard spotlight: Trentino-Alto Adige, where self-service diesel has climbed for seven straight days in a row and now sits nearly 4 cents per litre above Italy's national average (€2.203 vs €2.164).
 
-Fuel Dashboard is a project I built to track Italy's daily fuel prices region by region, pulling directly from the official MIMIT feed. Instead of a spreadsheet someone has to update by hand, the whole thing — data collection, regional analysis, even this write-up — refreshes itself automatically every day.
+Fuel Dashboard tracks daily petrol, diesel, LPG and methane prices across all 20 Italian regions using the official MIMIT feed, and spotlights a different region every day so local trends like this one don't get lost in a single national number. Check today's numbers and the region-by-region history at https://adeo-blip.github.io/fuel-price-italy/
 
-That's the real story here: this level of granular, day-by-day, region-by-region detail simply isn't practical to maintain manually. It only works because I used Claude Code to build a pipeline that updates itself. AI tools like this are changing what a solo side project can realistically keep running — no team, no manual data entry, just an automated system doing the boring parts.
+What I like about this project is that it's a real argument for using AI coding tools for more than one-off scripts: instead of a manually maintained Excel sheet that someone has to remember to update, Claude Code helped me build a dashboard that pulls fresh data, recomputes every regional and national figure, and republishes itself automatically — every single day, with zero manual data entry.
 
-Check out the live dashboard: https://adeo-blip.github.io/fuel-price-italy/
-
-#FuelPrices #Italy #DataViz #BuildInPublic #ClaudeCode #AI #Automation #EnergyPrices
+#FuelPrices #Italy #DataViz #ClaudeCode #AI #Automation #EnergyPrices #TrentinoAltoAdige
 
 Draft only — review before posting. Adeo Patapo · adeopatapo@gmail.com
