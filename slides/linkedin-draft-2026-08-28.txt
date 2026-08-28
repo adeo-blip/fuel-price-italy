@@ -1,0 +1,11 @@
+⛽ Today's Fuel Dashboard spotlight: Trentino-Alto Adige, where self-service diesel just pushed past €2.20/liter — about 4 cents above Italy's national average, and climbing for over a week straight.
+
+Fuel Dashboard is a project I built to track Italy's daily fuel prices region by region, pulling directly from the official MIMIT feed. Instead of a spreadsheet someone has to update by hand, the whole thing — data collection, regional analysis, even this write-up — refreshes itself automatically every day.
+
+That's the real story here: this level of granular, day-by-day, region-by-region detail simply isn't practical to maintain manually. It only works because I used Claude Code to build a pipeline that updates itself. AI tools like this are changing what a solo side project can realistically keep running — no team, no manual data entry, just an automated system doing the boring parts.
+
+Check out the live dashboard: https://adeo-blip.github.io/fuel-price-italy/
+
+#FuelPrices #Italy #DataViz #BuildInPublic #ClaudeCode #AI #Automation #EnergyPrices
+
+Draft only — review before posting. Adeo Patapo · adeopatapo@gmail.com
