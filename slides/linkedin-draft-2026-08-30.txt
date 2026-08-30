@@ -1,0 +1,9 @@
+Today's regional spotlight on Fuel Dashboard: Valle d'Aosta, where self-service Gasolio is running about 2.2 cents above Italy's national average at €2.183/L, and Benzina sits roughly 1.3 cents over the national mean at €2.043/L. Both have been drifting upward through most of August.
+
+Fuel Dashboard tracks fuel prices across all 23,973 registered stations in Italy, updates itself every day straight from the MIMIT open data feed, and rotates through a different region each day for a closer look — no manual spreadsheet, no stale numbers. Check today's numbers and the rest of the country at https://adeo-blip.github.io/fuel-price-italy/
+
+This is also a small case study in what's now possible with AI coding tools: the entire pipeline, from data ingestion to the daily regional write-up you're reading, was built and is maintained with Claude Code. A few years ago this would have been a manually maintained Excel sheet updated (or forgotten) once a week. Now it's a live dashboard that refreshes itself every morning without anyone touching it.
+
+#FuelPrices #Italy #DataVisualization #ClaudeCode #AI #OpenData #Automation #ValleDAosta
+
+Draft only — review before posting. Adeo Patapo · adeopatapo@gmail.com
