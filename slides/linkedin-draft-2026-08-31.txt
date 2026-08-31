@@ -1,0 +1,11 @@
+Today's Fuel Dashboard spotlight: Veneto.
+
+Self-service Benzina in Veneto is running at €2.023/L and Gasolio at €2.149/L today, both a touch below Italy's national self-service averages of €2.029 and €2.160. After five weeks of steady increases, diesel prices in the region have actually eased for three days running.
+
+Fuel Dashboard is a free, interactive site tracking Italy's fuel prices by region, updated every single day: https://adeo-blip.github.io/fuel-price-italy/
+
+What's interesting isn't just the numbers, it's how this gets built. Instead of a manually maintained Excel sheet, the entire pipeline (data ingestion, regional rotation, trend analysis, even this write-up) runs through Claude Code. A daily regional deep-dive like this is only realistic when the boring data work is automated end to end, and that's the case for using AI tools to build small, self-updating tools instead of static reports.
+
+#FuelPrices #Italy #DataViz #ClaudeCode #BuildInPublic #Automation #EnergyPrices
+
+Draft only — review before posting. Adeo Patapo · adeopatapo@gmail.com
