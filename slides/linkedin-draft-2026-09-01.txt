@@ -1,0 +1,11 @@
+Today's regional spotlight on Fuel Dashboard: Abruzzo, where self-service petrol (€2.026/L) is running about half a cent below the Italian average, even as diesel (€2.162/L) sits almost exactly on the national line and has been easing for four days straight.
+
+Fuel Dashboard tracks fuel prices across all 20 Italian regions every day, pulling directly from the Ministry's MIMIT feed and turning it into a self-updating, interactive site: https://adeo-blip.github.io/fuel-price-italy/. No spreadsheet, no manual data entry — just fresh numbers each morning.
+
+That's really the point of this project. Building a daily, self-refreshing dashboard like this used to mean a dedicated data engineer or hours of manual spreadsheet upkeep. With Claude Code I built the whole pipeline — data ingestion, region-of-the-day logic, article generation, and the deployed site — as a side project, and it now maintains itself. It's a small but concrete example of how much more accessible AI tools have made building real, always-current products instead of a static, manually-updated Excel sheet.
+
+Curious what a similar daily-refresh dashboard could do with your own data? Take a look and let me know what you think.
+
+#FuelPrices #Italy #DataVisualization #ClaudeCode #AI #BuildInPublic #OpenData #Dashboard
+
+Draft only — review before posting. Adeo Patapo · adeopatapo@gmail.com
