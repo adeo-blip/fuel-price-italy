@@ -1,0 +1,9 @@
+Basilicata is today's spotlight region on Fuel Dashboard, and it's showing something you don't see every day: self-service petrol climbing for seven readings in a row (now €2.055/L) while diesel quietly eases back from its late-August peak to €2.171/L. Both sit above Italy's national self-service averages — a reminder that fuel prices don't move in lockstep even within one country.
+
+Fuel Dashboard tracks Benzina, Gasolio, GPL and Metano prices across all 20 Italian regions using the official MIMIT government feed, refreshed automatically every day. No manual spreadsheet, no copy-pasting CSVs into a chart — the whole thing pulls, processes and republishes itself. Take a look: https://adeo-blip.github.io/fuel-price-italy/
+
+This is also a small case study in what's now possible with AI coding tools: I built and maintain this entire self-updating dashboard — the data pipeline, the daily regional spotlight, even this caption — using Claude Code, instead of maintaining a manual Excel sheet that would go stale within a week. That's the real shift: tools like this make daily, per-region detail practical for a side project, not just for a newsroom with a data team.
+
+#FuelPrices #Italy #DataVisualization #AI #ClaudeCode #Automation #EnergyPrices #Basilicata
+
+Draft only — review before posting. Adeo Patapo · adeopatapo@gmail.com
