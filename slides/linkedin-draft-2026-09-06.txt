@@ -1,0 +1,11 @@
+Today's Fuel Dashboard spotlight: Friuli-Venezia Giulia, where self-service diesel is pushing toward €2.21 a litre — almost 3 cents above Italy's national average.
+
+Fuel Dashboard is a fully automated, self-updating website that tracks fuel prices across all 20 Italian regions every day, pulling directly from Italy's official MIMIT data feed. No manual spreadsheet, no copy-pasting — every region gets its own daily deep-dive, complete with 7-day trends and station-level detail.
+
+The whole thing — data pipeline, region rotation, article writing, and page publishing — runs itself, built end-to-end with Claude Code. It's a small example of what's possible when you let an AI tool own an entire daily workflow instead of maintaining it by hand in Excel.
+
+Check out today's Friuli-Venezia Giulia numbers and browse any region at https://adeo-blip.github.io/fuel-price-italy/
+
+#FuelPrices #Italy #DataAutomation #ClaudeCode #AI #OpenData #Dashboard #FriuliVeneziaGiulia
+
+Draft only — review before posting. Adeo Patapo · adeopatapo@gmail.com
