@@ -1,0 +1,9 @@
+Today's regional spotlight: Liguria. Self-service Benzina there just hit €2.078/litre — above Italy's national average of €2.066 — capping a steady climb of nearly four cents per litre over the past week.
+
+That's the kind of granular, day-by-day insight Fuel Dashboard surfaces automatically for a different Italian region every morning, alongside national trends across Benzina, Gasolio, GPL, and Metano. Check it out: https://adeo-blip.github.io/fuel-price-italy/
+
+What's notable isn't just the data — it's how it gets there. Instead of a manually-updated Excel sheet, Fuel Dashboard is a self-updating, interactive dashboard built entirely with Claude Code. It pulls fresh MIMIT price data, picks a new region to spotlight, and republishes itself every single day, with zero manual upkeep. That's the kind of leverage AI coding tools give small, self-directed projects: a level of maintenance that used to take a team now runs unattended.
+
+#FuelPrices #Italy #DataViz #ClaudeCode #AI #BuildInPublic #Automation #EnergyPrices
+
+Draft only — review before posting. Adeo Patapo · adeopatapo@gmail.com
