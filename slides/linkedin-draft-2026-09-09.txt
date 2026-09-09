@@ -1,0 +1,9 @@
+Today's Fuel Dashboard spotlight: Lombardia, where self-service diesel has climbed for seven straight tracked days and now costs about 2.3 cents more per liter than the Italian average.
+
+Fuel Dashboard is a self-updating site that tracks Italy's fuel prices region by region, every day, using the official MIMIT data feed. No spreadsheet, no manual copy-paste — the whole pipeline pulls fresh data, picks a region to spotlight, and writes the day's article automatically. Take a look: https://adeo-blip.github.io/fuel-price-italy/
+
+This is the kind of project that makes the case for building with AI tools rather than maintaining another Excel file: Claude Code wrote and now runs the data pipeline, the regional rotation logic, and the article generation, so the dashboard stays current with zero manual upkeep. It's a small example of what's possible when you let an AI coding agent own the boring, repetitive parts of a data project.
+
+#FuelPrices #Italy #Lombardia #DataViz #BuildInPublic #ClaudeCode #AI #Automation
+
+Draft only — review before posting. Adeo Patapo · adeopatapo@gmail.com
