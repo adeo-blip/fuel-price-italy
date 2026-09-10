@@ -1,0 +1,9 @@
+Today's Fuel Dashboard spotlight: Marche, where self-service Benzina sits at €2.056/L and Gasolio at €2.183/L — both still below Italy's national averages of €2.080 and €2.205, even after a steady week-long climb.
+
+Fuel Dashboard tracks Italian fuel prices at the national, regional, provincial, comune, and gestore level, updating automatically every day from the official MIMIT feed. No manual spreadsheet, no copy-pasting — just a pipeline that pulls fresh data, recalculates every figure, and republishes itself. Explore the full interactive dashboard at https://adeo-blip.github.io/fuel-price-italy/
+
+This is what's possible when you use AI tools like Claude Code to build the infrastructure instead of maintaining it by hand: a daily-updating, multi-language, fully interactive dashboard that would otherwise take a team to keep current, built and run by one person.
+
+#FuelPrices #Italy #DataViz #ClaudeCode #AI #OpenData #Automation #Marche
+
+Draft only — review before posting. Adeo Patapo · adeopatapo@gmail.com
