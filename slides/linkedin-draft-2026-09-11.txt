@@ -1,0 +1,9 @@
+Molise is today's spotlight on Fuel Dashboard: self-service petrol at €2.073/L, still about 1.6 cents below Italy's national average — but diesel has just nudged past it after four straight days of increases.
+
+Fuel Dashboard tracks self-service and served prices for Benzina, Gasolio, GPL and Metano across every Italian region, province, comune and gestore, updated daily. You can explore the full map, filter down to your own comune, and see the national trend at https://adeo-blip.github.io/fuel-price-italy/
+
+What I like most about this project isn't the data itself — it's how it gets published. Instead of a manually maintained Excel sheet that goes stale the moment nobody updates it, the entire pipeline (data ingestion, regional rotation, this article, even the LinkedIn draft you're reading) is generated automatically every morning using Claude Code. AI tools like this are what make a genuinely self-updating, interactive dashboard realistic for a side project instead of a full-time job.
+
+#FuelPrices #Italy #DataViz #OpenData #ClaudeCode #AI #Automation #Molise
+
+Draft only — review before posting. Adeo Patapo · adeopatapo@gmail.com
