@@ -1086,6 +1086,80 @@
       "reporting": 1682
     }
   },
+  "weekly": [
+    {
+      "week": "2026-W30",
+      "week_start": "2026-07-20",
+      "days_counted": 6,
+      "Benzina": 1.9729,
+      "Gasolio": 2.1695,
+      "GPL": 0.7131,
+      "Metano": 1.4651
+    },
+    {
+      "week": "2026-W31",
+      "week_start": "2026-07-27",
+      "days_counted": 7,
+      "Benzina": 2.0015,
+      "Gasolio": 2.1263,
+      "GPL": 0.7121,
+      "Metano": 1.4817
+    },
+    {
+      "week": "2026-W32",
+      "week_start": "2026-08-03",
+      "days_counted": 7,
+      "Benzina": 2.0026,
+      "Gasolio": 2.1102,
+      "GPL": 0.7114,
+      "Metano": 1.5392
+    },
+    {
+      "week": "2026-W33",
+      "week_start": "2026-08-10",
+      "days_counted": 7,
+      "Benzina": 1.9963,
+      "Gasolio": 2.1063,
+      "GPL": 0.7082,
+      "Metano": 1.5495
+    },
+    {
+      "week": "2026-W34",
+      "week_start": "2026-08-17",
+      "days_counted": 5,
+      "Benzina": 2.0091,
+      "Gasolio": 2.1339,
+      "GPL": 0.7049,
+      "Metano": 1.5612
+    },
+    {
+      "week": "2026-W35",
+      "week_start": "2026-08-24",
+      "days_counted": 5,
+      "Benzina": 2.0226,
+      "Gasolio": 2.1539,
+      "GPL": 0.7043,
+      "Metano": 1.5682
+    },
+    {
+      "week": "2026-W36",
+      "week_start": "2026-08-31",
+      "days_counted": 3,
+      "Benzina": 2.0348,
+      "Gasolio": 2.1591,
+      "GPL": 0.705,
+      "Metano": 1.6061
+    },
+    {
+      "week": "2026-W37",
+      "week_start": "2026-09-07",
+      "days_counted": 5,
+      "Benzina": 2.0786,
+      "Gasolio": 2.2017,
+      "GPL": 0.7023,
+      "Metano": 1.6841
+    }
+  ],
   "national_latest": {
     "date": "2026-09-11",
     "Benzina": {
@@ -1109,5 +1183,79 @@
       "reporting": 21640
     }
   },
-  "generated_at": "2026-09-12T09:32:18.552243+00:00"
+  "national_weekly": [
+    {
+      "week": "2026-W30",
+      "week_start": "2026-07-20",
+      "days_counted": 6,
+      "Benzina": 1.9756,
+      "Gasolio": 2.1747,
+      "GPL": 0.7592,
+      "Metano": 1.4999
+    },
+    {
+      "week": "2026-W31",
+      "week_start": "2026-07-27",
+      "days_counted": 7,
+      "Benzina": 2.003,
+      "Gasolio": 2.1361,
+      "GPL": 0.7569,
+      "Metano": 1.5175
+    },
+    {
+      "week": "2026-W32",
+      "week_start": "2026-08-03",
+      "days_counted": 7,
+      "Benzina": 2.0056,
+      "Gasolio": 2.1182,
+      "GPL": 0.7561,
+      "Metano": 1.5513
+    },
+    {
+      "week": "2026-W33",
+      "week_start": "2026-08-10",
+      "days_counted": 7,
+      "Benzina": 2.0005,
+      "Gasolio": 2.1133,
+      "GPL": 0.7566,
+      "Metano": 1.5703
+    },
+    {
+      "week": "2026-W34",
+      "week_start": "2026-08-17",
+      "days_counted": 5,
+      "Benzina": 2.0129,
+      "Gasolio": 2.1406,
+      "GPL": 0.7554,
+      "Metano": 1.5815
+    },
+    {
+      "week": "2026-W35",
+      "week_start": "2026-08-24",
+      "days_counted": 5,
+      "Benzina": 2.0275,
+      "Gasolio": 2.1615,
+      "GPL": 0.7546,
+      "Metano": 1.5892
+    },
+    {
+      "week": "2026-W36",
+      "week_start": "2026-08-31",
+      "days_counted": 3,
+      "Benzina": 2.0386,
+      "Gasolio": 2.1656,
+      "GPL": 0.7544,
+      "Metano": 1.6156
+    },
+    {
+      "week": "2026-W37",
+      "week_start": "2026-09-07",
+      "days_counted": 5,
+      "Benzina": 2.0806,
+      "Gasolio": 2.2065,
+      "GPL": 0.7553,
+      "Metano": 1.6914
+    }
+  ],
+  "generated_at": "2026-09-12T09:58:25.508254+00:00"
 }

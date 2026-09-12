@@ -57,6 +57,7 @@ FUEL_MAP = {
     'Diesel e+10': 'Gasolio', 'GP DIESEL': 'Gasolio', 'Blu Diesel Alpino': 'Gasolio',
     'E-DIESEL': 'Gasolio', 'V-Power': 'Benzina', 'V-Power Diesel': 'Gasolio',
     'F101': 'Gasolio', 'R100': 'Gasolio', 'SSP98': 'Benzina',
+    'Super': 'Benzina', 'Diesel': 'Gasolio',
     'GPL': 'GPL', 'Metano': 'Metano', 'GNL': 'Metano', 'L-GNC': 'Metano',
 }
 FLOORS = {'Benzina': 1.0, 'Gasolio': 1.0, 'GPL': 0.3, 'Metano': 0.5}

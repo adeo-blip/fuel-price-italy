@@ -1,11 +1,64 @@
 {
-  "title": "Piemonte: Benzina Nears €2.10 as Prices Keep Climbing",
-  "dek": "Self-service Benzina and Gasolio in Piemonte have risen for over a week straight, tracking almost exactly with Italy's national average.",
-  "body": [
-    "Piemonte drivers paid an average of €2.0974 per liter for self-service Benzina and €2.2182 for self-service Gasolio on September 11, according to the latest Fuel Dashboard data. Both figures sit just under the national self-service average of €2.0982 for Benzina and €2.2216 for Gasolio — Piemonte is effectively tracking the rest of the country almost cent-for-cent, rather than running notably cheaper or pricier.",
-    "The bigger story is direction: Benzina has risen every single day the dashboard has tracked over the past two weeks, climbing from €2.0316 on September 1 to €2.0974 on September 11 — nearly 7 cents in ten days, including a full cent jump in just the last 24 hours. Gasolio has followed the same steady climb, up from €2.154 to €2.2182 over the same stretch. Meanwhile the region's station network stayed essentially flat: 1,849 registered stations, with 1,679 (about 91%) actively reporting prices today — a sign the local network is healthy and consistently reporting even as prices move.",
-    "Tracking one region in this kind of daily detail — full price history, station-by-station reporting rates, and a same-day comparison to the national average — would be a heavy lift to maintain by hand in a spreadsheet, updated once and then left stale. Fuel Dashboard instead rebuilds itself automatically every day, pulling fresh MIMIT data, recomputing every region, and generating this very analysis — built with Claude Code, no manual upkeep required."
+  "title": "Piemonte: Four Fuels, Eight Weeks, One Clear Story",
+  "dek": "A full-quarter look at how Benzina, Gasolio, GPL and Metano have moved in Piemonte since tracking began — and how the region compares to the rest of Italy, fuel by fuel.",
+  "executive_summary": [
+    "Piemonte drivers paid €2.097 for self-service Benzina and €2.218 for Gasolio on September 11 — both essentially tied with the national self-service average (€2.098 and €2.222 respectively), a fraction of a cent apart in either direction. On the surface, Piemonte looks like an unremarkable, right-in-the-middle region.",
+    "Zoom out to the eight weeks of data Fuel Dashboard has now tracked for the region, and a sharper picture appears. Benzina is up 5.4% since the week of July 20, almost exactly matching Italy's 5.3% national rise — but Metano has climbed 15.0% over the same stretch, outpacing the national increase of 12.8%. GPL, meanwhile, is one of the only fuel/region combinations tracked this quarter that's gotten cheaper, down 1.5% regionally versus a smaller 0.5% national dip. This report walks through all four fuels individually, region against country, week by week."
   ],
-  "pull_quote": "Piemonte's Benzina has risen every day this month — up nearly 7 cents since September 1.",
-  "caption": "Today's Fuel Dashboard spotlight: Piemonte, where self-service Benzina has climbed to €2.0974/L and Gasolio to €2.2182/L — both tracking almost exactly with Italy's national average, but the real story is the trend: Benzina has risen every single day this month, up nearly 7 cents since September 1.\n\nFuel Dashboard (https://adeo-blip.github.io/fuel-price-italy/) tracks fuel prices across all 20 Italian regions, every province, comune, and gestore, updated daily straight from MIMIT's official feed — no manual spreadsheet, no stale numbers.\n\nThis kind of daily, region-by-region detail is only realistic because the whole pipeline — data ingestion, regional rotation, even this article — rebuilds itself automatically every day. I built it with Claude Code instead of maintaining an Excel file by hand, and it's a good example of what's possible when you let AI tools own the boring, repetitive parts of a data project so you can focus on what the numbers actually mean.\n\nIf you're curious how Italian fuel prices are moving in your region, take a look: https://adeo-blip.github.io/fuel-price-italy/\n\n#FuelPrices #Italy #Piemonte #DataViz #ClaudeCode #AI #Automation #EnergyMarkets\n\nDraft only — review before posting. Adeo Patapo · adeopatapo@gmail.com"
+  "fuel_sections": [
+    {
+      "fuel": "Benzina",
+      "heading": "Benzina: tracking the nation almost cent-for-cent",
+      "paragraphs": [
+        "Piemonte's self-service Benzina closed at €2.0974 per litre on September 11, up €0.0103 from the day before and just €0.0008 below the national self-service average of €2.0982 — as close a match to the rest of the country as this dashboard is likely to find.",
+        "The week-by-week view tells the real story: Benzina in Piemonte rose from a €1.9729 average in the week of July 20 to €2.0786 in the week of September 7 — a 5.4% increase over eight weeks, running almost exactly parallel to Italy's own 5.3% national climb over the same period. Whatever is driving pump prices up nationally is landing in Piemonte with very little regional distortion."
+      ]
+    },
+    {
+      "fuel": "Gasolio",
+      "heading": "Gasolio: a steadier, smaller climb",
+      "paragraphs": [
+        "Gasolio reached €2.2182 self-service in Piemonte on September 11, up €0.0096 day-over-day and running €0.0034 below the national self-service average of €2.2216.",
+        "Diesel's rise has been noticeably gentler than Benzina's this quarter: up 1.48% regionally since late July (€2.1695 to €2.2017 across the tracked weeks), versus a near-identical 1.46% nationally. Where Benzina jumped sharply in the most recent week, Gasolio's climb has stayed close to linear — fewer surprises, but also less of the volatility that tends to make headlines."
+      ]
+    },
+    {
+      "fuel": "GPL",
+      "heading": "GPL: the one fuel getting cheaper",
+      "paragraphs": [
+        "At €0.7018 self-service, Piemonte's GPL is essentially flat day-over-day (+€0.0003) but stands out for a very different reason: it's meaningfully cheaper than the national self-service average of €0.7556 — a gap of over 5 cents per litre that has held consistently across the whole tracking period.",
+        "Piemonte's GPL has actually declined 1.51% since the week of July 20, compared to a much smaller 0.51% national dip — making this region one of the few places in Italy where LPG buyers have genuinely caught a break this quarter, not just seen prices hold steady."
+      ]
+    },
+    {
+      "fuel": "Metano",
+      "heading": "Metano: the fastest mover of the quarter",
+      "paragraphs": [
+        "Metano is unchanged day-over-day at €1.7001 self-service — but that single-day calm masks the biggest move of any fuel tracked in this report. Over the eight weeks since July 20, Piemonte's Metano price has climbed 14.95%, from €1.4651 to €1.6841, outpacing even the national increase of 12.77% over the same span.",
+        "That gap matters: it means CNG buyers in Piemonte have seen a steeper cost increase than the average Italian driver, even though Metano is usually marketed as the budget alternative to Benzina and Gasolio. It's exactly the kind of regional divergence that a single national headline price would hide entirely."
+      ]
+    }
+  ],
+  "network_section": {
+    "heading": "A stable, well-reporting network",
+    "paragraphs": [
+      "Piemonte's station network held essentially flat this week: 1,849 registered stations as of September 11, down marginally from 1,850 the day before — the kind of small, ordinary churn (a station closing, one dropping off the registry) that's normal in a network this size.",
+      "1,679 of those stations — about 91% — actively reported a price today, consistent with the reporting rate seen across the region's recent history. A high, stable reporting rate is itself useful information: it means the price averages in this report reflect the overwhelming majority of the region's actual pumps, not a thin or unrepresentative slice of them."
+    ]
+  },
+  "methodology_section": {
+    "heading": "Built to update itself, not to be updated by hand",
+    "paragraphs": [
+      "Every figure in this report — the daily prices, the eight-week trend for four separate fuels, the station counts, the region-vs-national comparisons — comes from a pipeline that runs automatically, once a day, with no manual data entry. It pulls Italy's official MIMIT fuel-price feed, joins it against the national station registry, recomputes national and regional (and provincial, comune-level, and gestore-level) averages, and rotates to a new region for this exact kind of deep-dive report.",
+      "That's a meaningfully different way of working than the spreadsheet most fuel-price tracking still runs on: one person downloading a CSV, pasting it into Excel, and manually refreshing a chart — a process that works until the person forgets, or the file format changes, or nobody has time that week. This entire report, including the analysis you just read, was generated by Claude Code as part of that same daily, unattended pipeline."
+    ]
+  },
+  "closing": {
+    "heading": "See every region, not just Piemonte",
+    "paragraphs": [
+      "This is one region on one day. Fuel Dashboard tracks all 20 Italian regions, every province, comune and gestore, refreshed daily, viewable by day, week or month, in English, Italiano, Français, Русский and 中文 — with live counts of how many stations are registered and how many are actually reporting prices right now."
+    ]
+  },
+  "pull_quote": "Metano rose 15% in Piemonte this quarter — faster than the national average, and invisible in any single day-over-day number.",
+  "caption": "New from Fuel Dashboard: a full four-fuel, eight-week deep dive into Piemonte. Benzina and Gasolio are tracking the national average almost exactly, GPL is one of the few fuels actually getting cheaper this quarter, and Metano has quietly climbed 15% since late July — faster than the rest of Italy.\n\nFuel Dashboard (https://adeo-blip.github.io/fuel-price-italy/) tracks Benzina, Gasolio, GPL and Metano across all 20 Italian regions, every province, comune and gestore — daily, weekly and monthly — with live registered-vs-reporting station counts.\n\nThe entire pipeline, including this report, rebuilds itself automatically every day. No manual CSV downloads, no spreadsheet somebody has to remember to refresh — just Claude Code running the same process, unattended, every morning. It's a good example of what AI tools make realistic that a manual Excel workflow never quite could: genuine daily, per-region depth instead of an occasional, stale snapshot.\n\nTake a look at your own region: https://adeo-blip.github.io/fuel-price-italy/\n\n#FuelPrices #Italy #Piemonte #DataVisualization #ClaudeCode #AI #Automation #EnergyMarkets\n\nDraft only — review before posting. Adeo Patapo · adeopatapo@gmail.com"
 }

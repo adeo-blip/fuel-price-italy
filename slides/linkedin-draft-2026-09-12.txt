@@ -1,11 +1,11 @@
-Today's Fuel Dashboard spotlight: Piemonte, where self-service Benzina has climbed to €2.0974/L and Gasolio to €2.2182/L — both tracking almost exactly with Italy's national average, but the real story is the trend: Benzina has risen every single day this month, up nearly 7 cents since September 1.
+New from Fuel Dashboard: a full four-fuel, eight-week deep dive into Piemonte. Benzina and Gasolio are tracking the national average almost exactly, GPL is one of the few fuels actually getting cheaper this quarter, and Metano has quietly climbed 15% since late July — faster than the rest of Italy.
 
-Fuel Dashboard (https://adeo-blip.github.io/fuel-price-italy/) tracks fuel prices across all 20 Italian regions, every province, comune, and gestore, updated daily straight from MIMIT's official feed — no manual spreadsheet, no stale numbers.
+Fuel Dashboard (https://adeo-blip.github.io/fuel-price-italy/) tracks Benzina, Gasolio, GPL and Metano across all 20 Italian regions, every province, comune and gestore — daily, weekly and monthly — with live registered-vs-reporting station counts.
 
-This kind of daily, region-by-region detail is only realistic because the whole pipeline — data ingestion, regional rotation, even this article — rebuilds itself automatically every day. I built it with Claude Code instead of maintaining an Excel file by hand, and it's a good example of what's possible when you let AI tools own the boring, repetitive parts of a data project so you can focus on what the numbers actually mean.
+The entire pipeline, including this report, rebuilds itself automatically every day. No manual CSV downloads, no spreadsheet somebody has to remember to refresh — just Claude Code running the same process, unattended, every morning. It's a good example of what AI tools make realistic that a manual Excel workflow never quite could: genuine daily, per-region depth instead of an occasional, stale snapshot.
 
-If you're curious how Italian fuel prices are moving in your region, take a look: https://adeo-blip.github.io/fuel-price-italy/
+Take a look at your own region: https://adeo-blip.github.io/fuel-price-italy/
 
-#FuelPrices #Italy #Piemonte #DataViz #ClaudeCode #AI #Automation #EnergyMarkets
+#FuelPrices #Italy #Piemonte #DataVisualization #ClaudeCode #AI #Automation #EnergyMarkets
 
 Draft only — review before posting. Adeo Patapo · adeopatapo@gmail.com
