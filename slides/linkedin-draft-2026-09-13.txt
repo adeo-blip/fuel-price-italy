@@ -1,0 +1,9 @@
+Today's Fuel Dashboard spotlight is on Puglia, and the most interesting number isn't the daily price — it's the trend underneath it. Over the past eight weeks, Italy's national Metano price has actually risen faster (+13.2%) than Puglia's own already-elevated price (+8.5%), meaning the rest of the country is catching up to what Puglia has been paying at the pump for methane. Meanwhile Puglia's GPL, already the region's cheapest fuel by a wide margin, has kept drifting down relative to the national average — a 6.5% discount that's still widening.
+
+Fuel Dashboard tracks Benzina, Gasolio, GPL, and Metano prices across all 20 Italian regions, every provincia, and thousands of comuni, refreshed daily from Italy's official MIMIT open-data feed. You can explore it live at https://adeo-blip.github.io/fuel-price-italy/.
+
+What I think is worth calling out: this entire dashboard, the daily data pipeline, the region-of-the-day report, and even the analysis paragraphs above were built and are run end-to-end with Claude Code — no manually-maintained Excel sheet, no person recalculating weekly averages by hand. It updates itself every morning. That's the case for using AI coding tools for this kind of ongoing data project: the marginal cost of covering one more region, one more fuel, or one more day is close to zero once the pipeline exists, which just isn't true of a spreadsheet someone has to babysit.
+
+#FuelPrices #Italy #Puglia #DataJournalism #ClaudeCode #OpenData #EnergyPrices
+
+Draft only — review before posting. Adeo Patapo · adeopatapo@gmail.com
