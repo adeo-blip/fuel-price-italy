@@ -1,0 +1,11 @@
+Today's Fuel Dashboard spotlight lands on Sicilia — and the numbers turned up something I didn't expect: the region's Metano (natural gas) price sat completely frozen at €1.839 for six straight weeks from late July through August, while the national average quietly climbed more than 12% over that same stretch. Then, in the last three weeks, Sicilia's price broke loose and jumped 6.5%, landing at €1.959 today, now running 13% above the national average.
+
+That's the kind of pattern you only catch if you're tracking the weekly trend, not just today's price — which is exactly what Fuel Dashboard does automatically, every single day, for all 20 Italian regions.
+
+Fuel Dashboard is a free, self-updating site tracking Italian fuel prices (Benzina, Gasolio, GPL, Metano) down to the region, province, comune, and individual station operator. Explore it at https://adeo-blip.github.io/fuel-price-italy/.
+
+What's maybe most interesting about this project isn't the fuel prices themselves — it's how it's built. There's no analyst pulling CSVs and updating a spreadsheet each morning. The entire pipeline — pulling the data, computing regional and national trends, picking today's featured region, and writing this report's analysis — runs unattended every day, built with Claude Code. It's a small but real example of what's possible when you use AI tools to build self-updating data products instead of maintaining them by hand.
+
+#FuelPrices #Italy #Sicilia #DataJournalism #AI #ClaudeCode #Automation #EnergyPrices
+
+Draft only — review before posting. Adeo Patapo · adeopatapo@gmail.com
