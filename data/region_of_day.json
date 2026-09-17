@@ -1130,9 +1130,55 @@
         "registered": 392,
         "reporting": 371
       }
+    },
+    {
+      "date": "2026-09-16",
+      "Benzina": {
+        "self": 2.1872,
+        "served": 2.2913
+      },
+      "Gasolio": {
+        "self": 2.3068,
+        "served": 2.4138
+      },
+      "GPL": {
+        "self": 0.8024,
+        "served": 0.825
+      },
+      "Metano": {
+        "self": 1.966,
+        "served": 1.8545
+      },
+      "stations": {
+        "registered": 392,
+        "reporting": 372
+      }
     }
   ],
   "latest": {
+    "date": "2026-09-16",
+    "Benzina": {
+      "self": 2.1872,
+      "served": 2.2913
+    },
+    "Gasolio": {
+      "self": 2.3068,
+      "served": 2.4138
+    },
+    "GPL": {
+      "self": 0.8024,
+      "served": 0.825
+    },
+    "Metano": {
+      "self": 1.966,
+      "served": 1.8545
+    },
+    "stations": {
+      "registered": 392,
+      "reporting": 372
+    }
+  },
+  "previous": {
     "date": "2026-09-15",
     "Benzina": {
       "self": 2.174,
@@ -1153,29 +1199,6 @@
     "stations": {
       "registered": 392,
       "reporting": 371
-    }
-  },
-  "previous": {
-    "date": "2026-09-14",
-    "Benzina": {
-      "self": 2.1628,
-      "served": 2.2671
-    },
-    "Gasolio": {
-      "self": 2.2784,
-      "served": 2.385
-    },
-    "GPL": {
-      "self": 0.8044,
-      "served": 0.826
-    },
-    "Metano": {
-      "self": 1.966,
-      "served": 1.85
-    },
-    "stations": {
-      "registered": 392,
-      "reporting": 372
     }
   },
   "weekly": [
@@ -1254,34 +1277,34 @@
     {
       "week": "2026-W38",
       "week_start": "2026-09-14",
-      "days_counted": 2,
-      "Benzina": 2.1684,
-      "Gasolio": 2.2856,
+      "days_counted": 3,
+      "Benzina": 2.1747,
+      "Gasolio": 2.2927,
       "GPL": 0.8024,
       "Metano": 1.966
     }
   ],
   "national_latest": {
-    "date": "2026-09-15",
+    "date": "2026-09-16",
     "Benzina": {
-      "self": 2.1312,
-      "served": 2.2681
+      "self": 2.1435,
+      "served": 2.2806
     },
     "Gasolio": {
-      "self": 2.2584,
-      "served": 2.4077
+      "self": 2.2728,
+      "served": 2.4225
     },
     "GPL": {
-      "self": 0.7542,
-      "served": 0.7562
+      "self": 0.7554,
+      "served": 0.7563
     },
     "Metano": {
-      "self": 1.7503,
-      "served": 1.8177
+      "self": 1.7608,
+      "served": 1.8279
     },
     "stations": {
-      "registered": 24004,
-      "reporting": 21646
+      "registered": 24000,
+      "reporting": 21645
     }
   },
   "national_weekly": [
@@ -1360,12 +1383,12 @@
     {
       "week": "2026-W38",
       "week_start": "2026-09-14",
-      "days_counted": 2,
-      "Benzina": 2.1246,
-      "Gasolio": 2.2513,
-      "GPL": 0.7543,
-      "Metano": 1.7411
+      "days_counted": 3,
+      "Benzina": 2.1309,
+      "Gasolio": 2.2585,
+      "GPL": 0.7547,
+      "Metano": 1.7477
     }
   ],
-  "generated_at": "2026-09-17T05:38:26.398466+00:00"
+  "generated_at": "2026-09-17T09:57:03.069495+00:00"
 }
