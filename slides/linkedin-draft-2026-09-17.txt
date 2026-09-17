@@ -1,0 +1,9 @@
+Today's Fuel Dashboard spotlight lands on Trentino-Alto Adige, and the number that stands out isn't the daily price move, it's the trend hiding underneath it. The region's methane has carried a hefty premium over the rest of Italy all summer, but that premium has shrunk from nearly 20% to under 13% in just nine weeks, as national methane prices catch up faster than the region's own. Meanwhile LPG is moving the other way, with the regional premium there actually widening. Neither of those stories shows up in a single day's price, only in the trend.
+
+Fuel Dashboard tracks self-service and served prices for Benzina, Gasolio, GPL and Metano across every region, province and comune in Italy, updated daily from the official MIMIT open-data feed, live now at https://adeo-blip.github.io/fuel-price-italy/.
+
+What I actually want to highlight is how this got built: there's no analyst pulling a CSV into Excel every morning, no manually updated chart, no one writing the commentary by hand. The entire pipeline, the daily data refresh, the region rotation, the weekly trend analysis, even the report you'd be reading, is generated automatically every day by an unattended system built with Claude Code. It's a small, concrete example of what's now possible when you hand a repetitive, data-heavy task to an AI coding tool instead of a spreadsheet: it doesn't get maintained less carefully over time, and it doesn't get tired of writing the same kind of report every single morning.
+
+#FuelPrices #Italy #DataPipeline #ClaudeCode #AItools #Automation #EnergyMarkets
+
+Draft only — review before posting. Adeo Patapo · adeopatapo@gmail.com
