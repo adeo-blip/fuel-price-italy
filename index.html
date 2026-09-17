@@ -458,6 +458,7 @@ const I18N = {
     kpi_note:'vs. previous update', kpi_updated:'Updated {date}',
     kpi_first_day:'First day tracked — trend starts building tomorrow', kpi_loading:'Loading…',
     trends_title:'Price trends', trends_note:'Choose a timeframe and a fuel to see how the national self-service average has moved.',
+    trends_note_scoped:'Choose a timeframe and a fuel to see how the self-service average has moved for {scope} — {name}.',
     granularity_daily:'Daily', granularity_weekly:'Weekly', granularity_monthly:'Monthly',
     legend_self:'Self-service', legend_served:'Full service',
     scope_label_italia:'Italy', scope_label_regione:'Region', scope_label_provincia:'Province',
@@ -495,6 +496,7 @@ const I18N = {
     kpi_note:'rispetto al rilevamento precedente', kpi_updated:'Aggiornato al {date}',
     kpi_first_day:'Primo giorno monitorato — l\'andamento comincia da domani', kpi_loading:'Caricamento…',
     trends_title:'Andamento dei prezzi', trends_note:'Scegli un intervallo temporale e un carburante per vedere come si è mosso il prezzo medio nazionale self-service.',
+    trends_note_scoped:'Scegli un intervallo temporale e un carburante per vedere come si è mosso il prezzo medio self-service per {scope} — {name}.',
     granularity_daily:'Giornaliero', granularity_weekly:'Settimanale', granularity_monthly:'Mensile',
     legend_self:'Self-service', legend_served:'Servito',
     scope_label_italia:'Italia', scope_label_regione:'Regione', scope_label_provincia:'Provincia',
@@ -532,6 +534,7 @@ const I18N = {
     kpi_note:'par rapport au relevé précédent', kpi_updated:'Mis à jour le {date}',
     kpi_first_day:'Premier jour suivi — la tendance commence à se dessiner demain', kpi_loading:'Chargement…',
     trends_title:'Évolution des prix', trends_note:"Choisissez une période et un carburant pour voir l'évolution du prix moyen national en libre-service.",
+    trends_note_scoped:"Choisissez une période et un carburant pour voir l'évolution du prix moyen en libre-service pour {scope} — {name}.",
     granularity_daily:'Quotidien', granularity_weekly:'Hebdomadaire', granularity_monthly:'Mensuel',
     legend_self:'Libre-service', legend_served:'Avec service',
     scope_label_italia:'Italie', scope_label_regione:'Région', scope_label_provincia:'Province',
@@ -569,6 +572,7 @@ const I18N = {
     kpi_note:'по сравнению с предыдущим замером', kpi_updated:'Обновлено {date}',
     kpi_first_day:'Первый день наблюдений — динамика начнёт строиться завтра', kpi_loading:'Загрузка…',
     trends_title:'Динамика цен', trends_note:'Выберите период и вид топлива, чтобы увидеть динамику средней цены самообслуживания по стране.',
+    trends_note_scoped:'Выберите период и вид топлива, чтобы увидеть динамику средней цены самообслуживания для {scope} — {name}.',
     granularity_daily:'По дням', granularity_weekly:'По неделям', granularity_monthly:'По месяцам',
     legend_self:'Самообслуживание', legend_served:'С обслуживанием',
     scope_label_italia:'Италия', scope_label_regione:'Регион', scope_label_provincia:'Провинция',
@@ -606,6 +610,7 @@ const I18N = {
     kpi_note:'较上次更新', kpi_updated:'更新于 {date}',
     kpi_first_day:'首个记录日——趋势将从明天开始累积', kpi_loading:'加载中…',
     trends_title:'价格趋势', trends_note:'选择时间范围和燃油种类,查看全国自助加油平均价格的变化。',
+    trends_note_scoped:'选择时间范围和燃油种类,查看{scope} — {name}的自助加油平均价格变化。',
     granularity_daily:'每日', granularity_weekly:'每周', granularity_monthly:'每月',
     legend_self:'自助', legend_served:'有人服务',
     scope_label_italia:'意大利', scope_label_regione:'大区', scope_label_provincia:'省份',
@@ -963,6 +968,7 @@ function applyLanguage(lang){
     }
   }
   updateScopeNote();
+  updateTrendsNote();
   renderKPI();
   updateGranularitySeg();
   updateFuelPills();
@@ -1029,6 +1035,17 @@ function updateScopeNote(){
     .replace('{name}', currentScopeKey)
     .replace('{date}', dateLabel);
 }
+function updateTrendsNote(){
+  const note=document.querySelector('[data-i18n="trends_note"]');
+  if(!note) return;
+  if(currentScopeType==='italia' || !currentScopeKey){
+    note.textContent = I18N[currentLang].trends_note;
+    return;
+  }
+  note.textContent = I18N[currentLang].trends_note_scoped
+    .replace('{scope}', I18N[currentLang]['scope_label_'+currentScopeType])
+    .replace('{name}', currentScopeKey);
+}
 function chooseScopeValue(name){
   currentScopeKey=name;
   document.getElementById('scope-search').value=name;
@@ -1038,6 +1055,7 @@ function chooseScopeValue(name){
   tag.innerHTML=`<span>${I18N[currentLang]['scope_label_'+currentScopeType]}: <b>${esc(name)}</b></span>`;
   currentScopeSeries=buildScopeSeries(currentScopeType, currentScopeKey);
   updateScopeNote();
+  updateTrendsNote();
   renderAll();
 }
 async function selectScopeType(scopeType){
@@ -1052,6 +1070,7 @@ async function selectScopeType(scopeType){
     combo.classList.add('vis-hidden');
     currentScopeSeries=buildScopeSeries('italia', null);
     updateScopeNote();
+    updateTrendsNote();
     renderAll();
     return;
   }
@@ -1061,6 +1080,7 @@ async function selectScopeType(scopeType){
   closeScopeList();
   currentScopeSeries=emptyScopeSeries(SCOPE_FUELS[scopeType], SCOPE_SERVED[scopeType]);
   updateScopeNote();
+  updateTrendsNote();
   renderAll();
   try{ await loadScopeFile(scopeType); }catch(e){ console.error('Failed to load scope file', scopeType, e); }
 }
