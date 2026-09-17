@@ -1,11 +1,9 @@
-Today's Fuel Dashboard spotlight: Trentino-Alto Adige, where diesel and petrol are simply riding the same nationwide wave — but LPG and natural gas are telling two opposite stories. The region's Metano premium over the rest of Italy has narrowed by about 27% since July, even though it still costs roughly 20 cents more per kg there than the national average. GPL is doing the reverse: its regional premium has widened by nearly 49% in under two months.
+Today's Fuel Dashboard spotlight lands on Trentino-Alto Adige, and the standout finding isn't the daily price — it's a nine-week trend. The region has long carried Italy's steepest premium on Metano (natural gas for vehicles), but that gap has shrunk from roughly 20% to about 12.5% since late July, simply because national methane prices are rising almost twice as fast as the region's own. Petrol and diesel, meanwhile, are moving in near-lockstep with the national market, and LPG is one of the only fuels bucking the trend by rising locally while easing nationally.
 
-Fuel Dashboard is a fully automated, self-updating site tracking Italian fuel prices across all 20 regions, every province, and thousands of stations and comuni — rebuilt and republished every single day. No one opens a spreadsheet to make this happen: an unattended pipeline built with Claude Code pulls the data, picks the day's featured region, runs the trend analysis, writes the report, and redeploys the live dashboard, start to finish.
+Fuel Dashboard tracks self-service and served prices for Benzina, Gasolio, GPL and Metano across every Italian region, province, municipality and fuel brand, updated daily from Italy's official MIMIT price feed. You can explore it yourself at https://adeo-blip.github.io/fuel-price-italy/.
 
-That's the case for building this kind of thing with AI tools instead of maintaining it by hand: a one-person side project can now ship daily, data-grounded analysis at a depth and consistency that would take a small team to maintain manually — and it never misses a day.
+What I think is worth calling out: this entire dashboard, the daily data pipeline, the regional rotation logic, and even the ~10-page report this caption comes from are built and run end-to-end with Claude Code, an AI coding agent. No spreadsheet, no manual data entry, no analyst writing a weekly summary by hand — just code that pulls the data, computes the trends, and writes the analysis, every single day. It's a small but concrete example of what's now possible when you use AI tools to build infrastructure instead of maintaining it manually: a self-updating dashboard and report that would otherwise take a person real recurring time to produce, running unattended.
 
-Explore your own region at https://adeo-blip.github.io/fuel-price-italy/
-
-#FuelPrices #Italy #DataJournalism #AI #ClaudeCode #Automation #EnergyMarkets
+#FuelPrices #Italy #DataAnalytics #AI #ClaudeCode #Automation #EnergyMarkets
 
 Draft only — review before posting. Adeo Patapo · adeopatapo@gmail.com
