@@ -1,6 +1,6 @@
-"""Update the national, Regione, Provincia, Comune and Gestore level JSON datasets
-that power the Fuel Dashboard, from two MIMIT exports — prices (prezzo_alle_8) and
-the active station registry (anagrafica_impianti_attivi).
+"""Update the national, Regione, Provincia, Bandiera, Comune and Gestore level JSON
+datasets that power the Fuel Dashboard, from two MIMIT exports — prices
+(prezzo_alle_8) and the active station registry (anagrafica_impianti_attivi).
 
 Each source is read from a same-named CSV manually dropped in the repo root
 (prezzo_alle_8.csv / anagrafica_impianti_attivi.csv, or a dated/"(1)" variant —
@@ -39,6 +39,7 @@ SCOPE_FILES = {
     'provincia': os.path.join(BASE_DIR, "data", "data_provincia.json"),
     'comune': os.path.join(BASE_DIR, "data", "data_comune.json"),
     'gestore': os.path.join(BASE_DIR, "data", "data_gestore.json"),
+    'bandiera': os.path.join(BASE_DIR, "data", "data_bandiera.json"),
 }
 COMUNE_RETENTION_DAYS = 60
 GESTORE_RETENTION_DAYS = 35
@@ -131,6 +132,7 @@ def load_registry(raw_text, sigla_to_provincia, sigla_to_regione, name_to_sigla)
     if missing:
         print(f"ERROR: registry feed missing columns {missing}. Header: {header}", file=sys.stderr)
         sys.exit(1)
+    has_bandiera = 'Bandiera' in idx
 
     registry = {}
     for line in lines[2:]:
@@ -143,9 +145,10 @@ def load_registry(raw_text, sigla_to_provincia, sigla_to_regione, name_to_sigla)
         if not station_id:
             continue
         gestore = parts[idx['Gestore']].strip() or UNSPECIFIED
+        bandiera = (parts[idx['Bandiera']].strip() or UNSPECIFIED) if has_bandiera else UNSPECIFIED
         comune = parts[idx['Comune']].strip() or UNSPECIFIED
         provincia, regione = resolve_provincia(parts[idx['Provincia']], sigla_to_provincia, sigla_to_regione, name_to_sigla)
-        registry[station_id] = {'gestore': gestore, 'comune': comune, 'provincia': provincia, 'regione': regione}
+        registry[station_id] = {'gestore': gestore, 'bandiera': bandiera, 'comune': comune, 'provincia': provincia, 'regione': regione}
     return registry
 
 
@@ -261,12 +264,14 @@ def main():
     by_provincia = defaultdict(new_bucket)
     by_comune = defaultdict(new_bucket)
     by_gestore = defaultdict(new_bucket)
+    by_bandiera = defaultdict(new_bucket)
 
     reporting_national = set()
     reporting_regione = defaultdict(set)
     reporting_provincia = defaultdict(set)
     reporting_comune = defaultdict(set)
     reporting_gestore = defaultdict(set)
+    reporting_bandiera = defaultdict(set)
 
     row_count = 0
     for line in lines[2:]:
@@ -285,6 +290,7 @@ def main():
             reporting_provincia[station['provincia']].add(station_id)
             reporting_comune[station['comune']].add(station_id)
             reporting_gestore[station['gestore']].add(station_id)
+            reporting_bandiera[station['bandiera']].add(station_id)
 
         fuel_raw = parts[idx['descCarburante']]
         fuel = FUEL_MAP.get(fuel_raw)
@@ -306,18 +312,20 @@ def main():
             by_provincia[station['provincia']][fuel][bucket_key].append(price)
             by_comune[station['comune']][fuel][bucket_key].append(price)
             by_gestore[station['gestore']][fuel][bucket_key].append(price)
+            by_bandiera[station['bandiera']][fuel][bucket_key].append(price)
 
     if row_count == 0:
         print("ERROR: parsed zero data rows from feed — format may have changed", file=sys.stderr)
         sys.exit(1)
 
     registered_regione, registered_provincia = Counter(), Counter()
-    registered_comune, registered_gestore = Counter(), Counter()
+    registered_comune, registered_gestore, registered_bandiera = Counter(), Counter(), Counter()
     for st in registry.values():
         registered_regione[st['regione']] += 1
         registered_provincia[st['provincia']] += 1
         registered_comune[st['comune']] += 1
         registered_gestore[st['gestore']] += 1
+        registered_bandiera[st['bandiera']] += 1
 
     # --- national entry (data.json — backward-compatible shape, now with station counts) ---
     entry = {"date": date_str}
@@ -333,9 +341,10 @@ def main():
     with open(DATA_JSON, 'w', encoding='utf-8') as f:
         json.dump(data, f, ensure_ascii=False)
 
-    # --- Regione / Provincia / Comune / Gestore level ---
+    # --- Regione / Provincia / Bandiera / Comune / Gestore level ---
     write_scope_file(SCOPE_FILES['regione'], date_str, by_regione, registered_regione, reporting_regione, include_served=True)
     write_scope_file(SCOPE_FILES['provincia'], date_str, by_provincia, registered_provincia, reporting_provincia, include_served=True)
+    write_scope_file(SCOPE_FILES['bandiera'], date_str, by_bandiera, registered_bandiera, reporting_bandiera, include_served=True)
     write_scope_file_indexed(SCOPE_FILES['comune'], date_str, by_comune, registered_comune, reporting_comune,
                               include_served=False, retention_days=COMUNE_RETENTION_DAYS, fuels=DRILLDOWN_FUELS, decimals=3)
     write_scope_file_indexed(SCOPE_FILES['gestore'], date_str, by_gestore, registered_gestore, reporting_gestore,

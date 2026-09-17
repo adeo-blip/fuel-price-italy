@@ -366,16 +366,17 @@ const FUEL_VAR = {Benzina:'--f-benzina', Gasolio:'--f-gasolio', GPL:'--f-gpl', M
 const GLOSS_KEY = {Benzina:'gloss_benzina', Gasolio:'gloss_gasolio', GPL:'gloss_gpl', Metano:'gloss_metano'};
 
 /* ---------------- Geography / operator scope (Italia / Regione / Provincia / Comune / Gestore) ---------------- */
-const SCOPE_TYPES = ['italia','regione','provincia','comune','gestore'];
+const SCOPE_TYPES = ['italia','regione','provincia','bandiera','comune','gestore'];
 const SCOPE_FILE_URL = {
   regione: './data/data_regione.json',
   provincia: './data/data_provincia.json',
+  bandiera: './data/data_bandiera.json',
   comune: './data/data_comune.json',
   gestore: './data/data_gestore.json',
 };
-const SCOPE_INDEXED = {regione:false, provincia:false, comune:true, gestore:true};
-const SCOPE_FUELS = {italia:FUELS, regione:FUELS, provincia:FUELS, comune:['Benzina','Gasolio'], gestore:['Benzina','Gasolio']};
-const SCOPE_SERVED = {italia:true, regione:true, provincia:true, comune:false, gestore:false};
+const SCOPE_INDEXED = {regione:false, provincia:false, bandiera:false, comune:true, gestore:true};
+const SCOPE_FUELS = {italia:FUELS, regione:FUELS, provincia:FUELS, bandiera:FUELS, comune:['Benzina','Gasolio'], gestore:['Benzina','Gasolio']};
+const SCOPE_SERVED = {italia:true, regione:true, provincia:true, bandiera:true, comune:false, gestore:false};
 
 let SCOPE_CACHE = {};
 let SCOPE_NAME_IDX = {};
@@ -460,7 +461,7 @@ const I18N = {
     granularity_daily:'Daily', granularity_weekly:'Weekly', granularity_monthly:'Monthly',
     legend_self:'Self-service', legend_served:'Full service',
     scope_label_italia:'Italy', scope_label_regione:'Region', scope_label_provincia:'Province',
-    scope_label_comune:'Municipality', scope_label_gestore:'Operator',
+    scope_label_bandiera:'Brand', scope_label_comune:'Municipality', scope_label_gestore:'Operator',
     scope_search_placeholder:'Type to search…', scope_no_match:'No matches',
     scope_note_filtered:'Showing {scope} — {name}. Detailed tracking for this view started on {date}, so history will be short at first.',
     scope_prompt:'Search and select a {scope} above to see its data.', kpi_select_prompt:'Select above',
@@ -497,7 +498,7 @@ const I18N = {
     granularity_daily:'Giornaliero', granularity_weekly:'Settimanale', granularity_monthly:'Mensile',
     legend_self:'Self-service', legend_served:'Servito',
     scope_label_italia:'Italia', scope_label_regione:'Regione', scope_label_provincia:'Provincia',
-    scope_label_comune:'Comune', scope_label_gestore:'Gestore',
+    scope_label_bandiera:'Bandiera', scope_label_comune:'Comune', scope_label_gestore:'Gestore',
     scope_search_placeholder:'Digita per cercare…', scope_no_match:'Nessun risultato',
     scope_note_filtered:'Stai visualizzando {scope} — {name}. Il monitoraggio dettagliato per questa vista è iniziato il {date}, quindi lo storico sarà breve all\'inizio.',
     scope_prompt:'Cerca e seleziona {scope} qui sopra per vedere i dati.', kpi_select_prompt:'Seleziona qui sopra',
@@ -534,7 +535,7 @@ const I18N = {
     granularity_daily:'Quotidien', granularity_weekly:'Hebdomadaire', granularity_monthly:'Mensuel',
     legend_self:'Libre-service', legend_served:'Avec service',
     scope_label_italia:'Italie', scope_label_regione:'Région', scope_label_provincia:'Province',
-    scope_label_comune:'Commune', scope_label_gestore:'Opérateur',
+    scope_label_bandiera:'Marque', scope_label_comune:'Commune', scope_label_gestore:'Opérateur',
     scope_search_placeholder:'Tapez pour rechercher…', scope_no_match:'Aucun résultat',
     scope_note_filtered:"Affichage de {scope} — {name}. Le suivi détaillé de cette vue a commencé le {date}, l'historique sera donc court au début.",
     scope_prompt:'Recherchez et sélectionnez {scope} ci-dessus pour voir ses données.', kpi_select_prompt:'Sélectionnez ci-dessus',
@@ -571,7 +572,7 @@ const I18N = {
     granularity_daily:'По дням', granularity_weekly:'По неделям', granularity_monthly:'По месяцам',
     legend_self:'Самообслуживание', legend_served:'С обслуживанием',
     scope_label_italia:'Италия', scope_label_regione:'Регион', scope_label_provincia:'Провинция',
-    scope_label_comune:'Коммуна', scope_label_gestore:'Оператор',
+    scope_label_bandiera:'Бренд', scope_label_comune:'Коммуна', scope_label_gestore:'Оператор',
     scope_search_placeholder:'Введите для поиска…', scope_no_match:'Совпадений нет',
     scope_note_filtered:'Просмотр: {scope} — {name}. Подробный учёт для этого фильтра начался {date}, поэтому сначала история будет короткой.',
     scope_prompt:'Найдите и выберите {scope} выше, чтобы увидеть данные.', kpi_select_prompt:'Выберите выше',
@@ -608,7 +609,7 @@ const I18N = {
     granularity_daily:'每日', granularity_weekly:'每周', granularity_monthly:'每月',
     legend_self:'自助', legend_served:'有人服务',
     scope_label_italia:'意大利', scope_label_regione:'大区', scope_label_provincia:'省份',
-    scope_label_comune:'市镇', scope_label_gestore:'运营商',
+    scope_label_bandiera:'品牌', scope_label_comune:'市镇', scope_label_gestore:'运营商',
     scope_search_placeholder:'输入以搜索…', scope_no_match:'无匹配结果',
     scope_note_filtered:'当前查看：{scope} — {name}。该视图的详细追踪始于 {date}，因此初期历史数据较少。',
     scope_prompt:'请在上方搜索并选择{scope}以查看数据。', kpi_select_prompt:'请在上方选择',
@@ -1063,7 +1064,7 @@ async function selectScopeType(scopeType){
   renderAll();
   try{ await loadScopeFile(scopeType); }catch(e){ console.error('Failed to load scope file', scopeType, e); }
 }
-function initScopeUI(){
+async function initScopeUI(){
   renderScopeSeg();
   const input=document.getElementById('scope-search');
   input.addEventListener('input', ()=>openScopeList(input.value));
@@ -1076,7 +1077,8 @@ function initScopeUI(){
       e.preventDefault();
     }else if(e.key==='Escape'){ closeScopeList(); }
   });
-  currentScopeSeries=buildScopeSeries('italia', null);
+  await selectScopeType('bandiera');
+  chooseScopeValue('Agip Eni');
 }
 
 /* ---------------- Cookie consent ---------------- */
@@ -1141,7 +1143,7 @@ renderGranularitySeg();
 renderFuelPills();
 (async()=>{
   try{ await loadLiveData(); }catch(e){ console.error('Failed to load data.json', e); }
-  initScopeUI();
+  await initScopeUI();
   initConsent();
 })();
 window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', scheduleRenderAll);
