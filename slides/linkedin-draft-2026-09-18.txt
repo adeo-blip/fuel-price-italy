@@ -1,0 +1,9 @@
+Today's Fuel Dashboard spotlight region is Umbria, and the most interesting number is methane: self-service Metano is up 18.7% since the week of 20 July (€1.4135 to €1.6783/kg), ahead of Italy's 16.9%, and it gained another 4.4% week on week against 3.1% nationally. Petrol (+7.9%) and diesel (+4.1%) are rising broadly in step with the national curve, while LPG has barely moved.
+
+Fuel Dashboard is an interactive, self-updating view of Italian fuel prices by region, province, municipality, operator and brand, built on the official MIMIT open data. Every day it refreshes itself, picks a region to spotlight, and writes a full report with trend analysis for petrol, diesel, LPG and methane. Take a look: https://adeo-blip.github.io/fuel-price-italy/
+
+The point is not just the fuel prices. This whole pipeline, from data download to analysis to the published dashboard and this report, was built with Claude Code and runs unattended. The same job in a manual Excel workbook would mean re-downloading, re-pasting, rebuilding charts and rewriting commentary every single day, and it would go stale the first day someone skipped it. AI tools let one person build something that maintains itself.
+
+#FuelPrices #Italy #DataAnalytics #AI #ClaudeCode #Automation #EnergyMarkets
+
+Draft only — review before posting. Adeo Patapo · adeopatapo@gmail.com
