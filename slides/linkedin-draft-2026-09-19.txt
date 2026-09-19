@@ -1,0 +1,9 @@
+Today's Fuel Dashboard spotlight region is Valle d'Aosta, and the most interesting finding is methane: self-service Metano has climbed from €1.559 to €1.899/kg since 21 July (+21.8% in five price steps) and rose 12.9% over the last two weeks against 8.9% for Italy, leaving the region 6.7% above the national average. Petrol is converging on the national price (premium down from 2.2 cents to 0.5 cents since early August) while diesel is drifting the other way, up 2.24 cents in a single day to €2.3319/l.
+
+Fuel Dashboard is an interactive, self-updating view of Italian fuel prices by region, province, municipality, operator and brand, built on the official MIMIT open data. Every day it refreshes itself, picks a region to spotlight, and writes a full report with trend analysis for petrol, diesel, LPG and methane. Take a look: https://adeo-blip.github.io/fuel-price-italy/
+
+The point is not just the fuel prices. This whole pipeline, from data download to weekly trend analysis to the published dashboard and this report, was built with Claude Code and runs unattended. The same job in a manual Excel workbook would mean re-downloading, re-pasting, rebuilding charts and rewriting commentary every single day, and it would go stale the first day someone skipped it. AI tools let one person build something that maintains itself.
+
+#FuelPrices #Italy #ValledAosta #DataAnalytics #AI #ClaudeCode #Automation
+
+Draft only — review before posting. Adeo Patapo · adeopatapo@gmail.com
