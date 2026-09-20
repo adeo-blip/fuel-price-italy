@@ -1,0 +1,11 @@
+Today's Fuel Dashboard region: Veneto, and the number that stands out is methane. Its weekly average has climbed 21.95% since the week of 20 July, against 17.51% for Italy as a whole, and self-service methane now sits 14.82 cents above the national price.
+
+The cross-fuel picture is just as interesting. Veneto's petrol was cheaper than the national average for seven straight weeks, then tipped slightly above it. Diesel jumped 3.46 cents in a single day, the biggest one-day rise in the region's tracked history. LPG is the only fuel that is getting cheaper.
+
+Fuel Dashboard is a self-updating, interactive view of Italian fuel prices built on the MIMIT open-data feed, and this daily regional report is written automatically too. Explore it at https://adeo-blip.github.io/fuel-price-italy/
+
+The point I keep making: this used to be a manual Excel job, download, paste, refresh, re-write, every single day. With Claude Code I built a pipeline that fetches the data, analyses the weekly trends, writes the report and publishes the dashboard on its own. If you still maintain a spreadsheet that needs feeding every morning, it is worth asking what an AI-built dashboard could do instead.
+
+#FuelPrices #Italy #ClaudeCode #AI #DataAutomation #Dashboard
+
+Draft only — review before posting. Adeo Patapo · adeopatapo@gmail.com
