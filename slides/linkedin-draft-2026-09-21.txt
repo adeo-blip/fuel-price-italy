@@ -1,0 +1,13 @@
+Abruzzo's methane price is up 20.04% since late July, ahead of Italy's 17.69%. And then it paused.
+
+Today's region on Fuel Dashboard is Abruzzo. Comparing weekly self-service averages (week of 20 July vs week of 14 September), Metano went from €1.408 to €1.6902 per kg in Abruzzo, against €1.4999 to €1.7653 nationally. Last week Abruzzo's Metano moved just 0.28% while the national average rose 3.75%, so the gap is closing. Benzina (+8.42%) and Gasolio (+5.88%) are tracking the national trend, and GPL is the only fuel that is lower than in July (-1.67%).
+
+On 20 September, Abruzzo's self-service Benzina averaged €2.1575 per litre and Gasolio €2.3524, both a fraction below the national average. The figures come from the Italian MIMIT open data: 608 reporting stations out of 673 registered in the region.
+
+Fuel Dashboard is a self-updating, interactive dashboard of Italian fuel prices, with a fresh regional report like this one published every day. Explore it here: https://adeo-blip.github.io/fuel-price-italy/
+
+Here is the point: none of this is a hand-maintained Excel sheet. I built it with Claude Code, and it now fetches the data, calculates the weekly trends, picks the region of the day, writes the report and publishes everything on its own, with no copy-pasting. If you still refresh a spreadsheet by hand, AI tools like Claude Code can turn it into a live product.
+
+#FuelPrices #Italy #Abruzzo #ClaudeCode #DataVisualization #Automation
+
+Adeo Patapo · adeopatapo@gmail.com
