@@ -1,0 +1,11 @@
+Today's regional spotlight on Fuel Dashboard: Basilicata. The stand-out number isn't at the pump today — Benzina and Gasolio barely moved — it's in the nine weeks of history behind it. Basilicata's Metano price has climbed 38.5% since late July, more than double Italy's 17.7% national increase over the same period. GPL tells the opposite story: it's actually down 3.5% regionally while the national price barely moved.
+
+Fuel Dashboard is a free, interactive tracker of Italian fuel prices — Benzina, Gasolio, GPL and Metano — broken down by Region, Province, Municipality and Operator/Brand, updated daily from Italy's official MIMIT registry. Today's report, including the full weekly regional-vs-national breakdown for all four fuels, is live now at https://adeo-blip.github.io/fuel-price-italy/.
+
+Here's what I think is the more interesting part: nothing about today's report was built by hand. The data pull, the region rotation, the weekly trend analysis, even this caption — all generated automatically every day by a pipeline I built with Claude Code. No spreadsheet, no manual chart update, no person deciding what to write that morning. It's a live case study in using AI coding tools to replace a manual Excel workflow with something that just runs itself, every single day, at a level of consistency a person doing this by hand couldn't sustain.
+
+If you're curious what a fully automated, self-updating data project looks like end to end, take a look.
+
+#FuelPrices #Italy #DataAutomation #ClaudeCode #AI #EnergyMarkets #Basilicata #OpenData
+
+Adeo Patapo · adeopatapo@gmail.com
