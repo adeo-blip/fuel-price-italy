@@ -1,0 +1,13 @@
+Today's Fuel Dashboard spotlight: Calabria.
+
+The most interesting number isn't today's price — it's the trend. Calabria's Metano (natural gas) has carried a large premium over the national average all season, but that gap has been quietly closing: from roughly 21% above the rest of Italy in late July to under 15% today, even as Calabria's own metano price kept climbing 12.7% over the same ten weeks. Benzina and Gasolio, meanwhile, are tracking the national curve almost tick for tick, and GPL hasn't moved at all in Calabria since tracking began in July.
+
+Fuel Dashboard (https://adeo-blip.github.io/fuel-price-italy/) is a free, interactive tracker of Italian fuel prices — by Region, Province, Municipality, or Operator/Brand — that updates itself every day, no manual data entry required.
+
+The bigger point: this entire pipeline, pulling the data, computing the trends, picking today's region, writing this analysis, and building the full report behind it, runs unattended every morning, built with Claude Code. No spreadsheet, no copy-pasting, no one updating cells by hand. It's a small example of what's possible when you hand the repetitive parts of a data-reporting job to an AI agent instead of a weekly Excel ritual.
+
+Take a look, filter to your own region, and see how prices near you compare.
+
+#FuelPrices #Italy #DataPipeline #AI #ClaudeCode #Automation #EnergyPrices
+
+Adeo Patapo · adeopatapo@gmail.com
