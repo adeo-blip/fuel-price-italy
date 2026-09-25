@@ -1,0 +1,11 @@
+Today's Fuel Dashboard spotlight: Emilia-Romagna, where pump prices are telling a more interesting story than they first appear.
+
+Diesel and petrol both crept down slightly day-over-day, but zoom out to the ten-week trend and one fuel stands out: Metano (natural gas) is up 23% in Emilia-Romagna since late July, outpacing Italy's national average by roughly four percentage points — the biggest region-vs-nation gap of any fuel we're tracking right now.
+
+Fuel Dashboard is a live, self-updating interactive dashboard covering all 20 Italian regions, every province, municipality, and major fuel brand — rebuilt every morning from the Ministry of Enterprises' official price and station data. No one is opening a spreadsheet to paste in yesterday's CSV: an automated pipeline built with Claude Code pulls the data, computes the trends, drafts today's regional report, and publishes it — including this post — without a human in the loop. That's the case for building with AI tools instead of maintaining a manual Excel sheet: what used to be a chore someone has to remember to do every morning is now a system that just runs.
+
+Explore the full interactive dashboard, switch between regions, provinces, municipalities, and brands, and read today's full Emilia-Romagna report at https://adeo-blip.github.io/fuel-price-italy/
+
+#FuelPrices #Italy #DataViz #AI #ClaudeCode #EnergyMarkets #OpenData
+
+Adeo Patapo · adeopatapo@gmail.com
