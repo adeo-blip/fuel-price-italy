@@ -1,0 +1,11 @@
+Today's Fuel Dashboard region: Friuli-Venezia Giulia. The most interesting finding: self-service Metano is up 17.7% across the tracked weeks (from 1.699 to 1.999 EUR/kg) and now sits 0.2061 EUR/kg above the national average of 1.7929. Benzina (2.1919) and Gasolio (2.3931) are both slightly above the national averages too, while GPL (0.7502) is the only fuel lower than where it started.
+
+Fuel Dashboard is an interactive view of Italian fuel prices built on official MIMIT data. Every day it updates itself, picks a region to spotlight, analyses the weekly trends against the national picture and publishes a full written report, with no human touching a spreadsheet.
+
+That is the case for building with AI tools like Claude Code: instead of a manual Excel sheet that goes stale, you get a self-updating interactive dashboard and report that stay consistent with each other.
+
+Explore it here: https://adeo-blip.github.io/fuel-price-italy/
+
+#FuelPrices #Italy #DataViz #ClaudeCode #Automation #AI
+
+Adeo Patapo · adeopatapo@gmail.com
