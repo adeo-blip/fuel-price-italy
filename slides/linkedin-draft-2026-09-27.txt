@@ -1,0 +1,9 @@
+Today's Fuel Dashboard spotlight: Lazio, where diesel just hit its highest price since tracking began on July 21 — up to €2.3577/liter self-service — and the rally is accelerating faster than at any point in the past ten weeks. Meanwhile Metano keeps doing something no other fuel has done: its weekly average has risen every single week since tracking started, both in Lazio (+16%) and nationally (+19%). GPL is the outlier going the other way, sliding to its lowest point yet in Lazio while staying flat nationally.
+
+Fuel Dashboard is a free, self-updating dashboard and daily report covering fuel prices across all of Italy, built entirely with AI tooling. Every number here — the daily prices, the weekly trend analysis, even this write-up — comes from an unattended pipeline built with Claude Code. No spreadsheet, no manual data entry, no analyst pulling numbers by hand. That's the case for building with AI agents instead of maintaining another Excel file: the pipeline pulls the official MIMIT registry, computes the trends, and writes the report, every single day, on its own.
+
+Check out the live dashboard and today's full regional report at https://adeo-blip.github.io/fuel-price-italy/ — drill into any Region, Province, Municipality, or Operator/Brand in Italy.
+
+#FuelPrices #Italy #DataAutomation #AI #ClaudeCode #EnergyMarkets #Lazio
+
+Adeo Patapo · adeopatapo@gmail.com
