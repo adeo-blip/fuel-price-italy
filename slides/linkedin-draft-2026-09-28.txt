@@ -1,0 +1,11 @@
+Today's Fuel Dashboard region is Liguria, and the most striking finding is Metano: the weekly average has risen from €1.4290 to €1.7365 (+21.52%) since our tracking began on 2026-07-21, ahead of the national +19.33%. It has climbed in steps, not a smooth line.
+
+The rest of the picture: self-service diesel hit €2.4229 per litre on 27 September, up 2.6 cents in a day and the highest reading in the tracked history. Petrol (€2.1836) has moved in lockstep with Italy. LPG is the odd one out: Liguria is up 0.76% while the national average slipped 0.49%, and after peaking at €0.8840 it has fallen back 5.17%.
+
+Fuel Dashboard is a live, interactive view of Italian fuel prices built on the official MIMIT open data. Every morning the data refreshes, a different region is featured, and the full report you are reading is written automatically. Explore it here: https://adeo-blip.github.io/fuel-price-italy/
+
+This is the case for using AI tools like Claude Code: instead of a manual Excel sheet that someone has to download, paste, refresh and rewrite every day, you can build a self-updating interactive dashboard and a daily regional report that run on their own.
+
+#FuelPrices #Italy #Liguria #DataVisualization #ClaudeCode #AI #Automation #OpenData
+
+Adeo Patapo · adeopatapo@gmail.com
