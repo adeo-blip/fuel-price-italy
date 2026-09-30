@@ -1,0 +1,9 @@
+Today's Fuel Dashboard spotlight lands on Marche, and the standout story isn't the daily price move — it's what happens when you zoom out. Self-service Metano in the region has climbed 22.82% since tracking began in late July, outpacing the 19.33% national increase over the same ten weeks, the widest gap between a region and the national trend of any fuel we track. GPL tells a quieter version of the same story: Marche sits 19% above the national LPG average, and that gap has been widening, not closing, even as the rest of Italy's GPL prices eased slightly. Meanwhile Gasolio just posted its sharpest single-day pullback of the tracked period, down 2.51% after setting its highest weekly average since the tracker began.
+
+Fuel Dashboard is a free, self-updating interactive dashboard and daily report covering fuel prices across every Italian region, province, municipality, and brand, rebuilt from scratch every morning with fresh MIMIT data. Take a look and explore your own region at https://adeo-blip.github.io/fuel-price-italy/.
+
+What I like about this project is what it replaces: not a person exporting a CSV every morning and rebuilding a spreadsheet by hand, but an unattended pipeline, built with Claude Code, that pulls the data, computes the regional and national trends, rotates through Italy's regions, and writes up what's actually notable — automatically, before most people have opened their laptop. It's a small example of a bigger shift: AI tools like Claude Code make it realistic for one person to build and operate something that used to need a standing manual process.
+
+#FuelPrices #Italy #DataAnalytics #ClaudeCode #AI #OpenData #EnergyPrices #Automation
+
+Adeo Patapo · adeopatapo@gmail.com
