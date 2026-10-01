@@ -1,0 +1,11 @@
+Today's Fuel Dashboard spotlight is on Molise — and the standout number is methane. Molise's self-service Metano price has climbed 21.1% since late July, outpacing the 19.3% rise seen across Italy as a whole, even as Benzina and Gasolio in the region are actually running a touch below the national average.
+
+Fuel Dashboard is a free, self-updating interactive dashboard that tracks self-service and full-service prices for Benzina, Gasolio, GPL and Metano across every Italian region, province, municipality, and fuel brand — updated daily, with a different region getting a deep-dive report each day. Today's ~10-page report on Molise, with the full weekly trend breakdown behind these numbers, is live now: https://adeo-blip.github.io/fuel-price-italy/
+
+The part I think is genuinely interesting: nothing about this pipeline is manually maintained. There's no spreadsheet someone updates every morning, no analyst building weekly averages by hand, no one drafting the write-up. I built the entire thing — the data pipeline, the trend analysis, the region rotation, and the daily report generation — with Claude Code, and it runs unattended every single day. It's a pretty concrete example of what's possible when you use AI tools to build real infrastructure instead of a one-off Excel sheet: something that scales to covering 20 regions daily without anyone babysitting it.
+
+Take a look, poke around the scope picker, and see how your region compares.
+
+#FuelPrices #Italy #DataPipeline #ClaudeCode #AI #OpenData #EnergyMarkets #BuildInPublic
+
+Adeo Patapo · adeopatapo@gmail.com
