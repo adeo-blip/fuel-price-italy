@@ -1,0 +1,11 @@
+Today's regional spotlight on Fuel Dashboard: Piemonte, where self-service Metano has climbed 21.82% since late July — outpacing the 19.81% national rise — and jumped another 3.64% in a single day, even as Benzina and Gasolio both eased back from their late-September peak.
+
+Fuel Dashboard is a free, interactive tool that tracks live fuel prices across every Italian region, province, municipality, and brand, updated automatically every day. Today's report digs into all four fuels (Benzina, Gasolio, GPL, Metano) for Piemonte, comparing eleven weeks of regional trends against the national average — including GPL, the one fuel that's actually gotten cheaper.
+
+What I find most interesting isn't the prices themselves: it's that this whole thing — the data pipeline, the daily region rotation, the weekly trend analysis, even the write-up you're reading — runs unattended, built with Claude Code. No manual CSV downloads, no spreadsheet upkeep, no one writing commentary by hand. It's a working example of handing an AI agent a full daily workflow instead of maintaining it yourself in Excel.
+
+Explore the live dashboard and switch between regions, provinces, municipalities, or operators yourself: https://adeo-blip.github.io/fuel-price-italy/
+
+#FuelPrices #Italy #Piemonte #DataPipeline #ClaudeCode #AIAutomation #EnergyData
+
+Adeo Patapo · adeopatapo@gmail.com
