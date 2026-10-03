@@ -1,64 +1,64 @@
 {
-  "title": "Piemonte's Fuel Prices Pull Back — Except for Metano, Which Won't Stop Climbing",
-  "dek": "Benzina and diesel ease off their late-September peak in Piemonte, while natural gas extends an eleven-week run that's now outpacing the national average.",
+  "title": "Puglia Tracks Italy on Petrol and Diesel, but Its GPL Stays Stubbornly Cheaper",
+  "dek": "Benzina and Gasolio in Puglia are moving almost exactly with the national average, while GPL has held a steady four to five cents below Italy in every tracked week.",
   "executive_summary": [
-    "Piemonte's self-service Benzina eased to €2.0941/L on October 1, down 1.23% from €2.1202 the day before and now just €0.0016 below the €2.0957 national average — effectively identical. Diesel (Gasolio) moved the same way, falling 1.28% to €2.3064/L, a hair above the €2.3054 national figure. GPL held exactly flat at €0.7027/L, continuing to sit about 6.9% below the €0.7548 national average. Metano broke the pattern: it jumped 3.64% day over day to €1.8291/L, the sharpest single-day move of any fuel today, pushing 1.45% above the €1.8029 national average.",
-    "Zoom out to the eleven weeks of history tracked for this region, and the real story is Metano. Piemonte's weekly self-service Metano average has climbed from €1.4651 (week of July 20) to €1.7848 (week of September 28) — a 21.82% rise — outpacing the 19.81% increase seen nationally over the same span, and it still hasn't leveled off: today's price of €1.8291 is already above that latest weekly average. Benzina and Gasolio, by contrast, both peaked in the week of September 21 (€2.162 and €2.372 respectively) and have been pulling back since, tracking the national trend almost exactly (+7.21% vs +7.16% for Benzina; +7.45% vs +7.09% for Gasolio since July). GPL is the outlier in the other direction — the only one of the four fuels that got cheaper over the window, down 1.49% regionally versus just 0.55% nationally, quietly widening Piemonte's long-standing LPG discount."
+    "Puglia is today's spotlight, and on October 2, the latest day in the MIMIT feed, its self-service prices sit almost exactly on the national line. Benzina averaged €2.0798 against €2.0745 nationally, 0.5 cents above. Gasolio came in at €2.2766 against €2.2838, 0.7 cents below. GPL was €0.7078 against €0.7555, €0.0477 under the national figure, and Metano was €1.954 against €1.8149. Benzina fell €0.0163 (-0.78%) and Gasolio fell €0.0163 (-0.71%) from October 1, while GPL ticked up €0.0025 (+0.35%). Metano was unchanged.",
+    "Zoom out to the weekly series and the picture is steadier than the daily moves suggest. From 2026-W31 to 2026-W39, Puglia's Benzina weekly average rose 7.99% (€2.0113 to €2.1721) against 8.18% nationally, and Gasolio rose 10.68% (€2.1391 to €2.3676) against 11.12%. The most interesting divergence is GPL. The regional weekly average slipped from €0.7100 to €0.7053 (-0.66%) over the same weeks, while the national average eased only 0.18%, and Puglia has sat between 4.4 and 5.0 cents below Italy in every tracked week."
   ],
   "fuel_sections": [
     {
       "fuel": "Benzina",
-      "heading": "Benzina Eases Back in Line with the Rest of Italy",
+      "heading": "Benzina: Half a Cent Above Italy and Off a 27 September High",
       "paragraphs": [
-        "Self-service Benzina in Piemonte averaged €2.0941/L on October 1, down €0.0261 (-1.23%) from €2.1202 the previous day. That puts the region just €0.0016 below the national self-service average of €2.0957/L — a gap of less than a tenth of a cent, essentially a dead heat.",
-        "Over the eleven weeks tracked since July 20, Piemonte's weekly Benzina average rose from €1.9729 to €2.1152 (week of September 28) — a 7.21% increase, almost exactly matching the 7.16% rise seen nationally (€1.9756 to €2.1171). The region peaked in the week of September 21 at €2.1621, the highest point in this window, before easing back in the most recent week — a pullback that today's €2.0941 reading continues."
+        "On October 2, self-service Benzina in Puglia averaged €2.0798, against €2.0745 nationally, so the region sits 0.5 cents above the Italian average. The regional price fell €0.0163 (-0.78%) from €2.0961 on October 1. Benzina peaked in the region at €2.1753 on September 27, which puts today's reading €0.0955 (4.4%) below that high. Served-mode Benzina was €2.2416 in Puglia against €2.2196 nationally.",
+        "From 2026-W31 to 2026-W39, the regional weekly Benzina average rose from €2.0113 to €2.1721, a gain of 7.99%, against 8.18% nationally (€2.0030 to €2.1669). Puglia has been above the national weekly average in every tracked week, by between 0.2 and 2.0 cents. The gap was widest in the thin 2026-W36 week, which counts only three days, and narrowed to 0.5 cents in 2026-W39."
       ]
     },
     {
       "fuel": "Gasolio",
-      "heading": "Diesel Pulls Back After a Steep September Climb",
+      "heading": "Gasolio: Below the National Line Since Mid-September After Six Weeks Above It",
       "paragraphs": [
-        "Self-service Gasolio in Piemonte fell to €2.3064/L on October 1, down €0.0299 (-1.28%) from €2.3363 the day before, landing just €0.0010 above the national self-service average of €2.3054/L — again, essentially identical.",
-        "The multi-week trend shows a slightly steeper climb than Benzina: Piemonte's weekly Gasolio average rose from €2.1695 (week of July 20) to €2.3312 (week of September 28), a 7.45% increase, a touch ahead of the 7.09% rise nationally (€2.1747 to €2.3290). Like Benzina, Gasolio peaked in the week of September 21 at €2.3720 before easing back — but the fact that Piemonte's rise has slightly outpaced the national one suggests a small regional premium has been building on diesel since midsummer."
+        "On October 2, self-service Gasolio in Puglia averaged €2.2766, against €2.2838 nationally, 0.7 cents (€0.0072) below. The regional price fell €0.0163 (-0.71%) from €2.2929 on October 1. The regional diesel high was €2.3972 on September 27, so today's reading is €0.1206 (5.0%) below it. Served-mode Gasolio was €2.4454 in Puglia against €2.4377 nationally.",
+        "From 2026-W31 to 2026-W39, the regional weekly Gasolio average rose from €2.1391 to €2.3676, up 10.68%, against 11.12% nationally (€2.1361 to €2.3736). Gasolio is the only fuel in this report whose gap to Italy changed sign: Puglia ran 0.1 to 0.3 cents above the national weekly average from 2026-W31 through 2026-W36, then fell below it from 2026-W37, and in the partial 2026-W40 week, four days counted, the gap was 0.9 cents under."
       ]
     },
     {
       "fuel": "GPL",
-      "heading": "Piemonte's LPG Discount Holds Steady — and Even Widens",
+      "heading": "GPL: Four to Five Cents Under Italy, and the Regional Price Has Barely Moved",
       "paragraphs": [
-        "GPL in Piemonte held exactly flat at €0.7027/L on October 1, unchanged from the day before, and continues to sit well below the €0.7548 national self-service average — a gap of just over 5 cents per liter, or roughly 6.9%.",
-        "GPL is the only one of the four fuels that actually got cheaper across the tracked window: Piemonte's weekly average slipped from €0.7131 (week of July 20) to €0.7025 (week of September 28), a 1.49% decline, while the national average barely moved, down just 0.55% (€0.7592 to €0.7550). The result is that Piemonte's long-standing LPG discount versus the rest of Italy has quietly widened rather than narrowed over the past eleven weeks."
+        "On October 2, self-service GPL in Puglia averaged €0.7078, against €0.7555 nationally, €0.0477 (6.3%) below. It was the only one of the four fuels in the region to rise on the day, up €0.0025 (+0.35%) from €0.7053 on October 1. Served-mode GPL was €0.7432 in Puglia against €0.7592 nationally.",
+        "From 2026-W31 to 2026-W39, Puglia's weekly GPL average slipped from €0.7100 to €0.7053 (-0.66%), while Italy's went from €0.7569 to €0.7555 (-0.18%). The regional daily series held at €0.7053 on every reported day from September 11 through October 1 before ticking up on October 2. The gap to the national average has stayed between 4.4 and 5.0 cents in every tracked week, so Puglia's GPL discount is steady rather than widening."
       ]
     },
     {
       "fuel": "Metano",
-      "heading": "Metano Is the Story: Up Nearly 22% Since July, and Piemonte Is Leading",
+      "heading": "Metano: A Stepped Regional Series That Needs a Cautious Read",
       "paragraphs": [
-        "Self-service Metano in Piemonte jumped to €1.8291/L on October 1, up €0.0643 (+3.64%) from €1.7648 the day before — by far the sharpest single-day move of any fuel today — and now sits €0.0262 (+1.45%) above the €1.8029 national self-service average.",
-        "This is the fuel to watch across the whole window: Piemonte's weekly Metano average has climbed from €1.4651 (week of July 20) to €1.7848 (week of September 28), a 21.82% rise, outpacing the 19.81% increase seen nationally over the same span (€1.4999 to €1.7970). Unlike Benzina and Gasolio, which both peaked in the week of September 21 and have since pulled back, Metano kept climbing straight through that week into the next, and today's €1.8291 reading is already above the latest weekly average — a sign this run hasn't plateaued in Piemonte yet."
+        "On October 2, Metano in Puglia shows €1.954, which is €0.1391 (7.7%) above the national €1.8149. That figure has not changed since September 17, and the regional served price of €1.8921 sits below its self-service price, the opposite of the national pattern (€1.8756 served against €1.8149 self-service). That combination points to a thin sample of Metano-selling stations rather than a settled regional price, so treat the level with caution.",
+        "From 2026-W31 to 2026-W39 the regional weekly Metano average rose from €1.6633 to €1.9540, up 17.48%, against 17.94% nationally (€1.5175 to €1.7898). The alignment looks close, but the regional daily series takes only seven distinct values across 64 reported days and moves in a few discrete steps. That pattern suggests the weekly trend mostly reflects a handful of station updates, so the regional Metano trend should be read as indicative only."
       ]
     }
   ],
   "network_section": {
-    "heading": "Reporting Rates Hold Above 91% as the Registry Tightens Slightly",
+    "heading": "Network: 1,436 of 1,577 Puglia Stations Reported on October 2",
     "paragraphs": [
-      "Of Piemonte's 1,842 registered stations on October 1, 1,683 reported prices that day — a 91.37% reporting rate, a touch higher than the 90.57% rate seen nationally (21,671 of 23,930 registered stations).",
-      "The registered count in Piemonte has eased slightly over the tracked window, from 1,848 stations on July 21 to 1,842 today — a net decline of 6 stations (-0.32%) — while the number of stations actively reporting prices has stayed essentially flat (1,685 → 1,683, -0.12%). That combination, a slowly consolidating registry alongside a steady reporting rate above 91%, suggests consumers in the region continue to get consistently solid price coverage day to day."
+      "Puglia had 1,577 registered stations on October 2, and 1,436 of them reported prices, a reporting rate of 91.1%. Nationally, 21,659 of 23,918 registered stations reported, a rate of 90.6%. Puglia accounts for 6.6% of Italy's registered stations and 6.6% of its reporting stations.",
+      "Over the tracked window the regional registered count moved from 1,575 on July 21 to a high of 1,583 on September 19 through 21, and has since eased back to 1,577. Daily reporting stayed between 1,429 and 1,439 stations, so roughly 140 registered Puglia stations are not reporting on any given day. The file does not break station counts down by fuel, so the per-fuel averages for thinly sold products such as Metano cannot be checked against coverage from this data alone."
     ]
   },
   "methodology_section": {
-    "heading": "How This Report Gets Made (Without a Human Touching a Spreadsheet)",
+    "heading": "How This Report Is Made: An Unattended Pipeline, Not a Spreadsheet",
     "paragraphs": [
-      "This entire report — the underlying data, the weekly trend analysis, the choice of which region to feature today, and the prose itself — is generated automatically every day by an unattended pipeline built with Claude Code. Each morning it pulls the latest MIMIT registry and price feeds, rotates alphabetically through Italy's 20 regions keyed to the calendar date, computes each fuel's weekly self-service average for the featured region against the national figure, and writes up the findings as a full regional report.",
-      "Contrast that with the usual alternative: a manually maintained spreadsheet, where someone has to download the CSVs, clean them, rebuild pivot tables and charts, and write fresh commentary by hand — every single day, with no built-in cross-checking of the numbers. This pipeline runs the equivalent workflow end to end, from raw feed to published report and live dashboard, without a person opening Excel."
+      "This entire report is generated automatically every day by an unattended pipeline built with Claude Code. The pipeline pulls the MIMIT price and registry data, rotates to the day's region on a fixed calendar cycle, computes the daily history and weekly averages for that region against the national figures, writes the analysis, and publishes the Word report and the dashboard data. Today's figures came from the MIMIT live feed, whose latest day is October 2, one day behind the report date.",
+      "A manually maintained spreadsheet depends on someone remembering to download the file, paste it into the right tab, and check that the formulas still point at the right rows. Each step is a place for an error to slip in, and the analysis usually lags behind the data. Here the same work runs without anyone touching a spreadsheet, and the write-up is composed fresh from that day's actual numbers rather than reused from yesterday's."
     ]
   },
   "closing": {
-    "heading": "Keep Exploring",
+    "heading": "Explore the Live Dashboard Further",
     "paragraphs": [
-      "The live Fuel Dashboard opens by default on Agip Eni's brand-level view, but that's just one starting point — use the scope picker to switch to Region, Province, Municipality, or another Operator/Brand and see how prices compare across the cuts that matter to you."
+      "The live dashboard at https://adeo-blip.github.io/fuel-price-italy/ opens on Agip Eni's brand-level view by default. Use the scope picker to switch to Region, Province, Municipality or another Operator or Brand, and explore how prices differ across Italy at whatever level of detail you need."
     ]
   },
-  "pull_quote": "Metano in Piemonte is up 21.82% since July — outpacing the national rise, and still climbing even as Benzina and Gasolio pull back.",
-  "caption": "Today's regional spotlight on Fuel Dashboard: Piemonte, where self-service Metano has climbed 21.82% since late July — outpacing the 19.81% national rise — and jumped another 3.64% in a single day, even as Benzina and Gasolio both eased back from their late-September peak.\n\nFuel Dashboard is a free, interactive tool that tracks live fuel prices across every Italian region, province, municipality, and brand, updated automatically every day. Today's report digs into all four fuels (Benzina, Gasolio, GPL, Metano) for Piemonte, comparing eleven weeks of regional trends against the national average — including GPL, the one fuel that's actually gotten cheaper.\n\nWhat I find most interesting isn't the prices themselves: it's that this whole thing — the data pipeline, the daily region rotation, the weekly trend analysis, even the write-up you're reading — runs unattended, built with Claude Code. No manual CSV downloads, no spreadsheet upkeep, no one writing commentary by hand. It's a working example of handing an AI agent a full daily workflow instead of maintaining it yourself in Excel.\n\nExplore the live dashboard and switch between regions, provinces, municipalities, or operators yourself: https://adeo-blip.github.io/fuel-price-italy/\n\n#FuelPrices #Italy #Piemonte #DataPipeline #ClaudeCode #AIAutomation #EnergyData\n\nAdeo Patapo · adeopatapo@gmail.com"
+  "pull_quote": "Every tracked week since July, Puglia's GPL has sat 4.4 to 5.0 cents below the Italian average.",
+  "caption": "Today's region on the Fuel Dashboard is Puglia, and its most interesting finding is GPL. Every tracked week since July, the regional GPL average has sat between 4.4 and 5.0 cents below Italy, while Benzina and Gasolio have moved almost exactly with the national figures.\n\nOn 2 October, the latest day in the MIMIT feed, self-service Benzina in Puglia was €2.0798 against €2.0745 nationally, and Gasolio was €2.2766 against €2.2838. GPL was €0.7078 against €0.7555.\n\nThe Fuel Dashboard is a live, interactive view of Italian fuel prices. Every morning, a pipeline built with Claude Code refreshes the data, picks the day's region, writes the analysis and publishes a Word report. No manually maintained spreadsheet is involved, which is the point: AI tools can build a dashboard that keeps itself up to date.\n\nExplore it at https://adeo-blip.github.io/fuel-price-italy/\n\n#FuelPrices #Italy #ClaudeCode #AI #DataViz #OpenData #Dashboard\n\nAdeo Patapo · adeopatapo@gmail.com"
 }

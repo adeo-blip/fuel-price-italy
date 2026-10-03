@@ -1,0 +1,11 @@
+Today's region on the Fuel Dashboard is Puglia, and its most interesting finding is GPL. Every tracked week since July, the regional GPL average has sat between 4.4 and 5.0 cents below Italy, while Benzina and Gasolio have moved almost exactly with the national figures.
+
+On 2 October, the latest day in the MIMIT feed, self-service Benzina in Puglia was €2.0798 against €2.0745 nationally, and Gasolio was €2.2766 against €2.2838. GPL was €0.7078 against €0.7555.
+
+The Fuel Dashboard is a live, interactive view of Italian fuel prices. Every morning, a pipeline built with Claude Code refreshes the data, picks the day's region, writes the analysis and publishes a Word report. No manually maintained spreadsheet is involved, which is the point: AI tools can build a dashboard that keeps itself up to date.
+
+Explore it at https://adeo-blip.github.io/fuel-price-italy/
+
+#FuelPrices #Italy #ClaudeCode #AI #DataViz #OpenData #Dashboard
+
+Adeo Patapo · adeopatapo@gmail.com
