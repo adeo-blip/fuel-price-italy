@@ -1,0 +1,11 @@
+Today's spotlight is Sardegna. Its self-service petrol and diesel have each risen about 6.5% since late July, slightly faster than the national rise of about 6.2%, and both now sit a fraction above the Italian average.
+
+The most striking number is metano. Nationally, self-service metano climbed 20.6% over the tracked weeks, the steepest rise of the four fuels, yet the regional series carries no self-service metano price at all. The national trend is real, but this region's data cannot show it.
+
+Fuel Dashboard tracks Italian fuel prices daily from official MIMIT data and turns them into an interactive dashboard and a written report. Explore it at https://adeo-blip.github.io/fuel-price-italy/
+
+All of it runs unattended every morning: the data pull, the weekly analysis, the rotating region and the write-up. It was built with Claude Code, and it makes the case for AI tools over a manually maintained Excel sheet, which only stays current as long as someone remembers to update it.
+
+#FuelPrices #Italy #Sardegna #OpenData #DataVisualization #ClaudeCode #AI
+
+Adeo Patapo · adeopatapo@gmail.com

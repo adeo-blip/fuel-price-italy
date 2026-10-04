@@ -1,64 +1,64 @@
 {
-  "title": "Puglia Tracks Italy on Petrol and Diesel, but Its GPL Stays Stubbornly Cheaper",
-  "dek": "Benzina and Gasolio in Puglia are moving almost exactly with the national average, while GPL has held a steady four to five cents below Italy in every tracked week.",
+  "title": "Sardegna Runs Just Above the National Line on Petrol and Diesel, and Metano Tells the Bigger Story",
+  "dek": "Latest figures for 3 October 2026, read against the tracked weeks since late July.",
   "executive_summary": [
-    "Puglia is today's spotlight, and on October 2, the latest day in the MIMIT feed, its self-service prices sit almost exactly on the national line. Benzina averaged €2.0798 against €2.0745 nationally, 0.5 cents above. Gasolio came in at €2.2766 against €2.2838, 0.7 cents below. GPL was €0.7078 against €0.7555, €0.0477 under the national figure, and Metano was €1.954 against €1.8149. Benzina fell €0.0163 (-0.78%) and Gasolio fell €0.0163 (-0.71%) from October 1, while GPL ticked up €0.0025 (+0.35%). Metano was unchanged.",
-    "Zoom out to the weekly series and the picture is steadier than the daily moves suggest. From 2026-W31 to 2026-W39, Puglia's Benzina weekly average rose 7.99% (€2.0113 to €2.1721) against 8.18% nationally, and Gasolio rose 10.68% (€2.1391 to €2.3676) against 11.12%. The most interesting divergence is GPL. The regional weekly average slipped from €0.7100 to €0.7053 (-0.66%) over the same weeks, while the national average eased only 0.18%, and Puglia has sat between 4.4 and 5.0 cents below Italy in every tracked week."
+    "As of 3 October 2026, the latest day in the feed, Sardegna's self-service petrol (Benzina) averaged €2.0649 per litre and self-service diesel (Gasolio) €2.2752, against national averages of €2.0636 and €2.2719. Both fell on the day, petrol by 0.51% and diesel by 0.53%, and both sit a fraction above Italy, by 0.06% and 0.15%. LPG is the outlier: at €0.8857 it is 16.7% above the national €0.7588 and did not move from the previous day. Self-service metano is not reported for the region at all; only a served price of €1.90 appears in the file.",
+    "Zoom out to the weekly series, which starts with the first tracked week in late July, and the picture shifts. Sardegna's petrol and diesel have each climbed about 6.5% since then, against national rises of about 6.2%, so the region has moved from slightly below Italy's average to slightly above it. The most interesting cross-fuel finding is metano: nationally its self-service price rose 20.6% across the same weeks, the steepest climb of the four fuels, while the regional series holds no self-service metano price in any week. The national trend is real, but this region's data cannot show it."
   ],
   "fuel_sections": [
     {
       "fuel": "Benzina",
-      "heading": "Benzina: Half a Cent Above Italy and Off a 27 September High",
+      "heading": "Petrol sits a hair above Italy after a long climb",
       "paragraphs": [
-        "On October 2, self-service Benzina in Puglia averaged €2.0798, against €2.0745 nationally, so the region sits 0.5 cents above the Italian average. The regional price fell €0.0163 (-0.78%) from €2.0961 on October 1. Benzina peaked in the region at €2.1753 on September 27, which puts today's reading €0.0955 (4.4%) below that high. Served-mode Benzina was €2.2416 in Puglia against €2.2196 nationally.",
-        "From 2026-W31 to 2026-W39, the regional weekly Benzina average rose from €2.0113 to €2.1721, a gain of 7.99%, against 8.18% nationally (€2.0030 to €2.1669). Puglia has been above the national weekly average in every tracked week, by between 0.2 and 2.0 cents. The gap was widest in the thin 2026-W36 week, which counts only three days, and narrowed to 0.5 cents in 2026-W39."
+        "Benzina in Sardegna closed the latest reading at €2.0649 self-service, down €0.0105 (−0.51%) from €2.0754 the day before. Italy's self-service average stood at €2.0636, so the region is 0.06% above the national figure, effectively level. The served price tells a similar story: €2.2034 locally against €2.2084 nationally, a 0.23% discount.",
+        "Over the tracked weeks the regional petrol average rose from €1.9751 in the first week (W30) to €2.1027 in W40, a gain of 6.5%. Nationally the same window moved from €1.9756 to €2.0979, up 6.2%. The regional peak came in the week starting 21 September at €2.1682, marginally above the national peak of €2.1669. The latest week fell 3.0% regionally and 3.2% nationally, so the cooling is shared rather than local, although W40 contains only five days and should be read as provisional."
       ]
     },
     {
       "fuel": "Gasolio",
-      "heading": "Gasolio: Below the National Line Since Mid-September After Six Weeks Above It",
+      "heading": "Diesel stays within half a percent of the national line",
       "paragraphs": [
-        "On October 2, self-service Gasolio in Puglia averaged €2.2766, against €2.2838 nationally, 0.7 cents (€0.0072) below. The regional price fell €0.0163 (-0.71%) from €2.2929 on October 1. The regional diesel high was €2.3972 on September 27, so today's reading is €0.1206 (5.0%) below it. Served-mode Gasolio was €2.4454 in Puglia against €2.4377 nationally.",
-        "From 2026-W31 to 2026-W39, the regional weekly Gasolio average rose from €2.1391 to €2.3676, up 10.68%, against 11.12% nationally (€2.1361 to €2.3736). Gasolio is the only fuel in this report whose gap to Italy changed sign: Puglia ran 0.1 to 0.3 cents above the national weekly average from 2026-W31 through 2026-W36, then fell below it from 2026-W37, and in the partial 2026-W40 week, four days counted, the gap was 0.9 cents under."
+        "Gasolio in Sardegna is at €2.2752 self-service on the latest day, down €0.0121 (−0.53%) from €2.2873. Italy averaged €2.2719, which leaves the region 0.15% higher. Served diesel shows the same shape: €2.4309 locally against €2.4256 nationally, 0.22% above. Both measures fell by just over half a percent in a single day.",
+        "Across the tracked weeks regional diesel rose from €2.1742 to €2.3164, up 6.5%, while national diesel rose 6.2%, from €2.1747 to €2.3086. The regional premium over Italy has therefore widened from 0.02% below the national average in W30 to 0.34% above in W40. The weekly peak came in W39 for both (€2.3817 regional, €2.3736 national), and both fell 2.7% in the latest week. The spread is small, but its direction is clear in the weekly numbers."
       ]
     },
     {
       "fuel": "GPL",
-      "heading": "GPL: Four to Five Cents Under Italy, and the Regional Price Has Barely Moved",
+      "heading": "LPG is the region's outlier, and its flat line deserves a closer look",
       "paragraphs": [
-        "On October 2, self-service GPL in Puglia averaged €0.7078, against €0.7555 nationally, €0.0477 (6.3%) below. It was the only one of the four fuels in the region to rise on the day, up €0.0025 (+0.35%) from €0.7053 on October 1. Served-mode GPL was €0.7432 in Puglia against €0.7592 nationally.",
-        "From 2026-W31 to 2026-W39, Puglia's weekly GPL average slipped from €0.7100 to €0.7053 (-0.66%), while Italy's went from €0.7569 to €0.7555 (-0.18%). The regional daily series held at €0.7053 on every reported day from September 11 through October 1 before ticking up on October 2. The gap to the national average has stayed between 4.4 and 5.0 cents in every tracked week, so Puglia's GPL discount is steady rather than widening."
+        "GPL in Sardegna is listed at €0.8857 on the latest day, unchanged from the day before. National LPG stands at €0.7588, so the regional price sits 16.7% above Italy, a premium of about €0.13 per litre. The served price shows a similar gap: €0.8612 locally against €0.7647 nationally, or 12.6% above.",
+        "The regional weekly LPG average fell from €0.8990 in W30 to €0.8857 in W34 and has not moved since, an identical value across seven consecutive weeks. National LPG drifted down from €0.7592 to €0.7558 over the same window, a 0.4% decline. The regional premium has narrowed from 18.4% to 17.2%, but the stillness itself is the notable part. A price that holds to four decimal places for weeks often reflects a small number of reporting stations rather than a market that has stopped moving, so this series calls for caution rather than a firm conclusion."
       ]
     },
     {
       "fuel": "Metano",
-      "heading": "Metano: A Stepped Regional Series That Needs a Cautious Read",
+      "heading": "Metano is the national story, and the regional file cannot tell it",
       "paragraphs": [
-        "On October 2, Metano in Puglia shows €1.954, which is €0.1391 (7.7%) above the national €1.8149. That figure has not changed since September 17, and the regional served price of €1.8921 sits below its self-service price, the opposite of the national pattern (€1.8756 served against €1.8149 self-service). That combination points to a thin sample of Metano-selling stations rather than a settled regional price, so treat the level with caution.",
-        "From 2026-W31 to 2026-W39 the regional weekly Metano average rose from €1.6633 to €1.9540, up 17.48%, against 17.94% nationally (€1.5175 to €1.7898). The alignment looks close, but the regional daily series takes only seven distinct values across 64 reported days and moves in a few discrete steps. That pattern suggests the weekly trend mostly reflects a handful of station updates, so the regional Metano trend should be read as indicative only."
+        "Today's regional metano figure is a served price only: €1.90, up from €1.74 the previous day, a 9.2% jump in a single step. Nationally the served price stands at €1.8862 and the self-service price at €1.8354. With no regional self-service series, there is no like-for-like comparison, and a one-day move of this size should be treated as a single reading rather than a trend.",
+        "Nationally, self-service metano rose from €1.4999 in W30 to €1.8082 in W40, a 20.6% climb and the steepest of the four fuels over the tracked weeks. The latest weekly step was smaller, up 1.0% from €1.7898 in W39. The regional file records no self-service metano price in any of its eleven weekly rows, so Sardegna cannot be placed against the national curve on this fuel. For a reader, that gap is part of the finding: the national metano move is clear, while the regional self-service data stays silent."
       ]
     }
   ],
   "network_section": {
-    "heading": "Network: 1,436 of 1,577 Puglia Stations Reported on October 2",
+    "heading": "Station coverage: 90 percent reporting, and what the silent stations mean",
     "paragraphs": [
-      "Puglia had 1,577 registered stations on October 2, and 1,436 of them reported prices, a reporting rate of 91.1%. Nationally, 21,659 of 23,918 registered stations reported, a rate of 90.6%. Puglia accounts for 6.6% of Italy's registered stations and 6.6% of its reporting stations.",
-      "Over the tracked window the regional registered count moved from 1,575 on July 21 to a high of 1,583 on September 19 through 21, and has since eased back to 1,577. Daily reporting stayed between 1,429 and 1,439 stations, so roughly 140 registered Puglia stations are not reporting on any given day. The file does not break station counts down by fuel, so the per-fuel averages for thinly sold products such as Metano cannot be checked against coverage from this data alone."
+      "On 3 October, 607 of Sardegna's 674 registered stations reported a price, a reporting rate of 90.1%. That is four more reporting stations than the day before (603). Nationally, 21,670 of 23,917 registered stations reported, or 90.6%, so the region sits essentially level with Italy on coverage.",
+      "The 67 silent stations in the region, roughly one in ten, mean every regional average here is built from most of the network rather than all of it. Against a national reporting rate of 90.6%, Sardegna's coverage is effectively the same as Italy's, so the regional and national comparisons are fair on coverage grounds. The thinner spots are the fuels with gaps in the regional file, metano above all, where the averages are the least firm."
     ]
   },
   "methodology_section": {
-    "heading": "How This Report Is Made: An Unattended Pipeline, Not a Spreadsheet",
+    "heading": "How this report is written, and why it is not a spreadsheet",
     "paragraphs": [
-      "This entire report is generated automatically every day by an unattended pipeline built with Claude Code. The pipeline pulls the MIMIT price and registry data, rotates to the day's region on a fixed calendar cycle, computes the daily history and weekly averages for that region against the national figures, writes the analysis, and publishes the Word report and the dashboard data. Today's figures came from the MIMIT live feed, whose latest day is October 2, one day behind the report date.",
-      "A manually maintained spreadsheet depends on someone remembering to download the file, paste it into the right tab, and check that the formulas still point at the right rows. Each step is a place for an error to slip in, and the analysis usually lags behind the data. Here the same work runs without anyone touching a spreadsheet, and the write-up is composed fresh from that day's actual numbers rather than reused from yesterday's."
+      "This report is generated automatically every morning by an unattended pipeline built with Claude Code. The pipeline pulls the latest MIMIT price and station registry data, updates the national and regional series, selects the day's region through a fixed rotation over Italy's twenty regions keyed to the calendar date, computes the weekly averages, and drafts the written analysis. No one chooses the region, and no one retypes a figure.",
+      "The contrast with a manually maintained spreadsheet is the point. A spreadsheet is only as current as the last time someone remembered to paste in the new export, copy the formulas down and check the totals, and when a day is missed the gap is silent. The pipeline is self-correcting: if a day is skipped, the rotation still picks the right region from the calendar, and the next run pulls whatever data is available. Every number in this report comes from data the pipeline wrote that day, which is also what makes it checkable."
     ]
   },
   "closing": {
-    "heading": "Explore the Live Dashboard Further",
+    "heading": "Explore the live dashboard",
     "paragraphs": [
-      "The live dashboard at https://adeo-blip.github.io/fuel-price-italy/ opens on Agip Eni's brand-level view by default. Use the scope picker to switch to Region, Province, Municipality or another Operator or Brand, and explore how prices differ across Italy at whatever level of detail you need."
+      "The live dashboard opens on Agip Eni's brand-level view by default. From there, use the scope picker to switch to Region, Province, Municipality or another Operator/Brand, and compare Sardegna with any other part of Italy on the same price series. The dashboard is at https://adeo-blip.github.io/fuel-price-italy/."
     ]
   },
-  "pull_quote": "Every tracked week since July, Puglia's GPL has sat 4.4 to 5.0 cents below the Italian average.",
-  "caption": "Today's region on the Fuel Dashboard is Puglia, and its most interesting finding is GPL. Every tracked week since July, the regional GPL average has sat between 4.4 and 5.0 cents below Italy, while Benzina and Gasolio have moved almost exactly with the national figures.\n\nOn 2 October, the latest day in the MIMIT feed, self-service Benzina in Puglia was €2.0798 against €2.0745 nationally, and Gasolio was €2.2766 against €2.2838. GPL was €0.7078 against €0.7555.\n\nThe Fuel Dashboard is a live, interactive view of Italian fuel prices. Every morning, a pipeline built with Claude Code refreshes the data, picks the day's region, writes the analysis and publishes a Word report. No manually maintained spreadsheet is involved, which is the point: AI tools can build a dashboard that keeps itself up to date.\n\nExplore it at https://adeo-blip.github.io/fuel-price-italy/\n\n#FuelPrices #Italy #ClaudeCode #AI #DataViz #OpenData #Dashboard\n\nAdeo Patapo · adeopatapo@gmail.com"
+  "pull_quote": "Nationally, self-service metano rose 20.6% across the tracked weeks, yet Sardegna's regional series holds no self-service metano price at all.",
+  "caption": "Today's spotlight is Sardegna. Its self-service petrol and diesel have each risen about 6.5% since late July, slightly faster than the national rise of about 6.2%, and both now sit a fraction above the Italian average.\n\nThe most striking number is metano. Nationally, self-service metano climbed 20.6% over the tracked weeks, the steepest rise of the four fuels, yet the regional series carries no self-service metano price at all. The national trend is real, but this region's data cannot show it.\n\nFuel Dashboard tracks Italian fuel prices daily from official MIMIT data and turns them into an interactive dashboard and a written report. Explore it at https://adeo-blip.github.io/fuel-price-italy/\n\nAll of it runs unattended every morning: the data pull, the weekly analysis, the rotating region and the write-up. It was built with Claude Code, and it makes the case for AI tools over a manually maintained Excel sheet, which only stays current as long as someone remembers to update it.\n\n#FuelPrices #Italy #Sardegna #OpenData #DataVisualization #ClaudeCode #AI\n\nAdeo Patapo · adeopatapo@gmail.com"
 }
