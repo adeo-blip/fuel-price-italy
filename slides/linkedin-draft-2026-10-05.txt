@@ -1,0 +1,9 @@
+Today's regional spotlight: Sicilia. Petrol there sits just 0.2 cents above the national average, but Sicilian LPG is about 3.9 cents above Italy, and it is the one fuel moving against the national trend. Across the tracked weeks, Sicilian LPG has risen 0.5% while the national average slipped 0.4%.
+
+This is the Fuel Dashboard: an interactive view of Italian fuel prices built from the MIMIT open data feed and updated automatically every day, with a daily regional report generated from the same data. Explore it at https://adeo-blip.github.io/fuel-price-italy/ and switch the scope from brand level to region, province or municipality.
+
+It was built with Claude Code, and that is the point. A manually maintained spreadsheet needs someone to remember to copy the data, extend the formulas and write the commentary every single morning. Here an unattended pipeline does all of it, including the weekly analysis and the write-up, so a missed day does not break the series.
+
+#FuelPrices #Italy #OpenData #ClaudeCode #AI #DataAnalysis #Dashboard
+
+Adeo Patapo · adeopatapo@gmail.com
