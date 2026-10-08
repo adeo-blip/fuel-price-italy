@@ -1,0 +1,11 @@
+Today's regional spotlight on Fuel Dashboard: Umbria.
+
+The number that stood out: self-service metano in Umbria has climbed 23.6% since late July, from about €1.41 to €1.75 per kg across the tracked weeks, nearly four times the percentage move seen in petrol (+5.9%) or diesel (+6.1%) over the same stretch. And yet Umbria's metano is still roughly 4.4% cheaper than the national average today. Petrol (€2.05/L self-service) and diesel (€2.26/L) are both tracking within about a percent of the national average, same as they've been all summer.
+
+Fuel Dashboard pulls Italy's official MIMIT price feed every day, rotates through all 20 regions on a fixed date-based cycle, and writes up a fresh regional report like this one automatically, with no manual spreadsheet work involved. It's a live example of what's possible when you pair an AI coding agent like Claude Code with a public data feed: a self-updating interactive dashboard and a genuine written analysis, generated unattended every morning, instead of a spreadsheet someone has to babysit.
+
+Check out the live interactive dashboard at https://adeo-blip.github.io/fuel-price-italy/ — drill into any region, province, municipality, or operator brand.
+
+#FuelPrices #Italy #DataPipeline #ClaudeCode #AIAutomation #OpenData #EnergyPrices
+
+Adeo Patapo · adeopatapo@gmail.com
