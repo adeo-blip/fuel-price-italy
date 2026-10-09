@@ -55,14 +55,15 @@
   }
   a{color:var(--accent-strong);}
   .num{font-variant-numeric:tabular-nums;font-family:var(--font-mono);}
-  .shell{max-width:920px;margin:0 auto;padding:0 20px;}
+  :root{--page-max:920px;}
+  .shell{max-width:var(--page-max);margin:0 auto;padding:0 20px;}
 
   /* ---------- Nav ---------- */
   nav.topbar{
     position:sticky;top:0;z-index:20;background:var(--bg);border-bottom:1px solid var(--border);
     backdrop-filter:blur(6px);
   }
-  .topbar-inner{max-width:920px;margin:0 auto;padding:14px 20px;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;}
+  .topbar-inner{max-width:var(--page-max);margin:0 auto;padding:14px 20px;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;}
   .brand{display:flex;align-items:center;gap:9px;font-weight:700;font-size:16px;letter-spacing:-0.01em;}
   .brand .brand-dot{width:11px;height:11px;border-radius:50%;background:var(--accent);box-shadow:0 0 0 3px var(--accent-soft);}
   .navlinks{display:flex;gap:20px;font-size:14px;font-weight:600;color:var(--text-secondary);}
@@ -87,7 +88,7 @@
     transition:transform .15s;
   }
   .cta:hover{transform:translateY(-1px);}
-  .last-updated-line{margin:14px 0 0;font-size:12.5px;color:var(--text-muted);}
+  .hero .last-updated-line{margin:14px auto 0;font-size:12.5px;color:var(--text-muted);}
 
   /* ---------- KPI row ---------- */
   .kpi-row{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:0 0 28px;}
@@ -227,7 +228,7 @@
   }
 
   footer{border-top:1px solid var(--border);padding:26px 20px 100px;color:var(--text-muted);font-size:13px;}
-  .footer-inner{max-width:920px;margin:0 auto;display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px;}
+  .footer-inner{max-width:var(--page-max);margin:0 auto;display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px;}
   .footer-inner button{font:inherit;color:var(--accent-strong);background:none;border:none;cursor:pointer;text-decoration:underline;text-underline-offset:2px;padding:0;}
 
   /* ---------- Cookie banner ---------- */
@@ -261,6 +262,27 @@
   .modal-close-row{margin-top:20px;text-align:right;}
 
   .vis-hidden{display:none!important;}
+
+  /* ---------- Desktop layout (phones/tablets keep the single-column design above) ---------- */
+  @media (min-width:1100px){
+    :root{--page-max:1240px;}
+    .hero{max-width:var(--page-max);margin:0 auto;padding:40px 20px 26px;text-align:left;display:flex;align-items:flex-end;justify-content:space-between;gap:48px;}
+    .hero-copy{max-width:780px;}
+    .hero h1{font-size:54px;margin-bottom:10px;}
+    .hero .hero-sub{margin:0;max-width:62ch;font-size:17px;}
+    .hero-actions{display:flex;flex-direction:column;align-items:flex-end;gap:10px;flex-shrink:0;padding-bottom:4px;}
+    .hero .last-updated-line{margin:0;}
+    .kpi-row{grid-template-columns:repeat(4,1fr);}
+    .kpi-card{padding:22px 24px;}
+    .panel{padding:28px 32px;}
+    .combo{max-width:380px;}
+    .about-contact{display:grid;grid-template-columns:1.3fr 1fr;gap:48px;align-items:start;}
+    .about-text{max-width:none;}
+    #cookie-banner{left:24px;right:auto;bottom:24px;margin:0;max-width:460px;}
+  }
+  @media (min-width:1600px){
+    :root{--page-max:1360px;}
+  }
 </style>
 
 </head>
@@ -280,11 +302,15 @@
 </nav>
 
 <div class="hero">
-  <p class="eyebrow" data-i18n="hero_eyebrow">ITALY · NATIONAL FUEL NETWORK</p>
-  <h1>Fuel Dashboard</h1>
-  <p data-i18n="hero_subtitle">Track Italy's pump prices — Benzina, Gasolio, GPL and Metano — daily, weekly and monthly, straight from the national transparency feed.</p>
-  <a class="cta" href="#trends" data-i18n="hero_cta">View trends</a>
-  <p class="last-updated-line" id="last-updated-line"></p>
+  <div class="hero-copy">
+    <p class="eyebrow" data-i18n="hero_eyebrow">ITALY · NATIONAL FUEL NETWORK</p>
+    <h1>Fuel Dashboard</h1>
+    <p class="hero-sub" data-i18n="hero_subtitle">Track Italy's pump prices — Benzina, Gasolio, GPL and Metano — daily, weekly and monthly, straight from the national transparency feed.</p>
+  </div>
+  <div class="hero-actions">
+    <a class="cta" href="#trends" data-i18n="hero_cta">View trends</a>
+    <p class="last-updated-line" id="last-updated-line"></p>
+  </div>
 </div>
 
 <div class="shell">
@@ -353,25 +379,27 @@
     </div>
   </section>
 
-  <section id="about">
-    <h2 class="section-title" data-i18n="about_title">About this data</h2>
-    <p class="about-text" data-i18n="about_text">—</p>
-  </section>
+  <div class="about-contact">
+    <section id="about">
+      <h2 class="section-title" data-i18n="about_title">About this data</h2>
+      <p class="about-text" data-i18n="about_text">—</p>
+    </section>
 
-  <section id="contact">
-    <h2 class="section-title" data-i18n="contact_title">Contact</h2>
-    <div class="contact-card">
-      <div>
-        <p class="contact-intro" data-i18n="contact_intro">Questions about this data or the dashboard?</p>
-        <p class="contact-name">Adeo Patapo</p>
-        <div class="contact-rows">
-          <div class="contact-row"><span class="label" data-i18n="contact_email_label">Email</span><a href="mailto:adeopatapo@gmail.com">adeopatapo@gmail.com</a></div>
-          <div class="contact-row"><span class="label" data-i18n="contact_phone_label">Phone</span><a href="tel:+393663786189">+39 366 378 6189</a></div>
+    <section id="contact">
+      <h2 class="section-title" data-i18n="contact_title">Contact</h2>
+      <div class="contact-card">
+        <div>
+          <p class="contact-intro" data-i18n="contact_intro">Questions about this data or the dashboard?</p>
+          <p class="contact-name">Adeo Patapo</p>
+          <div class="contact-rows">
+            <div class="contact-row"><span class="label" data-i18n="contact_email_label">Email</span><a href="mailto:adeopatapo@gmail.com">adeopatapo@gmail.com</a></div>
+            <div class="contact-row"><span class="label" data-i18n="contact_phone_label">Phone</span><a href="tel:+393663786189">+39 366 378 6189</a></div>
+          </div>
         </div>
+        <div class="contact-avatar">AP</div>
       </div>
-      <div class="contact-avatar">AP</div>
-    </div>
-  </section>
+    </section>
+  </div>
 </div>
 
 <footer>
@@ -855,6 +883,11 @@ const LANG_LABEL = {en:'EN', it:'IT', fr:'FR', ru:'RU', zh:'中文'};
 const CONSENT_KEY='fuel-dashboard-consent';
 const LANG_KEY='fuel-dashboard-lang';
 
+function chartDims(holder, baseW, baseH){
+  const w=holder ? holder.clientWidth : 0;
+  if(w>=900) return {W:Math.min(1320, Math.round(w)), H:baseH+60};
+  return {W:baseW, H:baseH};
+}
 function theme(name){ return getComputedStyle(document.documentElement).getPropertyValue(name).trim(); }
 function esc(s){ return (s==null?'':String(s)).replace(/[&<>"']/g, c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c])); }
 function svgns(tag,attrs){ const el=document.createElementNS('http://www.w3.org/2000/svg',tag); for(const k in attrs) el.setAttribute(k,attrs[k]); return el; }
@@ -1086,7 +1119,8 @@ function renderTrend(){
   `;
 
   const n=labels.length;
-  const W=760,H=300, padL=52, padR=64, padT=16, padB=30;
+  const {W,H}=chartDims(holder,760,300);
+  const padL=52, padR=64, padT=16, padB=30;
   const plotW=W-padL-padR, plotH=H-padT-padB;
   const allVals = (hasServed ? self.concat(served.filter(v=>v!=null)) : self.slice()).concat(natLine ? natLine.filter(v=>v!=null) : []);
   const minV=Math.min(...allVals), maxV=Math.max(...allVals);
@@ -1368,7 +1402,8 @@ function renderCmp(){
     ${cmpHighlight ? `<span class="item"><span class="swatch" style="background:var(--text-primary);height:3px"></span>${esc(cmpHighlight)}</span>` : ''}`;
 
   const n=labels.length;
-  const W=760,H=320,padL=52,padR=24,padT=16,padB=30;
+  const {W,H}=chartDims(chartHolder,760,320);
+  const padL=52,padR=24,padT=16,padB=30;
   const plotW=W-padL-padR, plotH=H-padT-padB;
   const vals=[...natS.filter(v=>v!=null)];
   regS.forEach(r=>r.s.forEach(v=>{ if(v!=null) vals.push(v); }));
@@ -1722,6 +1757,11 @@ renderFuelPills();
   initCmp();
   initConsent();
 })();
+let resizeTimer=null;
+window.addEventListener('resize', ()=>{
+  clearTimeout(resizeTimer);
+  resizeTimer=setTimeout(()=>{ renderTrend(); renderCmp(); }, 150);
+});
 window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', scheduleRenderAll);
 new MutationObserver(scheduleRenderAll).observe(document.documentElement,{attributes:true, attributeFilter:['data-theme']});
 </script>
