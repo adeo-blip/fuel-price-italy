@@ -1,0 +1,9 @@
+Today's Fuel Dashboard spotlight lands on Valle d'Aosta, and the standout number isn't the daily price — it's the trend underneath it. Metano (natural gas) in the region has climbed 21.8% since late July, nearly matching a 23.7% national rise, while GPL has barely moved more than 1% over the same eleven-plus weeks. Diesel, meanwhile, is running about 0.8% above the national average there, while petrol sits just below it.
+
+Fuel Dashboard tracks self-service and served prices for Benzina, Gasolio, GPL and Metano across every Italian region, province, municipality, and operator, updating daily from MIMIT's official feed. This particular report — the data pull, the weekly trend analysis, the region rotation, and every word of the write-up — was produced end to end by an unattended pipeline built with Claude Code. No spreadsheet, no manual recalculation, no one rewriting commentary each morning. Just a dashboard and a report that build and publish themselves every day.
+
+That's the actual pitch here: instead of a hand-maintained Excel sheet that someone has to update, re-check, and re-explain, an AI-built pipeline can pull the data, run the analysis, write it up, and ship it — automatically, every day, without anyone touching it. Take a look at the live dashboard and today's full regional report: https://adeo-blip.github.io/fuel-price-italy/
+
+#FuelPrices #Italy #DataPipeline #AI #ClaudeCode #Automation #EnergyPrices #OpenData
+
+Adeo Patapo · adeopatapo@gmail.com
