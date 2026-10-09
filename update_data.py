@@ -44,6 +44,11 @@ SCOPE_FILES = {
 COMUNE_RETENTION_DAYS = 60
 GESTORE_RETENTION_DAYS = 35
 DRILLDOWN_FUELS = ['Benzina', 'Gasolio']
+COMUNE_FUELS = ['Benzina', 'Gasolio', 'GPL', 'Metano']
+BRAND_PRICE_MIN_RATIO = 0.8
+BRAND_PRICE_MAX_RATIO = 1.5
+BRAND_PRICES_FILE = os.path.join(BASE_DIR, "data", "brand_prices.json")
+BRAND_PRICES_COMUNE_FILE = os.path.join(BASE_DIR, "data", "brand_prices_comune.json")
 
 FUEL_MAP = {
     'Benzina': 'Benzina', 'Benzina speciale': 'Benzina', 'Benzina WR 100': 'Benzina',
@@ -216,6 +221,7 @@ def write_scope_file_indexed(path, date_str, buckets_map, registered_counter, re
             doc['names'].append(key)
         idx = name_to_idx[key]
         summary = summarize_buckets(buckets, include_served=include_served, fuels=fuels, decimals=decimals)
+        summary = {fuel: vals for fuel, vals in summary.items() if any(v is not None for v in vals.values())}
         summary["stations"] = {
             "registered": registered_counter.get(key, 0),
             "reporting": len(reporting_map.get(key, ())),
@@ -234,6 +240,61 @@ def write_scope_file_indexed(path, date_str, buckets_map, registered_counter, re
     os.makedirs(os.path.dirname(path), exist_ok=True)
     with open(path, 'w', encoding='utf-8') as f:
         json.dump(doc, f, ensure_ascii=False, separators=(',', ':'))
+
+
+def build_brand_levels(registry, station_prices, brand_index):
+    """Latest-day brand price table per place. For every (place, brand, fuel, mode) keeps
+    [brand_idx, stations, average, lowest] where each station contributes the price of its
+    cheapest grade of that fuel, so premium grades don't penalise a brand."""
+    acc = {'italia': {}, 'regione': {}, 'provincia': {}, 'comune': {}}
+    by_product = defaultdict(list)
+    for prices in station_prices.values():
+        for product, price in prices.items():
+            by_product[product].append(price)
+    medians = {product: statistics.median(vals) for product, vals in by_product.items()}
+    for station_id, prices in station_prices.items():
+        st = registry.get(station_id)
+        if not st:
+            continue
+        prices = {product: price for product, price in prices.items()
+                  if BRAND_PRICE_MIN_RATIO * medians[product] <= price <= BRAND_PRICE_MAX_RATIO * medians[product]}
+        bi = brand_index.setdefault(st['bandiera'], len(brand_index))
+        places = (('italia', ''), ('regione', st['regione']), ('provincia', st['provincia']), ('comune', st['comune']))
+        for (fuel, mode), price in prices.items():
+            for level, key in places:
+                cell = acc[level].setdefault(key, {}).setdefault(fuel, {}).setdefault(mode, {}).setdefault(bi, [0, 0.0, price])
+                cell[0] += 1
+                cell[1] += price
+                if price < cell[2]:
+                    cell[2] = price
+    out = {}
+    for level, places in acc.items():
+        out[level] = {}
+        for key, fuels in places.items():
+            fuel_doc = {}
+            for fuel, modes in fuels.items():
+                mode_doc = {}
+                for mode, brands in modes.items():
+                    rows = [[bi, c[0], round(c[1] / c[0], 3), round(c[2], 3)] for bi, c in brands.items()]
+                    rows.sort(key=lambda r: (r[2], -r[1]))
+                    mode_doc[mode] = rows
+                fuel_doc[fuel] = mode_doc
+            out[level][key] = fuel_doc
+    return out
+
+
+def write_brand_prices(date_str, registry, station_prices):
+    brand_index = {}
+    levels = build_brand_levels(registry, station_prices, brand_index)
+    brands = [name for name, _ in sorted(brand_index.items(), key=lambda kv: kv[1])]
+    base = {"date": date_str, "fuels": MAIN_FUELS, "brands": brands}
+    main_doc = dict(base, levels={lv: levels[lv] for lv in ('italia', 'regione', 'provincia')})
+    comune_doc = dict(base, levels={'comune': levels['comune']})
+    for path, doc in ((BRAND_PRICES_FILE, main_doc), (BRAND_PRICES_COMUNE_FILE, comune_doc)):
+        os.makedirs(os.path.dirname(path), exist_ok=True)
+        with open(path, 'w', encoding='utf-8') as f:
+            json.dump(doc, f, ensure_ascii=False, separators=(',', ':'))
+    print(f"Brand price tables: {len(brands)} brands, {len(levels['comune'])} municipalities")
 
 
 def main():
@@ -272,6 +333,7 @@ def main():
     reporting_comune = defaultdict(set)
     reporting_gestore = defaultdict(set)
     reporting_bandiera = defaultdict(set)
+    station_prices = {}
 
     row_count = 0
     for line in lines[2:]:
@@ -306,6 +368,10 @@ def main():
             continue
 
         bucket_key = 'self' if is_self else 'served'
+        if station:
+            sp = station_prices.setdefault(station_id, {})
+            if (fuel, bucket_key) not in sp or price < sp[(fuel, bucket_key)]:
+                sp[(fuel, bucket_key)] = price
         national[fuel][bucket_key].append(price)
         if station:
             by_regione[station['regione']][fuel][bucket_key].append(price)
@@ -346,9 +412,14 @@ def main():
     write_scope_file(SCOPE_FILES['provincia'], date_str, by_provincia, registered_provincia, reporting_provincia, include_served=True)
     write_scope_file(SCOPE_FILES['bandiera'], date_str, by_bandiera, registered_bandiera, reporting_bandiera, include_served=True)
     write_scope_file_indexed(SCOPE_FILES['comune'], date_str, by_comune, registered_comune, reporting_comune,
-                              include_served=False, retention_days=COMUNE_RETENTION_DAYS, fuels=DRILLDOWN_FUELS, decimals=3)
+                              include_served=False, retention_days=COMUNE_RETENTION_DAYS, fuels=COMUNE_FUELS, decimals=3)
     write_scope_file_indexed(SCOPE_FILES['gestore'], date_str, by_gestore, registered_gestore, reporting_gestore,
                               include_served=False, retention_days=GESTORE_RETENTION_DAYS, fuels=DRILLDOWN_FUELS, decimals=3)
+
+    try:
+        write_brand_prices(date_str, registry, station_prices)
+    except Exception as exc:
+        print(f"WARNING: brand price tables were not updated: {exc!r}", file=sys.stderr)
 
     print(f"Processed {row_count} price rows across {len(registry)} registered stations ({len(reporting_national)} reporting today)")
     print(json.dumps(entry, indent=2))

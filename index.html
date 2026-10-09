@@ -172,6 +172,40 @@
   #tooltip b{font-family:var(--font-mono);}
   #tooltip .tt-row{display:flex;justify-content:space-between;gap:14px;}
 
+
+  /* ---------- Brand ranking + regions table ---------- */
+  .cheap-controls{margin-top:16px;gap:14px;}
+  .minsel{display:flex;align-items:center;gap:8px;font:600 12.5px var(--font-ui);color:var(--text-secondary);}
+  .minsel select{font:600 13px var(--font-ui);padding:7px 10px;border-radius:10px;border:1px solid var(--border);background:var(--surface-2);color:var(--text-primary);}
+  .cheap-headline{font-size:15px;color:var(--text-secondary);margin:16px 0 12px;}
+  .cheap-headline b{color:var(--text-primary);}
+  .table-wrap{overflow-x:auto;}
+  .data-table{width:100%;border-collapse:collapse;font-size:13.5px;}
+  .data-table th{font:700 11px var(--font-ui);text-transform:uppercase;letter-spacing:.05em;color:var(--text-muted);text-align:left;padding:8px 10px;border-bottom:1px solid var(--baseline);white-space:nowrap;}
+  .data-table td{padding:9px 10px;border-bottom:1px solid var(--gridline);color:var(--text-secondary);vertical-align:middle;}
+  .data-table .num-col{text-align:right;white-space:nowrap;}
+  .data-table .c-rank{width:34px;color:var(--text-muted);}
+  .data-table .brand-name{color:var(--text-primary);font-weight:600;}
+  .data-table tr.best td{background:var(--accent-soft);}
+  .data-table tr.clickable{cursor:pointer;}
+  .data-table tr.clickable:hover td{background:var(--surface-2);}
+  .data-table tr.hl td{background:var(--accent-soft);}
+  .data-table .good{color:var(--good);} .data-table .bad{color:var(--critical);}
+  .data-table .pct{color:var(--text-muted);font-size:12px;}
+  .dcell{display:flex;align-items:center;gap:10px;}
+  .dcell .num{min-width:62px;text-align:right;font-size:12.5px;}
+  .dbar{position:relative;display:inline-block;width:110px;height:10px;background:var(--surface-2);border-radius:5px;}
+  .dbar i{position:absolute;top:0;height:100%;border-radius:5px;}
+  .dbar i.neg{background:var(--good);} .dbar i.pos{background:var(--critical);}
+  .dbar-axis{position:absolute;left:50%;top:-2px;bottom:-2px;width:1px;background:var(--baseline);}
+  .sort-btn{font:inherit;color:inherit;letter-spacing:inherit;text-transform:inherit;background:none;border:none;cursor:pointer;padding:0;}
+  .sort-btn:hover{color:var(--text-primary);}
+  .open-btn{font:700 15px var(--font-ui);background:var(--surface-2);border:1px solid var(--border);color:var(--text-secondary);border-radius:8px;padding:2px 9px;cursor:pointer;}
+  .open-btn:hover{border-color:var(--accent);color:var(--text-primary);}
+  .spark{display:block;}
+  .more-btn{margin-top:14px;}
+  #cmp-table-holder{margin-top:18px;}
+
   /* ---------- About ---------- */
   .about-text{color:var(--text-secondary);font-size:15px;max-width:70ch;}
 
@@ -236,6 +270,8 @@
     <div class="brand"><span class="brand-dot"></span>Fuel Dashboard</div>
     <div class="navlinks">
       <a href="#trends" data-i18n="nav_trends">Trends</a>
+      <a href="#cheapest" data-i18n="nav_cheapest">Cheapest brands</a>
+      <a href="#regions" data-i18n="nav_regions">Regions vs Italy</a>
       <a href="#about" data-i18n="nav_about">About the data</a>
       <a href="#contact" data-i18n="nav_contact">Contact</a>
     </div>
@@ -277,6 +313,43 @@
       <p class="fuel-gloss" id="fuel-gloss"></p>
       <div class="legend" id="trend-legend"></div>
       <div id="trend-chart-holder"></div>
+    </div>
+  </section>
+
+  <section id="cheapest">
+    <h2 class="section-title" data-i18n="cheap_title">Where is fuel cheaper?</h2>
+    <p class="section-note" data-i18n="cheap_note">Pick a place and a fuel to rank the brands by their average price on the latest day. Each station counts at the price of its cheapest grade.</p>
+    <div class="panel">
+      <div class="scope-row">
+        <div class="seg" id="cheap-scope-seg" role="group" aria-label="Place"></div>
+        <div class="combo vis-hidden" id="cheap-combo">
+          <input type="text" id="cheap-search" autocomplete="off" role="combobox" aria-expanded="false" aria-label="Place">
+          <div class="combo-list" id="cheap-list" role="listbox"></div>
+        </div>
+      </div>
+      <div class="controls-row cheap-controls">
+        <div class="pillrow" id="cheap-fuel-pills" role="group" aria-label="Fuel type"></div>
+        <div class="seg" id="cheap-mode-seg" role="group" aria-label="Price type"></div>
+        <label class="minsel"><span id="cheap-min-label">Min. stations</span>
+          <select id="cheap-min"><option value="1">1</option><option value="3" selected>3</option><option value="5">5</option><option value="10">10</option><option value="25">25</option></select>
+        </label>
+      </div>
+      <p class="cheap-headline" id="cheap-headline"></p>
+      <div id="cheap-table-holder"></div>
+      <p class="scope-note" id="cheap-asof"></p>
+    </div>
+  </section>
+
+  <section id="regions">
+    <h2 class="section-title" data-i18n="cmp_title">Regions vs Italy</h2>
+    <p class="section-note" data-i18n="cmp_note">The Italy average (bold line) against all 20 regions.</p>
+    <div class="panel">
+      <div class="controls-row">
+        <div class="pillrow" id="cmp-fuel-pills" role="group" aria-label="Fuel type"></div>
+      </div>
+      <div class="legend" id="cmp-legend"></div>
+      <div id="cmp-chart-holder"></div>
+      <div id="cmp-table-holder"></div>
     </div>
   </section>
 
@@ -375,7 +448,7 @@ const SCOPE_FILE_URL = {
   gestore: './data/data_gestore.json',
 };
 const SCOPE_INDEXED = {regione:false, provincia:false, bandiera:false, comune:true, gestore:true};
-const SCOPE_FUELS = {italia:FUELS, regione:FUELS, provincia:FUELS, bandiera:FUELS, comune:['Benzina','Gasolio'], gestore:['Benzina','Gasolio']};
+const SCOPE_FUELS = {italia:FUELS, regione:FUELS, provincia:FUELS, bandiera:FUELS, comune:FUELS, gestore:['Benzina','Gasolio']};
 const SCOPE_SERVED = {italia:true, regione:true, provincia:true, bandiera:true, comune:false, gestore:false};
 
 let SCOPE_CACHE = {};
@@ -459,6 +532,33 @@ const I18N = {
     kpi_first_day:'First day tracked — trend starts building tomorrow', kpi_loading:'Loading…',
     trends_title:'Price trends', trends_note:'Choose a timeframe and a fuel to see how the national self-service average has moved.',
     trends_note_scoped:'Choose a timeframe and a fuel to see how the self-service average has moved for {scope} — {name}.',
+    nav_cheapest:'Cheapest brands',
+    nav_regions:'Regions vs Italy',
+    cheap_title:'Where is fuel cheaper?',
+    cheap_note:'Pick a place and a fuel to rank the brands by their average price on the latest day. Each station counts at the price of its cheapest grade.',
+    cheap_search_prompt:'Search and select a {scope} to rank its brands.',
+    cheap_min_label:'Min. stations',
+    cheap_headline:'Cheapest {fuel} in {place}: {brand}, €{price} ({diff} vs the place average)',
+    cheap_none:'No brand has enough stations with a {fuel} price here. Try a lower minimum.',
+    cheap_col_brand:'Brand',
+    cheap_col_avg:'Average',
+    cheap_col_vs:'vs place average',
+    cheap_col_low:'Lowest station',
+    cheap_col_n:'Stations',
+    cheap_show_all:'Show all {n}',
+    cheap_show_less:'Show top 12',
+    cheap_asof:'Prices of {date}.',
+    cmp_title:'Regions vs Italy',
+    cmp_note:'The Italy average (bold line) against all 20 regions. Click a row to highlight a region; use the arrow to open its full trend.',
+    cmp_col_region:'Region',
+    cmp_col_latest:'Latest',
+    cmp_col_vs:'vs Italy',
+    cmp_col_week:'7 days',
+    cmp_col_trend:'Trend',
+    cmp_open:'Open trend',
+    legend_italy:'Italy average',
+    legend_region_lines:'Other regions',
+    cmp_loading:'Loading regional data…',
     granularity_daily:'Daily', granularity_weekly:'Weekly', granularity_monthly:'Monthly',
     legend_self:'Self-service', legend_served:'Full service',
     scope_label_italia:'Italy', scope_label_regione:'Region', scope_label_provincia:'Province',
@@ -497,6 +597,33 @@ const I18N = {
     kpi_first_day:'Primo giorno monitorato — l\'andamento comincia da domani', kpi_loading:'Caricamento…',
     trends_title:'Andamento dei prezzi', trends_note:'Scegli un intervallo temporale e un carburante per vedere come si è mosso il prezzo medio nazionale self-service.',
     trends_note_scoped:'Scegli un intervallo temporale e un carburante per vedere come si è mosso il prezzo medio self-service per {scope} — {name}.',
+    nav_cheapest:'Marchi più economici',
+    nav_regions:'Regioni vs Italia',
+    cheap_title:'Dove costa meno il carburante?',
+    cheap_note:"Scegli un luogo e un carburante per classificare i marchi in base al prezzo medio dell'ultimo giorno. Ogni impianto conta con il prezzo della sua qualità più economica.",
+    cheap_search_prompt:'Cerca e seleziona {scope} per classificare i suoi marchi.',
+    cheap_min_label:'Impianti min.',
+    cheap_headline:'{fuel} più economico a {place}: {brand}, €{price} ({diff} rispetto alla media del luogo)',
+    cheap_none:'Nessun marchio ha abbastanza impianti con un prezzo {fuel} qui. Prova un minimo più basso.',
+    cheap_col_brand:'Marchio',
+    cheap_col_avg:'Media',
+    cheap_col_vs:'vs media del luogo',
+    cheap_col_low:'Impianto più economico',
+    cheap_col_n:'Impianti',
+    cheap_show_all:'Mostra tutti ({n})',
+    cheap_show_less:'Mostra i primi 12',
+    cheap_asof:'Prezzi del {date}.',
+    cmp_title:'Regioni vs Italia',
+    cmp_note:'La media italiana (linea spessa) a confronto con tutte le 20 regioni. Clicca una riga per evidenziare una regione; usa la freccia per aprire il suo andamento completo.',
+    cmp_col_region:'Regione',
+    cmp_col_latest:'Ultimo',
+    cmp_col_vs:'vs Italia',
+    cmp_col_week:'7 giorni',
+    cmp_col_trend:'Andamento',
+    cmp_open:'Apri andamento',
+    legend_italy:'Media Italia',
+    legend_region_lines:'Altre regioni',
+    cmp_loading:'Caricamento dati regionali…',
     granularity_daily:'Giornaliero', granularity_weekly:'Settimanale', granularity_monthly:'Mensile',
     legend_self:'Self-service', legend_served:'Servito',
     scope_label_italia:'Italia', scope_label_regione:'Regione', scope_label_provincia:'Provincia',
@@ -535,6 +662,33 @@ const I18N = {
     kpi_first_day:'Premier jour suivi — la tendance commence à se dessiner demain', kpi_loading:'Chargement…',
     trends_title:'Évolution des prix', trends_note:"Choisissez une période et un carburant pour voir l'évolution du prix moyen national en libre-service.",
     trends_note_scoped:"Choisissez une période et un carburant pour voir l'évolution du prix moyen en libre-service pour {scope} — {name}.",
+    nav_cheapest:'Marques les moins chères',
+    nav_regions:'Régions vs Italie',
+    cheap_title:'Où le carburant est-il moins cher ?',
+    cheap_note:'Choisissez un lieu et un carburant pour classer les marques selon leur prix moyen du dernier jour. Chaque station compte au prix de sa qualité la moins chère.',
+    cheap_search_prompt:'Recherchez et sélectionnez {scope} pour classer ses marques.',
+    cheap_min_label:'Stations min.',
+    cheap_headline:'{fuel} le moins cher à {place} : {brand}, €{price} ({diff} par rapport à la moyenne du lieu)',
+    cheap_none:"Aucune marque n'a assez de stations avec un prix {fuel} ici. Essayez un minimum plus bas.",
+    cheap_col_brand:'Marque',
+    cheap_col_avg:'Moyenne',
+    cheap_col_vs:'vs moyenne du lieu',
+    cheap_col_low:'Station la moins chère',
+    cheap_col_n:'Stations',
+    cheap_show_all:'Tout afficher ({n})',
+    cheap_show_less:'Afficher les 12 premières',
+    cheap_asof:'Prix du {date}.',
+    cmp_title:'Régions vs Italie',
+    cmp_note:'La moyenne italienne (ligne épaisse) face aux 20 régions. Cliquez sur une ligne pour mettre une région en évidence ; la flèche ouvre son évolution complète.',
+    cmp_col_region:'Région',
+    cmp_col_latest:'Dernier',
+    cmp_col_vs:'vs Italie',
+    cmp_col_week:'7 jours',
+    cmp_col_trend:'Tendance',
+    cmp_open:"Ouvrir l'évolution",
+    legend_italy:'Moyenne Italie',
+    legend_region_lines:'Autres régions',
+    cmp_loading:'Chargement des données régionales…',
     granularity_daily:'Quotidien', granularity_weekly:'Hebdomadaire', granularity_monthly:'Mensuel',
     legend_self:'Libre-service', legend_served:'Avec service',
     scope_label_italia:'Italie', scope_label_regione:'Région', scope_label_provincia:'Province',
@@ -573,6 +727,33 @@ const I18N = {
     kpi_first_day:'Первый день наблюдений — динамика начнёт строиться завтра', kpi_loading:'Загрузка…',
     trends_title:'Динамика цен', trends_note:'Выберите период и вид топлива, чтобы увидеть динамику средней цены самообслуживания по стране.',
     trends_note_scoped:'Выберите период и вид топлива, чтобы увидеть динамику средней цены самообслуживания для {scope} — {name}.',
+    nav_cheapest:'Самые дешёвые бренды',
+    nav_regions:'Регионы и Италия',
+    cheap_title:'Где топливо дешевле?',
+    cheap_note:'Выберите место и вид топлива, чтобы ранжировать бренды по средней цене за последний день. Каждая АЗС учитывается по цене самой дешёвой марки топлива.',
+    cheap_search_prompt:'Найдите и выберите {scope}, чтобы ранжировать его бренды.',
+    cheap_min_label:'Мин. АЗС',
+    cheap_headline:'Самый дешёвый {fuel} — {place}: {brand}, €{price} ({diff} к средней по месту)',
+    cheap_none:'Нет бренда с достаточным числом АЗС с ценой {fuel}. Уменьшите минимум.',
+    cheap_col_brand:'Бренд',
+    cheap_col_avg:'Средняя',
+    cheap_col_vs:'к средней по месту',
+    cheap_col_low:'Самая низкая АЗС',
+    cheap_col_n:'АЗС',
+    cheap_show_all:'Показать все ({n})',
+    cheap_show_less:'Показать первые 12',
+    cheap_asof:'Цены на {date}.',
+    cmp_title:'Регионы и Италия',
+    cmp_note:'Средняя по Италии (жирная линия) в сравнении со всеми 20 регионами. Нажмите на строку, чтобы выделить регион; стрелка открывает его полную динамику.',
+    cmp_col_region:'Регион',
+    cmp_col_latest:'Последняя',
+    cmp_col_vs:'к Италии',
+    cmp_col_week:'7 дней',
+    cmp_col_trend:'Динамика',
+    cmp_open:'Открыть динамику',
+    legend_italy:'Средняя по Италии',
+    legend_region_lines:'Другие регионы',
+    cmp_loading:'Загрузка региональных данных…',
     granularity_daily:'По дням', granularity_weekly:'По неделям', granularity_monthly:'По месяцам',
     legend_self:'Самообслуживание', legend_served:'С обслуживанием',
     scope_label_italia:'Италия', scope_label_regione:'Регион', scope_label_provincia:'Провинция',
@@ -611,6 +792,33 @@ const I18N = {
     kpi_first_day:'首个记录日——趋势将从明天开始累积', kpi_loading:'加载中…',
     trends_title:'价格趋势', trends_note:'选择时间范围和燃油种类,查看全国自助加油平均价格的变化。',
     trends_note_scoped:'选择时间范围和燃油种类,查看{scope} — {name}的自助加油平均价格变化。',
+    nav_cheapest:'最便宜品牌',
+    nav_regions:'各大区与全国',
+    cheap_title:'哪里的燃油更便宜？',
+    cheap_note:'选择地点和燃油种类,按最新一天的平均价格对品牌排名。每个加油站按其最便宜油品的价格计算。',
+    cheap_search_prompt:'请搜索并选择{scope},查看其品牌排名。',
+    cheap_min_label:'最少加油站数',
+    cheap_headline:'{place}最便宜的{fuel}：{brand},€{price}(比当地平均价{diff})',
+    cheap_none:'此处没有足够多的加油站提供{fuel}价格,请降低最少数量。',
+    cheap_col_brand:'品牌',
+    cheap_col_avg:'平均价',
+    cheap_col_vs:'与当地平均价相比',
+    cheap_col_low:'最低价加油站',
+    cheap_col_n:'加油站数',
+    cheap_show_all:'显示全部({n})',
+    cheap_show_less:'仅显示前 12 个',
+    cheap_asof:'价格日期：{date}。',
+    cmp_title:'各大区与全国',
+    cmp_note:'全国平均价(粗线)与全部 20 个大区的对比。点击一行可突出显示某个大区;点击箭头查看其完整走势。',
+    cmp_col_region:'大区',
+    cmp_col_latest:'最新',
+    cmp_col_vs:'与全国相比',
+    cmp_col_week:'7 天',
+    cmp_col_trend:'走势',
+    cmp_open:'查看走势',
+    legend_italy:'全国平均',
+    legend_region_lines:'其他大区',
+    cmp_loading:'正在加载大区数据…',
     granularity_daily:'每日', granularity_weekly:'每周', granularity_monthly:'每月',
     legend_self:'自助', legend_served:'有人服务',
     scope_label_italia:'意大利', scope_label_regione:'大区', scope_label_provincia:'省份',
@@ -794,7 +1002,7 @@ function renderGranularitySeg(){
     ['daily','weekly','monthly'].forEach(g=>{
       const btn=document.createElement('button');
       btn.type='button'; btn.dataset.g=g;
-      btn.addEventListener('click', ()=>{ currentGranularity=g; updateGranularitySeg(); renderTrend(); });
+      btn.addEventListener('click', ()=>{ currentGranularity=g; updateGranularitySeg(); renderTrend(); renderCmp(); });
       holder.appendChild(btn);
     });
   }
@@ -858,18 +1066,29 @@ function renderTrend(){
     return;
   }
 
+  let natLine=null;
+  if(currentScopeType!=='italia' && DATA.timeseries[currentFuel]){
+    const natByDate=new Map(DATA.dates.map((d,i)=>[d, DATA.timeseries[currentFuel].self[i]]));
+    const natArr=scope.dates.map(d=>natByDate.has(d) ? natByDate.get(d) : null);
+    const nb=bucketize(scope.dates, natArr, scope.dates.map(()=>null), keyFn);
+    const nm=new Map(nb.map(b=>[b.key,b.self]));
+    const vals=buckets.map(b=>nm.has(b.key) ? nm.get(b.key) : null);
+    if(vals.some(v=>v!=null)) natLine=vals;
+  }
+
   const labels=buckets.map(b=>labelFor(b, currentGranularity, currentLang));
   const self=buckets.map(b=>b.self), served=buckets.map(b=>b.served);
 
   legend.innerHTML=`
     <span class="item"><span class="swatch" style="background:${color}"></span>${I18N[currentLang].legend_self}</span>
     ${hasServed ? `<span class="item" style="color:${color}"><span class="swatch dashed"></span>${I18N[currentLang].legend_served}</span>` : ''}
+    ${natLine ? `<span class="item"><span class="swatch" style="background:var(--text-muted);height:2px"></span>${tr('legend_italy')}</span>` : ''}
   `;
 
   const n=labels.length;
   const W=760,H=300, padL=52, padR=64, padT=16, padB=30;
   const plotW=W-padL-padR, plotH=H-padT-padB;
-  const allVals = hasServed ? self.concat(served.filter(v=>v!=null)) : self.slice();
+  const allVals = (hasServed ? self.concat(served.filter(v=>v!=null)) : self.slice()).concat(natLine ? natLine.filter(v=>v!=null) : []);
   const minV=Math.min(...allVals), maxV=Math.max(...allVals);
   const span=maxV-minV || 0.1;
   const lo=minV-span*0.15, hi=maxV+span*0.18;
@@ -885,8 +1104,9 @@ function renderTrend(){
                 <text class="axis-label" x="${padL-8}" y="${yy+4}" text-anchor="end">€${v.toFixed(2)}</text>`;
   }
   let xLabels='';
+  const showLabel=thinLabelIdx(n,7);
   labels.forEach((lab,i)=>{
-    xLabels += `<text class="axis-label" x="${x(i)}" y="${H-8}" text-anchor="middle">${esc(lab)}</text>`;
+    if(showLabel.has(i)) xLabels += `<text class="axis-label" x="${x(i)}" y="${H-8}" text-anchor="middle">${esc(lab)}</text>`;
   });
 
   const pathOf=arr=>{
@@ -894,12 +1114,14 @@ function renderTrend(){
     return pts.map(([i,v],j)=>(j===0?'M':'L')+x(i).toFixed(1)+','+y(v).toFixed(1)).join(' ');
   };
   const selfPath=pathOf(self), servedPath=hasServed?pathOf(served):'';
+  const natPath=natLine ? pathOf(natLine) : '';
 
   const svg=svgns('svg',{class:'chart',viewBox:`0 0 ${W} ${H}`,role:'img','aria-label':`${currentFuel} price trend`});
   svg.innerHTML=`
     ${gridSvg}
     <line class="grid-line" x1="${padL}" x2="${W-padR}" y1="${padT+plotH}" y2="${padT+plotH}" style="stroke:var(--baseline)"></line>
     ${xLabels}
+    ${natLine ? `<path d="${natPath}" fill="none" style="stroke:var(--text-muted)" stroke-width="2" stroke-linecap="round" stroke-dasharray="6 5"></path>` : ''}
     ${hasServed ? `<path d="${servedPath}" fill="none" stroke="${color}" stroke-width="2" stroke-linecap="round" stroke-dasharray="1 7" opacity="0.75"></path>` : ''}
     <path d="${selfPath}" fill="none" stroke="${color}" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"></path>
     <circle cx="${x(n-1)}" cy="${y(self[n-1])}" r="4.5" fill="${color}" stroke="var(--surface)" stroke-width="2"></circle>
@@ -921,10 +1143,340 @@ function renderTrend(){
     let html=`<div style="font-weight:600;margin-bottom:4px">${esc(labels[i])}</div>
       <div class="tt-row"><span>${I18N[currentLang].legend_self}</span><b>€${fmtPrice(self[i])}</b></div>`;
     if(hasServed) html+=`<div class="tt-row"><span>${I18N[currentLang].legend_served}</span><b>€${fmtPrice(served[i])}</b></div>`;
+    if(natLine && natLine[i]!=null) html+=`<div class="tt-row"><span>${tr('legend_italy')}</span><b>€${fmtPrice(natLine[i])}</b></div><div class="tt-row"><span>Δ</span><b>${fmtEuroDelta(self[i]-natLine[i])}</b></div>`;
     showTip(html, e.clientX, e.clientY);
   }
 
   holder.innerHTML=''; holder.appendChild(svg);
+}
+
+/* ---------------- Shared helpers for the place / brand / region views ---------------- */
+function tr(key){ return I18N[currentLang][key] || I18N.en[key] || key; }
+function byId(id){ return document.getElementById(id); }
+function fmtEuroDelta(v){ return (v<0?'-':'+')+'€'+Math.abs(v).toFixed(3); }
+function renderPillsInto(holder, current, onPick){
+  holder.innerHTML='';
+  FUELS.forEach(f=>{
+    const btn=document.createElement('button');
+    btn.className='pill'; btn.type='button';
+    btn.setAttribute('aria-pressed', f===current ? 'true':'false');
+    btn.innerHTML=`<span class="dot" style="background:${theme(FUEL_VAR[f])}"></span><span class="label">${f}</span>`;
+    btn.addEventListener('click', ()=>onPick(f));
+    holder.appendChild(btn);
+  });
+}
+function attachCombo(input, list, getNames, onPick){
+  const close=()=>{ list.classList.remove('open'); input.setAttribute('aria-expanded','false'); };
+  const open=(q)=>{
+    const names=getNames();
+    const ql=(q||'').trim().toLowerCase();
+    const matches=(ql ? names.filter(n=>n.toLowerCase().includes(ql)) : names).slice(0,50);
+    list.innerHTML='';
+    if(!matches.length){
+      list.innerHTML=`<div class="combo-empty">${tr('scope_no_match')}</div>`;
+    }else{
+      matches.forEach(n=>{
+        const opt=document.createElement('div');
+        opt.className='combo-opt'; opt.setAttribute('role','option'); opt.textContent=n;
+        opt.addEventListener('mousedown', e=>{ e.preventDefault(); input.value=n; close(); onPick(n); });
+        list.appendChild(opt);
+      });
+    }
+    list.classList.add('open'); input.setAttribute('aria-expanded','true');
+  };
+  input.addEventListener('input', ()=>open(input.value));
+  input.addEventListener('focus', ()=>open(input.value));
+  input.addEventListener('blur', ()=>setTimeout(close,120));
+  input.addEventListener('keydown', e=>{
+    if(e.key==='Enter'){
+      const first=list.querySelector('.combo-opt');
+      if(first){ input.value=first.textContent; close(); onPick(first.textContent); }
+      e.preventDefault();
+    }else if(e.key==='Escape'){ close(); }
+  });
+}
+function thinLabelIdx(n, maxLabels){
+  const step=Math.max(1, Math.ceil(n/maxLabels));
+  const idx=[]; for(let i=n-1;i>=0;i-=step) idx.push(i);
+  return new Set(idx);
+}
+
+/* ---------------- Where is fuel cheaper? (brand ranking) ---------------- */
+const BRAND_DOCS = {main:null, comune:null};
+async function loadBrandDoc(kind){
+  if(BRAND_DOCS[kind]) return BRAND_DOCS[kind];
+  const res=await fetch(kind==='comune' ? './data/brand_prices_comune.json' : './data/brand_prices.json', {cache:'no-store'});
+  BRAND_DOCS[kind]=await res.json();
+  return BRAND_DOCS[kind];
+}
+const CHEAP_SCOPES=['italia','regione','provincia','comune'];
+const CHEAP_TOP=12;
+let cheapScope='italia', cheapKey='', cheapFuel='Benzina', cheapMode='self', cheapMin=3, cheapExpanded=false;
+
+function cheapDoc(){ return cheapScope==='comune' ? BRAND_DOCS.comune : BRAND_DOCS.main; }
+function cheapNames(){
+  const doc=cheapDoc();
+  if(!doc) return [];
+  return Object.keys(doc.levels[cheapScope]||{}).filter(k=>k && k!==UNSPECIFIED_REGION).sort((a,b)=>a.localeCompare(b));
+}
+async function selectCheapScope(scope){
+  cheapScope=scope;
+  cheapKey = scope==='italia' ? '' : null;
+  cheapExpanded=false;
+  cheapMin = scope==='comune' ? 1 : 3;
+  byId('cheap-min').value=String(cheapMin);
+  byId('cheap-search').value='';
+  renderCheap();
+  try{ await loadBrandDoc(scope==='comune' ? 'comune' : 'main'); }catch(e){ console.error('Failed to load brand prices', e); }
+  renderCheap();
+}
+function chooseCheapPlace(name){
+  cheapKey=name; cheapExpanded=false;
+  renderCheap();
+}
+function renderCheapControls(){
+  const seg=byId('cheap-scope-seg');
+  if(!seg.childElementCount){
+    CHEAP_SCOPES.forEach(s=>{
+      const btn=document.createElement('button');
+      btn.type='button'; btn.dataset.scope=s;
+      btn.addEventListener('click', ()=>selectCheapScope(s));
+      seg.appendChild(btn);
+    });
+  }
+  seg.querySelectorAll('button').forEach(b=>{
+    b.setAttribute('aria-pressed', b.dataset.scope===cheapScope?'true':'false');
+    b.textContent=tr('scope_label_'+b.dataset.scope);
+  });
+  const modeSeg=byId('cheap-mode-seg');
+  if(!modeSeg.childElementCount){
+    ['self','served'].forEach(m=>{
+      const btn=document.createElement('button');
+      btn.type='button'; btn.dataset.mode=m;
+      btn.addEventListener('click', ()=>{ cheapMode=m; cheapExpanded=false; renderCheap(); });
+      modeSeg.appendChild(btn);
+    });
+  }
+  modeSeg.querySelectorAll('button').forEach(b=>{
+    b.setAttribute('aria-pressed', b.dataset.mode===cheapMode?'true':'false');
+    b.textContent=tr(b.dataset.mode==='self' ? 'legend_self' : 'legend_served');
+  });
+  renderPillsInto(byId('cheap-fuel-pills'), cheapFuel, f=>{ cheapFuel=f; cheapExpanded=false; renderCheap(); });
+  byId('cheap-combo').classList.toggle('vis-hidden', cheapScope==='italia');
+  byId('cheap-search').placeholder=tr('scope_search_placeholder');
+  byId('cheap-min-label').textContent=tr('cheap_min_label');
+}
+function renderCheap(){
+  renderCheapControls();
+  const head=byId('cheap-headline'), holder=byId('cheap-table-holder'), asof=byId('cheap-asof');
+  const doc=cheapDoc();
+  asof.textContent='';
+  if(!doc){ head.textContent=''; holder.innerHTML=`<p class="scope-note">${tr('kpi_loading')}</p>`; return; }
+  if(cheapScope!=='italia' && cheapKey==null){
+    head.textContent='';
+    holder.innerHTML=`<p class="scope-note">${tr('cheap_search_prompt').replace('{scope}', tr('scope_label_'+cheapScope))}</p>`;
+    return;
+  }
+  asof.textContent=tr('cheap_asof').replace('{date}', fmtDate(doc.date, currentLang));
+  const place=(doc.levels[cheapScope]||{})[cheapKey] || {};
+  const all=((place[cheapFuel]||{})[cheapMode]) || [];
+  const totalN=all.reduce((a,r)=>a+r[1],0);
+  const placeAvg= totalN ? all.reduce((a,r)=>a+r[1]*r[2],0)/totalN : null;
+  const rows=all.filter(r=>r[1]>=cheapMin);
+  if(!rows.length){
+    head.textContent='';
+    holder.innerHTML=`<p class="scope-note">${tr('cheap_none').replace('{fuel}', cheapFuel)}</p>`;
+    return;
+  }
+  const placeName = cheapScope==='italia' ? tr('scope_label_italia') : cheapKey;
+  const best=rows[0];
+  head.innerHTML=tr('cheap_headline')
+    .replace('{fuel}', esc(cheapFuel)).replace('{place}', esc(placeName))
+    .replace('{brand}', `<b>${esc(doc.brands[best[0]])}</b>`)
+    .replace('{price}', best[2].toFixed(3))
+    .replace('{diff}', fmtEuroDelta(best[2]-placeAvg));
+  const shown = cheapExpanded ? rows : rows.slice(0,CHEAP_TOP);
+  const maxAbs=Math.max(...shown.map(r=>Math.abs(r[2]-placeAvg)), 0.001);
+  const color=theme(FUEL_VAR[cheapFuel]);
+  let html=`<div class="table-wrap"><table class="data-table"><thead><tr>
+    <th class="c-rank">#</th><th>${tr('cheap_col_brand')}</th><th class="num-col">${tr('cheap_col_avg')}</th>
+    <th>${tr('cheap_col_vs')}</th><th class="num-col">${tr('cheap_col_low')}</th><th class="num-col">${tr('cheap_col_n')}</th></tr></thead><tbody>`;
+  shown.forEach((r,i)=>{
+    const d=r[2]-placeAvg;
+    const w=Math.abs(d)/maxAbs*50;
+    const bar=`<span class="dbar"><span class="dbar-axis"></span><i class="${d<0?'neg':'pos'}" style="${d<0?`left:${50-w}%`:'left:50%'};width:${w}%"></i></span>`;
+    html+=`<tr class="${i===0?'best':''}"><td class="c-rank">${i+1}</td><td class="brand-name">${esc(doc.brands[r[0]])}</td>
+      <td class="num-col num"><b>€${r[2].toFixed(3)}</b></td>
+      <td><span class="dcell"><span class="num ${d<0?'good':'bad'}">${fmtEuroDelta(d)}</span>${bar}</span></td>
+      <td class="num-col num">€${r[3].toFixed(3)}</td><td class="num-col num">${r[1].toLocaleString('en-US')}</td></tr>`;
+  });
+  html+=`</tbody></table></div>`;
+  if(rows.length>CHEAP_TOP){
+    html+=`<button class="btn ghost more-btn" id="cheap-more" type="button">${cheapExpanded ? tr('cheap_show_less') : tr('cheap_show_all').replace('{n}', rows.length)}</button>`;
+  }
+  holder.innerHTML=html;
+  const more=byId('cheap-more');
+  if(more) more.addEventListener('click', ()=>{ cheapExpanded=!cheapExpanded; renderCheap(); });
+}
+function initCheap(){
+  const min=byId('cheap-min');
+  min.addEventListener('change', ()=>{ cheapMin=+min.value; cheapExpanded=false; renderCheap(); });
+  attachCombo(byId('cheap-search'), byId('cheap-list'), cheapNames, chooseCheapPlace);
+  renderCheap();
+  loadBrandDoc('main').then(renderCheap).catch(e=>console.error('Failed to load brand prices', e));
+}
+
+/* ---------------- Regions vs Italy ---------------- */
+let cmpFuel='Benzina', cmpHighlight=null, cmpSortKey='price', cmpSortDir=1;
+
+function cmpModel(){
+  const doc=SCOPE_CACHE.regione;
+  if(!doc || !(doc.history||[]).length || !DATA.dates.length) return null;
+  const dates=doc.history.map(h=>h.date);
+  const natByDate=new Map(DATA.dates.map((d,i)=>[d, DATA.timeseries[cmpFuel].self[i]]));
+  const nat=dates.map(d=>natByDate.has(d) ? natByDate.get(d) : null);
+  const names=new Set();
+  doc.history.forEach(h=>Object.keys(h.entries||{}).forEach(k=>{ if(k!==UNSPECIFIED_REGION) names.add(k); }));
+  const regions=[...names].sort((a,b)=>a.localeCompare(b)).map(name=>{
+    const daily=doc.history.map(h=>{ const e=(h.entries||{})[name]; return e && e[cmpFuel] && e[cmpFuel].self!=null ? e[cmpFuel].self : null; });
+    return {name, daily};
+  }).filter(r=>r.daily.some(v=>v!=null));
+  return {dates, nat, regions};
+}
+const UNSPECIFIED_REGION='Altro / Non specificato';
+
+function lastIdx(arr){ for(let i=arr.length-1;i>=0;i--) if(arr[i]!=null) return i; return -1; }
+
+function renderCmp(){
+  renderPillsInto(byId('cmp-fuel-pills'), cmpFuel, f=>{ cmpFuel=f; renderCmp(); });
+  const chartHolder=byId('cmp-chart-holder'), tableHolder=byId('cmp-table-holder'), legend=byId('cmp-legend');
+  const model=cmpModel();
+  if(!model){ legend.innerHTML=''; chartHolder.innerHTML=`<p class="scope-note">${tr('cmp_loading')}</p>`; tableHolder.innerHTML=''; return; }
+  const {dates, nat, regions}=model;
+  if(cmpHighlight && !regions.some(r=>r.name===cmpHighlight)) cmpHighlight=null;
+  const color=theme(FUEL_VAR[cmpFuel]);
+  const keyFn = currentGranularity==='daily' ? (d=>d) : currentGranularity==='weekly' ? isoWeekKey : monthKey;
+  const nulls=dates.map(()=>null);
+  const natB=bucketize(dates, nat, nulls, keyFn);
+  const labels=natB.map(b=>labelFor(b, currentGranularity, currentLang));
+  const natS=natB.map(b=>b.self);
+  const regS=regions.map(r=>({name:r.name, s:bucketize(dates, r.daily, nulls, keyFn).map(b=>b.self)}));
+
+  legend.innerHTML=`
+    <span class="item"><span class="swatch" style="background:${color};height:4px"></span>${tr('legend_italy')}</span>
+    <span class="item"><span class="swatch" style="background:var(--text-muted);opacity:.5"></span>${tr('legend_region_lines')}</span>
+    ${cmpHighlight ? `<span class="item"><span class="swatch" style="background:var(--text-primary);height:3px"></span>${esc(cmpHighlight)}</span>` : ''}`;
+
+  const n=labels.length;
+  const W=760,H=320,padL=52,padR=24,padT=16,padB=30;
+  const plotW=W-padL-padR, plotH=H-padT-padB;
+  const vals=[...natS.filter(v=>v!=null)];
+  regS.forEach(r=>r.s.forEach(v=>{ if(v!=null) vals.push(v); }));
+  const minV=Math.min(...vals), maxV=Math.max(...vals);
+  const span=maxV-minV||0.1;
+  const lo=minV-span*0.08, hi=maxV+span*0.08;
+  const x=i=> n>1 ? padL+i/(n-1)*plotW : padL+plotW/2;
+  const y=v=>padT+plotH-((v-lo)/(hi-lo))*plotH;
+  let grid='';
+  for(let t=0;t<=5;t++){
+    const v=lo+(hi-lo)*t/5, yy=y(v);
+    grid+=`<line class="grid-line" x1="${padL}" x2="${W-padR}" y1="${yy}" y2="${yy}"></line><text class="axis-label" x="${padL-8}" y="${yy+4}" text-anchor="end">€${v.toFixed(2)}</text>`;
+  }
+  const show=thinLabelIdx(n,7);
+  let xl=''; labels.forEach((lab,i)=>{ if(show.has(i)) xl+=`<text class="axis-label" x="${x(i)}" y="${H-8}" text-anchor="middle">${esc(lab)}</text>`; });
+  const pathOf=arr=>arr.map((v,i)=>[i,v]).filter(([,v])=>v!=null).map(([i,v],j)=>(j===0?'M':'L')+x(i).toFixed(1)+','+y(v).toFixed(1)).join(' ');
+  const others=regS.filter(r=>r.name!==cmpHighlight).map(r=>`<path d="${pathOf(r.s)}" fill="none" style="stroke:var(--text-muted)" stroke-opacity=".38" stroke-width="1.2" stroke-linejoin="round"></path>`).join('');
+  const hl=regS.find(r=>r.name===cmpHighlight);
+  const svg=svgns('svg',{class:'chart',viewBox:`0 0 ${W} ${H}`,role:'img','aria-label':`${cmpFuel} regions versus Italy`});
+  svg.innerHTML=`${grid}
+    <line class="grid-line" x1="${padL}" x2="${W-padR}" y1="${padT+plotH}" y2="${padT+plotH}" style="stroke:var(--baseline)"></line>
+    ${xl}${others}
+    ${hl ? `<path d="${pathOf(hl.s)}" fill="none" style="stroke:var(--text-primary)" stroke-width="2.4" stroke-linejoin="round" stroke-linecap="round"></path>` : ''}
+    <path d="${pathOf(natS)}" fill="none" stroke="${color}" stroke-width="3.2" stroke-linejoin="round" stroke-linecap="round"></path>
+    <circle cx="${x(n-1)}" cy="${y(natS[n-1]!=null?natS[n-1]:lo)}" r="4.5" fill="${color}" style="stroke:var(--surface)" stroke-width="2"></circle>`;
+  labels.forEach((lab,i)=>{
+    const cw=plotW/n;
+    const rect=svgns('rect',{class:'hover-col',x:(padL+i*cw).toFixed(1),y:padT,width:cw.toFixed(1),height:plotH});
+    const line=svgns('line',{class:'crosshair-line',x1:x(i),x2:x(i),y1:padT,y2:padT+plotH});
+    rect.addEventListener('mouseenter',e=>{
+      line.style.opacity='1';
+      const present=regS.filter(r=>r.s[i]!=null).sort((a,b)=>a.s[i]-b.s[i]);
+      let html=`<div style="font-weight:600;margin-bottom:4px">${esc(lab)}</div><div class="tt-row"><span>${tr('legend_italy')}</span><b>€${fmtPrice(natS[i])}</b></div>`;
+      if(hl && hl.s[i]!=null) html+=`<div class="tt-row"><span>${esc(hl.name)}</span><b>€${fmtPrice(hl.s[i])}</b></div>`;
+      if(present.length){
+        const c=present[0], d=present[present.length-1];
+        html+=`<div class="tt-row"><span>▼ ${esc(c.name)}</span><b>€${fmtPrice(c.s[i])}</b></div><div class="tt-row"><span>▲ ${esc(d.name)}</span><b>€${fmtPrice(d.s[i])}</b></div>`;
+      }
+      showTip(html,e.clientX,e.clientY);
+    });
+    rect.addEventListener('mousemove',e=>moveTip(e.clientX,e.clientY));
+    rect.addEventListener('mouseleave',()=>{ line.style.opacity='0'; hideTip(); });
+    svg.appendChild(line); svg.appendChild(rect);
+  });
+  chartHolder.innerHTML=''; chartHolder.appendChild(svg);
+
+  /* table */
+  const natLast=lastIdx(nat);
+  const rowsData=regions.map(r=>{
+    const li=lastIdx(r.daily);
+    const latest=li>=0 ? r.daily[li] : null;
+    const natAt=li>=0 ? nat[li] : null;
+    const vs=(latest!=null && natAt!=null) ? latest-natAt : null;
+    const vsPct=vs!=null ? vs/natAt*100 : null;
+    let wk=null;
+    if(li>=0){
+      let j=Math.max(0, li-7); while(j<li && r.daily[j]==null) j++;
+      if(j<li) wk=latest-r.daily[j];
+    }
+    return {name:r.name, latest, vs, vsPct, wk, spark:r.daily.filter(v=>v!=null).slice(-30)};
+  });
+  const sorters={
+    price:(a,b)=>(a.latest??Infinity)-(b.latest??Infinity),
+    vs:(a,b)=>(a.vs??Infinity)-(b.vs??Infinity),
+    name:(a,b)=>a.name.localeCompare(b.name),
+  };
+  rowsData.sort((a,b)=>sorters[cmpSortKey](a,b)*cmpSortDir);
+  const th=(key,label,cls)=>`<th class="${cls||''}"><button type="button" class="sort-btn" data-sort="${key}" aria-label="${esc(label)}">${esc(label)}${cmpSortKey===key ? (cmpSortDir>0?' ↑':' ↓') : ''}</button></th>`;
+  let html=`<div class="table-wrap"><table class="data-table"><thead><tr>
+    ${th('name',tr('cmp_col_region'))}${th('price',tr('cmp_col_latest'),'num-col')}${th('vs',tr('cmp_col_vs'),'num-col')}
+    <th class="num-col">${tr('cmp_col_week')}</th><th>${tr('cmp_col_trend')}</th><th></th></tr></thead><tbody>`;
+  rowsData.forEach(r=>{
+    const sp=r.spark.length>1 ? (()=>{
+      const mn=Math.min(...r.spark), mx=Math.max(...r.spark), sw=90, sh=22, rng=(mx-mn)||1;
+      const pts=r.spark.map((v,i)=>`${(i/(r.spark.length-1)*sw).toFixed(1)},${(sh-2-(v-mn)/rng*(sh-4)).toFixed(1)}`).join(' ');
+      return `<svg class="spark" viewBox="0 0 ${sw} ${sh}" width="${sw}" height="${sh}"><polyline points="${pts}" fill="none" stroke="${color}" stroke-width="1.8" stroke-linejoin="round" stroke-linecap="round"></polyline></svg>`;
+    })() : '';
+    html+=`<tr class="clickable ${r.name===cmpHighlight?'hl':''}" data-region="${esc(r.name)}">
+      <td class="brand-name">${esc(r.name)}</td>
+      <td class="num-col num"><b>${r.latest!=null?'€'+r.latest.toFixed(3):'—'}</b></td>
+      <td class="num-col num ${r.vs==null?'':(r.vs<0?'good':'bad')}">${r.vs==null?'—':fmtEuroDelta(r.vs)+' <span class="pct">('+fmtSigned(r.vsPct,1)+'%)</span>'}</td>
+      <td class="num-col num ${r.wk==null?'':(r.wk<0?'good':'bad')}">${r.wk==null?'—':fmtEuroDelta(r.wk)}</td>
+      <td>${sp}</td>
+      <td class="num-col"><button type="button" class="open-btn" data-open="${esc(r.name)}" title="${esc(tr('cmp_open'))}" aria-label="${esc(tr('cmp_open'))}: ${esc(r.name)}">→</button></td></tr>`;
+  });
+  html+=`</tbody></table></div>`;
+  tableHolder.innerHTML=html;
+  tableHolder.querySelectorAll('.sort-btn').forEach(b=>b.addEventListener('click', ()=>{
+    const k=b.dataset.sort;
+    if(cmpSortKey===k) cmpSortDir*=-1; else { cmpSortKey=k; cmpSortDir=1; }
+    renderCmp();
+  }));
+  tableHolder.querySelectorAll('tr.clickable').forEach(tr_=>tr_.addEventListener('click', e=>{
+    if(e.target.closest('.open-btn')) return;
+    cmpHighlight = cmpHighlight===tr_.dataset.region ? null : tr_.dataset.region;
+    renderCmp();
+  }));
+  tableHolder.querySelectorAll('.open-btn').forEach(b=>b.addEventListener('click', ()=>openRegionTrend(b.dataset.open)));
+}
+async function openRegionTrend(name){
+  await selectScopeType('regione');
+  chooseScopeValue(name);
+  currentFuel=cmpFuel; updateFuelPills(); renderTrend();
+  byId('trends').scrollIntoView({behavior:'smooth', block:'start'});
+}
+function initCmp(){
+  renderCmp();
+  loadScopeFile('regione').then(renderCmp).catch(e=>console.error('Failed to load regional data', e));
 }
 
 /* ---------------- Language switcher ---------------- */
@@ -973,6 +1525,8 @@ function applyLanguage(lang){
   updateGranularitySeg();
   updateFuelPills();
   renderTrend();
+  renderCheap();
+  renderCmp();
   renderLastUpdated();
   if(consentChoice==='accepted'){
     try{ localStorage.setItem(LANG_KEY, lang); }catch(e){}
@@ -1164,6 +1718,8 @@ renderFuelPills();
 (async()=>{
   try{ await loadLiveData(); }catch(e){ console.error('Failed to load data.json', e); }
   await initScopeUI();
+  initCheap();
+  initCmp();
   initConsent();
 })();
 window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', scheduleRenderAll);
