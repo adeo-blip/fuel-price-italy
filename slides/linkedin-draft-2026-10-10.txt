@@ -1,0 +1,9 @@
+Today's Fuel Dashboard spotlight region is Veneto — and the standout number isn't the daily price, it's the trend underneath it. Veneto's Metano price has climbed 28.7% since late July, compared to a 23.9% rise nationally — a gap between one region and the rest of Italy that's been widening every week, not opening all at once. GPL added its own twist this week: after two months of barely moving, Veneto's LPG price jumped 2.6% in just the last few days — the sharpest weekly move of any fuel since tracking began on July 21.
+
+Fuel Dashboard tracks self-service and served prices for Benzina, Gasolio, GPL and Metano across all 20 Italian regions, updated every morning from the official MIMIT government feeds, with a new region spotlighted each day. You can explore it yourself at https://adeo-blip.github.io/fuel-price-italy/.
+
+What's maybe more interesting than the prices: this entire pipeline — the data refresh, the weekly trend analysis, the region rotation, even the written report you're reading about right now — runs automatically every day, built with Claude Code. No spreadsheet to remember to update, no manual copy-paste from a government CSV. It's a small example of what's possible when you hand an AI agent a recurring data task end to end instead of doing it by hand in Excel.
+
+#FuelPrices #Italy #DataVisualization #AI #ClaudeCode #EnergyMarkets #Automation
+
+Adeo Patapo · adeopatapo@gmail.com
