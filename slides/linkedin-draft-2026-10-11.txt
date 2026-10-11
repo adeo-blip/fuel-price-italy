@@ -1,0 +1,13 @@
+Today's Fuel Dashboard spotlight region: Abruzzo. And the number that stands out isn't the daily price — it's the 12-week trend underneath it: Abruzzo's Metano price has climbed 36.6% since late July, nearly 13 points faster than Italy's +24% average rise. Twelve weeks ago, filling up with Metano in Abruzzo was about 6% cheaper than the national average. Today it's running 3% above it — a full reversal in under three months.
+
+Benzina and Gasolio, meanwhile, are tracking Italy's moves almost perfectly, both up roughly 4-5% over the same stretch. GPL has barely budged in Abruzzo (-0.65%) even as the national GPL price climbed +1.4%.
+
+Fuel Dashboard is a free, self-updating site tracking retail fuel prices across Italy's roughly 24,000 registered stations, refreshed daily from the official MIMIT feed: https://adeo-blip.github.io/fuel-price-italy/
+
+What's maybe more interesting than the fuel data itself: this entire thing — the daily data pull, the region rotation, the trend analysis, even this caption — runs unattended, built and maintained with Claude Code. No manual spreadsheet, no one re-pulling CSVs and recalculating averages every morning. It's a working example of what's possible when you hand an AI coding agent a real, live, publicly-facing project instead of just a one-off script.
+
+Explore the live dashboard yourself — switch between Region, Province, Municipality, or Operator/Brand views to see your own area.
+
+#FuelPrices #Italy #DataDashboard #ClaudeCode #AIAutomation #OpenData #Abruzzo
+
+Adeo Patapo · adeopatapo@gmail.com
