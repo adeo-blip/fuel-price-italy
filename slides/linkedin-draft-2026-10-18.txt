@@ -1,0 +1,13 @@
+Today's Fuel Dashboard spotlight: Liguria.
+
+Self-service Benzina and Gasolio in Liguria are both running slightly below the national average right now (-0.5% and -0.4%), but the real story this week is gas. Liguria's Metano price has climbed almost 39% since late July, well ahead of the roughly 25% rise seen nationally over the same twelve weeks, and GPL has pulled 15% above the national average too, rising more than three times as fast as the rest of Italy since tracking began.
+
+Fuel Dashboard is a live, self-updating site that pulls Italy's official MIMIT fuel price feed every day, picks a region to spotlight, computes the week-over-week trends, and writes up the findings, all automatically. No spreadsheet, no manual pivot tables, no analyst re-pasting CSVs each morning: the whole pipeline, including this write-up, runs on Claude Code.
+
+That's the real pitch here: a one-person side project can now ship something that would have taken a small analytics team to maintain as a manual Excel tracker, not because the data is secret, but because AI tools make daily ingestion, analysis and writing cheap enough to automate end to end.
+
+Check out the live dashboard, switch between Region, Province, Municipality or Operator views, and see how your area compares: https://adeo-blip.github.io/fuel-price-italy/
+
+#FuelPrices #Italy #DataViz #BuildInPublic #ClaudeCode #AI #EnergyMarkets
+
+Adeo Patapo · adeopatapo@gmail.com
