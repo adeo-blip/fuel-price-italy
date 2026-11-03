@@ -1,0 +1,11 @@
+Today's Fuel Dashboard spotlight is on Campania — and the most interesting number isn't the headline price, it's a reversal hiding in the weekly trend.
+
+Back in July, Campania's Metano price was running slightly above the Italian national average. Today, after Metano prices climbed more than 20% in the region and over 30% nationally this autumn, Campania sits 7% below the national average instead. Benzina and Gasolio are drifting the other way, sitting just slightly above the national line after a gentler post-peak pullback than the rest of the country. And GPL is the fuel to watch next: Campania's GPL has risen almost twice as fast as the national average in recent weeks, closing a gap that was over 5% wide in July down to about 3% now.
+
+None of this is hand-typed. Fuel Dashboard is a self-updating dashboard and daily report that pulls Italy's official MIMIT fuel price feed every morning, recomputes national and regional averages across all 20 regions and four fuel types, picks a new region to spotlight on a fixed rotation, and has an AI agent (Claude Code) write the trend analysis above straight from the numbers, no templates involved. It does the job a manually-maintained Excel sheet would do, except it runs every single day without anyone needing to remember to open it.
+
+Full interactive dashboard, region comparisons, and today's full report: https://adeo-blip.github.io/fuel-price-italy/
+
+#FuelPrices #Italy #DataPipeline #ClaudeCode #AIAutomation #EnergyData #Campania
+
+Adeo Patapo · adeopatapo@gmail.com
