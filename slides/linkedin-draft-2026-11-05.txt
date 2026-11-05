@@ -1,0 +1,9 @@
+Today's regional spotlight: Friuli-Venezia Giulia. While most of Italy has watched GPL (LPG) prices climb for four straight tracked weeks, this region's auto-gas prices have barely moved — turning what was close to an even market into a 3.4% regional discount at the pump versus the national average.
+
+Fuel Dashboard is a free, self-updating site that tracks petrol, diesel, LPG and natural gas prices across all of Italy's regions, provinces, municipalities and 300+ brands, refreshed every morning from Italy's official MIMIT price feed. No one is manually re-typing numbers into a spreadsheet — the data pull, the regional spotlight rotation, the weekly trend analysis, and even the writing of this report are generated automatically, every day, by an unattended pipeline built with Claude Code.
+
+That's the real pitch: a small AI-assisted build can replace what used to need a standing team and a manually maintained Excel file — the same underlying data, continuously refreshed, behind a live interactive dashboard instead of a static sheet. Take a look: https://adeo-blip.github.io/fuel-price-italy/
+
+#FuelPrices #Italy #DataAnalytics #AI #ClaudeCode #EnergyMarkets #OpenData
+
+Adeo Patapo · adeopatapo@gmail.com
