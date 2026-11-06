@@ -1,0 +1,11 @@
+Today's Fuel Dashboard spotlight: Lazio.
+
+The number that stood out: Lazio's Metano has historically cost more than the Italian average — as much as 7% more back in July. This week, for the first time since I started tracking, that premium flipped: the national average (€2.049/L) edged above Lazio's (€2.047/L). Benzina and Gasolio barely moved day-over-day, while GPL quietly became the region's fastest-rising fuel, up 3.6% in the past month alone.
+
+Fuel Dashboard is a live, self-updating dashboard tracking fuel prices across all of Italy — every brand, region, province and municipality — refreshed every morning straight from MIMIT's open data feed. No manual downloads, no spreadsheet upkeep. Take a look: https://adeo-blip.github.io/fuel-price-italy/
+
+This entire pipeline — the data pull, the regional trend analysis, even the write-up itself — runs unattended every morning, built with Claude Code. A year ago this would have meant a person checking a government site once a week and updating an Excel sheet by hand. Now it's code that never skips a day and never makes a typo. That's the real case for building with AI tools right now: not "AI writes your report," but "AI builds the thing that keeps writing it correctly, every day, for free."
+
+#FuelPrices #Italy #DataPipeline #ClaudeCode #AI #Automation #EnergyPrices #OpenData
+
+Adeo Patapo · adeopatapo@gmail.com
