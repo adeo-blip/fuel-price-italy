@@ -1,0 +1,11 @@
+Today's Fuel Dashboard spotlight region is Lombardia — and the most interesting number isn't today's price, it's the trend underneath it.
+
+Since late July, methane (Metano) prices have climbed everywhere in Italy, but not at the same pace: nationally they're up 37.5%, while in Lombardia they've risen a more modest 26.4%. That's widened Lombardia's discount to the national Metano average from about 2% in July to nearly 10% today (€1.9056/L in Lombardia vs €2.1022/L nationally, as of Nov 7). Benzina and Gasolio tell a calmer story — both rose into a September peak and have since eased back to roughly 2-4% above where they started in July, in Lombardia and nationally alike.
+
+Fuel Dashboard tracks self-service and served prices for Benzina, Gasolio, GPL and Metano across every Italian region, province, municipality and operator/brand, updated daily from Italy's MIMIT open price feed. Every piece of it — the data pull, the weekly trend analysis, the daily regional spotlight, even this write-up — runs automatically through a pipeline I built with Claude Code. No manual spreadsheet, no copy-pasted numbers: just a self-updating dashboard and report, every single day.
+
+Explore it yourself: https://adeo-blip.github.io/fuel-price-italy/
+
+#FuelPrices #Italy #DataPipeline #ClaudeCode #AI #EnergyMarkets #Lombardia
+
+Adeo Patapo · adeopatapo@gmail.com
