@@ -1,0 +1,9 @@
+Today's Fuel Dashboard spotlight: Marche. The headline isn't petrol or diesel — it's GPL, which jumped 6.7% overnight (€0.899 to €0.959/L) after sitting completely flat for eleven straight weeks, while Metano keeps climbing toward its steepest rise of the season, up over 40% regionally since late July.
+
+Fuel Dashboard is a live, self-updating dashboard and daily report tracking petrol, diesel, LPG and natural gas prices across every Italian region, province, municipality, brand and station, built entirely with Claude Code. No spreadsheet, no manual data entry, no analyst recalculating averages by hand — an unattended pipeline pulls the official MIMIT price feed, computes the regional and national trends, and writes up the daily report every single morning, start to finish.
+
+That's the real case for using AI tools like Claude Code here: a one-person side project can now run a daily analytics pipeline that would normally take a small team to maintain manually, and it never misses a day. Check out today's Marche numbers and explore any region, province or brand yourself at https://adeo-blip.github.io/fuel-price-italy/
+
+#FuelPrices #Italy #DataPipeline #ClaudeCode #AI #Automation #EnergyMarkets
+
+Adeo Patapo · adeopatapo@gmail.com
