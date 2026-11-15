@@ -1,0 +1,11 @@
+Today's Fuel Dashboard spotlight: Toscana. The most interesting number this week isn't the price everyone watches (Benzina, basically flat since July) — it's Metano, which has flipped from a 2.9% premium over Italy's average in July to a 0.7% discount today, even after surging 36% region-wide since then.
+
+Fuel Dashboard tracks Italy's daily fuel prices across 20 regions, 100+ provinces, thousands of municipalities and hundreds of brands and operators — fully interactive, rebuilt every day. Today's spotlight also flags GPL, which is climbing faster in Toscana (+11.1% since July) than nationally (+9.1%), a gap that keeps widening.
+
+The dashboard, the daily regional report, and the trend analysis above are all generated automatically — no spreadsheet, no manual update. It's a live example of what's possible when you use AI tools like Claude Code to build a self-updating pipeline instead of maintaining data by hand in Excel: same job, a fraction of the effort, refreshed every single day without anyone touching it.
+
+Explore the live map, switch regions, or compare brands yourself: https://adeo-blip.github.io/fuel-price-italy/
+
+#FuelPrices #Italy #DataPipeline #ClaudeCode #AIAutomation #OpenData
+
+Adeo Patapo · adeopatapo@gmail.com

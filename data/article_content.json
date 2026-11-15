@@ -1,64 +1,64 @@
 {
-  "title": "Marche's LPG Price Jumps 7% Overnight While Methane Keeps Climbing Toward a Four-Month High",
-  "dek": "A sudden single-day GPL spike breaks eleven weeks of flat pricing in the region, even as natural gas extends its steady summer-to-fall climb both locally and nationwide.",
+  "title": "Toscana's Metano Flips Below the National Average as GPL Keeps Climbing",
+  "dek": "A look at how Tuscany's four tracked fuels have moved since July — and where the region now diverges from the rest of Italy.",
   "executive_summary": [
-    "Today, Marche's self-service Benzina sits at €2.0062/L, essentially flat day-over-day (-€0.0018, -0.09%) and 0.34% below the national average of €2.0130. Gasolio is €2.2384/L (-€0.0010 day-over-day, -0.04%), also running 0.48% under the €2.2493 national mark. GPL is today's outlier: it jumped to €0.959/L, up 6.67% (+€0.060) from yesterday's €0.899 — a price that had sat virtually unchanged since August 20 — and now trades 17.9% above the national GPL average of €0.8132. Metano continues its steady ascent, reaching €2.1083/L (+1.22% day-over-day), landing almost exactly level with the national average of €2.1058.",
-    "Zoom out across the 16 weeks tracked since July 21, and Metano is by far the biggest mover for both Marche and Italy as a whole — up 41.6% regionally and 38.1% nationally, with the pace actually accelerating in the most recent week (Marche +8.0%, national +10.2% week-over-week). Gasolio and Benzina have each climbed a more modest 2-4% over the full period, both peaking in late September before cooling off. GPL is the real divergence story: nationally it has been grinding higher in a straight line (+5.3% since July), while in Marche it sat dead flat at €0.899 for eleven straight weeks before today's abrupt 6.7% jump — a move sharp enough, and sudden enough, to be worth watching again tomorrow."
+    "Today's snapshot in Toscana: self-service Benzina sits at €1.9699/L, down from €2.0117 as of the Nov. 8 reading and about half a cent below the €1.9753 national average. Gasolio is at €2.2380/L, essentially identical to the €2.2381 national figure. GPL has climbed to €0.8323/L, now running above the €0.8280 national average, and Metano is flat at €2.0990/L, just under the €2.1138 national mark. Of Toscana's 1,654 registered stations, 1,492 reported a price today — a 90.2% reporting rate in line with Italy's 90.4%.",
+    "Zoom out to the weekly data since the week of July 20 and the real story is a split between two fuels moving in opposite directions relative to the rest of the country. GPL is up 11.1% in Toscana versus 9.1% nationally — the region is outpacing Italy on this fuel with no pullback yet. Metano, despite being by far the biggest mover of all four fuels (+36.0% in Toscana, +40.9% nationally since July), has flipped from trading at a 2.9% premium over the national average in July to roughly a 0.7% discount today — a crossover worth watching as it plays out."
   ],
   "fuel_sections": [
     {
       "fuel": "Benzina",
-      "heading": "Petrol Holds Steady, Trading Below the National Average",
+      "heading": "Benzina Slips Back Below Two Euros, Erasing Its September Spike",
       "paragraphs": [
-        "Marche's self-service Benzina price is €2.0062/L today, down a negligible €0.0018 (-0.09%) from yesterday's €2.008. That keeps the region 0.34% cheaper than the national self-service average of €2.0130/L, continuing a pattern of Marche pricing petrol slightly under the Italy-wide figure.",
-        "Over the 16 tracked weeks, Marche's weekly average Benzina price rose from €1.9544 (week of July 20) to €2.0096 (week of November 2), a 2.82% increase — marginally outpacing the national rise of 2.11% over the same span (€1.9756 to €2.0173). Both series peaked in the week of September 21 before easing back; in the most recent tracked week, Marche's average fell 1.10% while the national average fell a steeper 1.39%, suggesting the broader market is cooling slightly faster than Marche right now."
+        "Self-service Benzina in Toscana is €1.9699/L today (served €2.1446), down from €2.0117 as of the Nov. 8 reading — a drop of about 2.1% in six days. That puts the region roughly half a cent, or 0.3%, below the €1.9753 national self-service average.",
+        "Zooming out, Benzina has essentially round-tripped since late July: Toscana opened the tracked period at €1.9727 (week of July 20), climbed to a tracked high of €2.1658 the week of Sept. 21 — a run-up of 9.8% — and has since slid all the way back to today's €1.9699, net unchanged from 17 weeks ago. The national average traced almost the identical arc (+9.7% to the same September peak, then -8.8% back down), so Toscana isn't diverging from the rest of the country on this fuel."
       ]
     },
     {
       "fuel": "Gasolio",
-      "heading": "Diesel Cools From Its Late-September Peak, Still Pricier Than a Month Ago",
+      "heading": "Diesel Cools Off After Its Autumn Surge, Tracking the National Retreat",
       "paragraphs": [
-        "Marche's self-service Gasolio sits at €2.2384/L today, down €0.0010 (-0.04%) day-over-day, and 0.48% below the €2.2493 national self-service average.",
-        "The multi-week picture shows Marche diesel climbing faster than the national average through the summer and into autumn: from €2.1524 (week of July 20) to €2.2438 (week of November 2), a 4.25% rise, versus 3.72% nationally (€2.1747 to €2.2556). Both series peaked in the week of September 21 — Marche at €2.3496, national at €2.3736 — and have since pulled back, with Marche down 4.50% from that peak and the national average down 4.97%, a slightly deeper correction nationally than regionally."
+        "Gasolio self-service in Toscana is €2.2380/L today, down slightly (-0.5%) from €2.2483 on Nov. 8, and now sits essentially on top of the €2.2381 national average — a gap of roughly a tenth of a cent.",
+        "Over the full tracked window, Gasolio is up 2.9% in Toscana since the week of July 20 (€2.1737 to today's €2.2380), but that net figure masks a sharper round trip: the region peaked at €2.3833 the week of Sept. 21 (+9.6% from July) before giving back most of the gain. Nationally the pattern matches — up 9.2% to the same September peak, now up only 2.9% net — so Toscana's diesel market is moving in lockstep with the rest of Italy."
       ]
     },
     {
       "fuel": "GPL",
-      "heading": "A Sudden 7% Jump Breaks Eleven Weeks of Flat LPG Pricing",
+      "heading": "GPL Is the Quiet Outperformer, Rising Faster in Toscana Than Nationwide",
       "paragraphs": [
-        "Marche's self-service GPL price jumped to €0.959/L today, up €0.060 (+6.67%) from yesterday's €0.899 — the first move of any size since the price settled at €0.899 back on August 20. That one-day jump pushes Marche's GPL price 17.9% above today's national self-service average of €0.8132/L.",
-        "Zoomed out, the weekly-average trend tells a quieter story than today's spike suggests: Marche's GPL rose just 2.47% over the full 16 weeks (€0.889 to €0.911), while the national average climbed more steadily and faster, up 5.30% (€0.7592 to €0.7994) over the same stretch. In other words, Marche had been the calmer of the two all season — until today's abrupt jump, which on its own is larger than the region's entire prior four-month drift and is worth confirming holds in tomorrow's data rather than reversing as a one-day anomaly."
+        "GPL self-service in Toscana jumped to €0.8323/L today from €0.8153 on Nov. 8 — up 2.1% in six days — and is now running above the €0.8280 national average, a premium of roughly half a cent.",
+        "This is the fuel where Toscana is genuinely diverging from the rest of the country. Since the week of July 20, GPL is up 11.1% in Toscana (from €0.7493) versus 9.1% nationally (from €0.7592), and unlike Benzina and Gasolio there has been no pullback — GPL has climbed in nearly every week on record, with the steepest single jump landing in the most recent week alone. If that pace holds, Toscana's GPL premium over the national average is only going to widen."
       ]
     },
     {
       "fuel": "Metano",
-      "heading": "Natural Gas Extends Its Climb Toward the Steepest Rise of the Season",
+      "heading": "Metano's Rally Is the Biggest of All Four Fuels — and Toscana Just Fell Behind the Pack",
       "paragraphs": [
-        "Marche's self-service Metano price reached €2.1083/L today, up €0.0255 (+1.22%) from yesterday's €2.0828, landing just €0.0025 (+0.12%) above today's national self-service average of €2.1058/L — essentially in line with the rest of the country.",
-        "Metano is the standout mover of the four fuels tracked: Marche's weekly average rose 41.63% from €1.4581 (week of July 20) to €2.0647 (week of November 2), slightly ahead of the national rise of 38.08% (€1.4999 to €2.071) over the same period. The climb is not slowing down — in the most recent tracked week alone, Marche's average rose 8.01% and the national average rose 10.18%, meaning the national price is now closing the gap with Marche's by rising even faster week-on-week."
+        "Metano self-service in Toscana is effectively flat today at €2.0990/L versus €2.1002 on Nov. 8, and now sits about 0.7% below the €2.1138 national average.",
+        "Metano has moved more than any other fuel this year: up 36.0% in Toscana and 40.9% nationally since the week of July 20. But the more interesting number is the crossover — back in July, Toscana's Metano traded at a 2.9% premium over the national average (€1.5437 vs €1.4999); today it sits at a 0.7% discount. Toscana's methane prices simply haven't kept pace with the national run-up, flipping the region from more expensive than average to cheaper than average in under four months."
       ]
     }
   ],
   "network_section": {
-    "heading": "724 of 779 Marche Stations Reporting Today — Slightly Ahead of the National Rate",
+    "heading": "9 in 10 Toscana Stations Are Reporting — Right in Line With the Rest of Italy",
     "paragraphs": [
-      "Marche has 779 registered fuel stations in today's data, of which 724 reported prices — a 92.9% reporting rate. That compares to 21,655 of 23,951 stations reporting nationally, a 90.4% rate, putting Marche a touch ahead of the national average for data completeness today.",
-      "A reporting rate in the low-to-mid 90s is typical for this pipeline and reflects normal day-to-day gaps in MIMIT's self-reported price feed rather than station closures — the registered count for Marche has actually crept up slightly over the tracked period, from 774 stations on July 21 to 779 today, suggesting the regional network is marginally expanding even as a handful of stations skip reporting on any given day."
+      "Of Toscana's 1,654 registered stations, 1,492 reported a price today (90.2%), almost unchanged from the 1,493-of-1,654 (90.3%) that reported on Nov. 8. Nationally, 21,669 of 23,961 registered stations reported (90.4%) — so Toscana's reporting rate is tracking the national norm within a fraction of a point.",
+      "A reporting rate holding steady near 90% both regionally and nationally suggests the gap isn't data drop-out specific to Toscana — it more likely reflects a small, fairly constant slice of registered stations (temporary closures, outages, or stations that simply don't submit same-day prices) across the whole country."
     ]
   },
   "methodology_section": {
-    "heading": "Built by an Unattended Pipeline, Not a Spreadsheet",
+    "heading": "How This Report Gets Made: No Spreadsheet, No Human in the Loop",
     "paragraphs": [
-      "Everything in this report — the daily price pull from MIMIT's feed, the region-of-the-day rotation, the weekly trend calculations comparing Marche to the national average, and the prose you just read — is produced automatically every morning by an unattended pipeline built with Claude Code. No analyst opens a spreadsheet, recalculates a weekly average, or drafts a paragraph; the pipeline reads the raw station-level data, computes the comparisons, and writes the report from the numbers it finds, start to finish.",
-      "That is a deliberate contrast with how a project like this is usually run: a person manually downloading a CSV, pasting it into a tracking spreadsheet, and writing up a summary by hand — a process that is slow, easy to let slip on a busy day, and hard to extend to new fuels, regions, or comparisons. Fuel Dashboard instead treats the report as code: the same logic runs every day, for whichever region comes up next in the rotation, with no manual step in between the raw data and the published page."
+      "Every part of this report — pulling the day's price and station data, computing the weekly regional and national averages, selecting today's spotlight region on a fixed rotation through Italy's 20 regions, and writing the analysis above — runs automatically, once a day, with no manual step in between.",
+      "That's a deliberate contrast with how this kind of tracking is usually done: a manually-maintained spreadsheet that someone has to open, paste new numbers into, and recalculate by hand every single day. This pipeline was built with Claude Code and simply runs itself."
     ]
   },
   "closing": {
-    "heading": "Explore Beyond Agip Eni's Brand View",
+    "heading": "Explore Further on the Live Dashboard",
     "paragraphs": [
-      "The live dashboard opens by default on Agip Eni's brand-level view, but that's just the starting point — use the scope picker to switch to Region, Province, Municipality, or another Operator/Brand and dig into whichever slice of Italy's fuel market you care about."
+      "The live Fuel Dashboard opens by default on Agip Eni's brand-level view — switch to Region, Province, Municipality, or another Operator/Brand using the scope picker to dig into whichever slice of Italy's fuel market interests you."
     ]
   },
-  "pull_quote": "Marche's LPG price just jumped 6.7% in a single day — after sitting frozen at €0.899 for eleven straight weeks.",
-  "caption": "Today's Fuel Dashboard spotlight: Marche. The headline isn't petrol or diesel — it's GPL, which jumped 6.7% overnight (€0.899 to €0.959/L) after sitting completely flat for eleven straight weeks, while Metano keeps climbing toward its steepest rise of the season, up over 40% regionally since late July.\n\nFuel Dashboard is a live, self-updating dashboard and daily report tracking petrol, diesel, LPG and natural gas prices across every Italian region, province, municipality, brand and station, built entirely with Claude Code. No spreadsheet, no manual data entry, no analyst recalculating averages by hand — an unattended pipeline pulls the official MIMIT price feed, computes the regional and national trends, and writes up the daily report every single morning, start to finish.\n\nThat's the real case for using AI tools like Claude Code here: a one-person side project can now run a daily analytics pipeline that would normally take a small team to maintain manually, and it never misses a day. Check out today's Marche numbers and explore any region, province or brand yourself at https://adeo-blip.github.io/fuel-price-italy/\n\n#FuelPrices #Italy #DataPipeline #ClaudeCode #AI #Automation #EnergyMarkets\n\nAdeo Patapo · adeopatapo@gmail.com"
+  "pull_quote": "Toscana's Metano has flipped from a 2.9% premium over the national average in July to a 0.7% discount today — even as it's up 36% since then.",
+  "caption": "Today's Fuel Dashboard spotlight: Toscana. The most interesting number this week isn't the price everyone watches (Benzina, basically flat since July) — it's Metano, which has flipped from a 2.9% premium over Italy's average in July to a 0.7% discount today, even after surging 36% region-wide since then.\n\nFuel Dashboard tracks Italy's daily fuel prices across 20 regions, 100+ provinces, thousands of municipalities and hundreds of brands and operators — fully interactive, rebuilt every day. Today's spotlight also flags GPL, which is climbing faster in Toscana (+11.1% since July) than nationally (+9.1%), a gap that keeps widening.\n\nThe dashboard, the daily regional report, and the trend analysis above are all generated automatically — no spreadsheet, no manual update. It's a live example of what's possible when you use AI tools like Claude Code to build a self-updating pipeline instead of maintaining data by hand in Excel: same job, a fraction of the effort, refreshed every single day without anyone touching it.\n\nExplore the live map, switch regions, or compare brands yourself: https://adeo-blip.github.io/fuel-price-italy/\n\n#FuelPrices #Italy #DataPipeline #ClaudeCode #AIAutomation #OpenData\n\nAdeo Patapo · adeopatapo@gmail.com"
 }
