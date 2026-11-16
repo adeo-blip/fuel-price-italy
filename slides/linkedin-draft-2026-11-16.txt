@@ -1,0 +1,9 @@
+Today's Fuel Dashboard spotlight region is Trentino-Alto Adige — and the number that stands out is methane. Regional Metano prices have climbed roughly 39% since tracking began in late July, and today sit about 18% above Italy's national average, by far the widest premium of any fuel in the dataset. Petrol and diesel, by contrast, are essentially flat to slightly down day over day.
+
+Fuel Dashboard is a free, self-updating interactive dashboard that tracks petrol, diesel, LPG and methane prices across every region, province, municipality and operator in Italy, refreshed daily from the Ministry's own MIMIT feed. No one opens a spreadsheet to do this — a small unattended pipeline built with Claude Code pulls the data, rotates through Italy's 20 regions for a daily spotlight, computes the weekly trends, and writes the report you're reading right now, every single day without manual intervention.
+
+That's the real pitch here: a few years ago this would have meant a manually-maintained Excel file, updated whenever someone remembered to. Today it's a live interactive site plus a fresh, data-grounded written report, generated end-to-end by AI tooling. Check out the dashboard at https://adeo-blip.github.io/fuel-price-italy/ and explore today's Trentino-Alto Adige numbers for yourself.
+
+#FuelPrices #Italy #DataPipeline #ClaudeCode #AITools #OpenData #EnergyMarkets
+
+Adeo Patapo · adeopatapo@gmail.com

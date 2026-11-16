@@ -1,64 +1,64 @@
 {
-  "title": "Toscana's Metano Flips Below the National Average as GPL Keeps Climbing",
-  "dek": "A look at how Tuscany's four tracked fuels have moved since July — and where the region now diverges from the rest of Italy.",
+  "title": "Trentino-Alto Adige's Pumps Ease Into Mid-November as Methane Pulls Away From Every Other Fuel",
+  "dek": "Petrol and diesel drift slightly lower across the region while methane prices climb to an 18% premium over the national average.",
   "executive_summary": [
-    "Today's snapshot in Toscana: self-service Benzina sits at €1.9699/L, down from €2.0117 as of the Nov. 8 reading and about half a cent below the €1.9753 national average. Gasolio is at €2.2380/L, essentially identical to the €2.2381 national figure. GPL has climbed to €0.8323/L, now running above the €0.8280 national average, and Metano is flat at €2.0990/L, just under the €2.1138 national mark. Of Toscana's 1,654 registered stations, 1,492 reported a price today — a 90.2% reporting rate in line with Italy's 90.4%.",
-    "Zoom out to the weekly data since the week of July 20 and the real story is a split between two fuels moving in opposite directions relative to the rest of the country. GPL is up 11.1% in Toscana versus 9.1% nationally — the region is outpacing Italy on this fuel with no pullback yet. Metano, despite being by far the biggest mover of all four fuels (+36.0% in Toscana, +40.9% nationally since July), has flipped from trading at a 2.9% premium over the national average in July to roughly a 0.7% discount today — a crossover worth watching as it plays out."
+    "Trentino-Alto Adige enters the week with petrol and diesel both inching down day over day — self-service Benzina at €2.0110/L (-0.08%) and Gasolio at €2.2565/L (-0.06%) — while GPL and Metano held perfectly flat versus yesterday at €0.8366/L and €2.4990/L respectively. Against today's national self-service averages (Benzina €1.9734, Gasolio €2.2371, GPL €0.828, Metano €2.1125), the region is running richer on all four fuels, most sharply on methane, where the local price sits a full 18.3% above the national figure.",
+    "Zoom out to the weekly data tracked since late July, though, and one fuel dwarfs the other three: regional Metano has climbed roughly 39% since the week of 2026-07-20, against a 41% national rise, while Benzina is essentially flat (-0.5% regionally) and Gasolio is up only a few percent. GPL is the fuel worth watching most closely right now — it has risen more slowly here than nationally over the full period, and in the most recent two tracked weeks the two lines actually split direction, with the region easing back just as the national average kept climbing."
   ],
   "fuel_sections": [
     {
       "fuel": "Benzina",
-      "heading": "Benzina Slips Back Below Two Euros, Erasing Its September Spike",
+      "heading": "Petrol Holds Just Above €2 as the Region Underperforms a National Near-Flatline",
       "paragraphs": [
-        "Self-service Benzina in Toscana is €1.9699/L today (served €2.1446), down from €2.0117 as of the Nov. 8 reading — a drop of about 2.1% in six days. That puts the region roughly half a cent, or 0.3%, below the €1.9753 national self-service average.",
-        "Zooming out, Benzina has essentially round-tripped since late July: Toscana opened the tracked period at €1.9727 (week of July 20), climbed to a tracked high of €2.1658 the week of Sept. 21 — a run-up of 9.8% — and has since slid all the way back to today's €1.9699, net unchanged from 17 weeks ago. The national average traced almost the identical arc (+9.7% to the same September peak, then -8.8% back down), so Toscana isn't diverging from the rest of the country on this fuel."
+        "Self-service Benzina in Trentino-Alto Adige priced at €2.0110/L today, down €0.0016 (-0.08%) from yesterday's €2.0126 — essentially unchanged. That's €0.0376 (+1.9%) above today's national self-service average of €1.9734/L, a premium that has held fairly steady through the week.",
+        "Looking at the full tracked window, regional Benzina has actually slipped from €2.021/L in the week of 2026-07-20 to €2.0118/L in the week of 2026-11-09, a net -0.46%, after peaking at €2.2085/L in the week of 2026-09-21. Nationally the round trip was milder: €1.9756 to €1.9744 (-0.06%), off an identical September peak of €2.1669. In other words, the region rose and fell by roughly the same amount as the rest of Italy, but has slipped a little further below its starting point on the way back down."
       ]
     },
     {
       "fuel": "Gasolio",
-      "heading": "Diesel Cools Off After Its Autumn Surge, Tracking the National Retreat",
+      "heading": "Diesel Cools From Its September Peak, Region Still Running a Touch Above the Nation",
       "paragraphs": [
-        "Gasolio self-service in Toscana is €2.2380/L today, down slightly (-0.5%) from €2.2483 on Nov. 8, and now sits essentially on top of the €2.2381 national average — a gap of roughly a tenth of a cent.",
-        "Over the full tracked window, Gasolio is up 2.9% in Toscana since the week of July 20 (€2.1737 to today's €2.2380), but that net figure masks a sharper round trip: the region peaked at €2.3833 the week of Sept. 21 (+9.6% from July) before giving back most of the gain. Nationally the pattern matches — up 9.2% to the same September peak, now up only 2.9% net — so Toscana's diesel market is moving in lockstep with the rest of Italy."
+        "Self-service Gasolio priced at €2.2565/L today, down €0.0013 (-0.06%) from yesterday's €2.2578, versus a national self-service average of €2.2371/L today — the region sits €0.0194 (+0.87%) richer.",
+        "The multi-week shape mirrors Benzina closely: regional diesel climbed from €2.2063/L in the week of 2026-07-20 to a peak of €2.4048/L in the week of 2026-09-21, then eased back to €2.2572/L by the week of 2026-11-09 — a net +2.31% over the full span and a -6.14% retreat from the peak. Nationally the pattern tracks almost step for step: €2.1747 to a same-week peak of €2.3736, settling at €2.2376 (+2.89% net, -5.73% off peak). The region's September run-up and subsequent pullback have both been marginally sharper than the rest of the country's."
       ]
     },
     {
       "fuel": "GPL",
-      "heading": "GPL Is the Quiet Outperformer, Rising Faster in Toscana Than Nationwide",
+      "heading": "LPG Is the One Fuel Pulling in Two Different Directions Right Now",
       "paragraphs": [
-        "GPL self-service in Toscana jumped to €0.8323/L today from €0.8153 on Nov. 8 — up 2.1% in six days — and is now running above the €0.8280 national average, a premium of roughly half a cent.",
-        "This is the fuel where Toscana is genuinely diverging from the rest of the country. Since the week of July 20, GPL is up 11.1% in Toscana (from €0.7493) versus 9.1% nationally (from €0.7592), and unlike Benzina and Gasolio there has been no pullback — GPL has climbed in nearly every week on record, with the steepest single jump landing in the most recent week alone. If that pace holds, Toscana's GPL premium over the national average is only going to widen."
+        "Self-service GPL priced at €0.8366/L today, unchanged from yesterday, and €0.0086 (+1.04%) above today's national self-service average of €0.828/L.",
+        "Over the full tracked window, regional GPL is up 5.74% (from €0.7912/L in the week of 2026-07-20 to €0.8366/L in the week of 2026-11-09), while the national figure rose a steeper 9.06% (€0.7592 to €0.828) over the same span — the rest of Italy has been closing the gap on what is usually a regionally pricier fuel here. More notable still: in the two most recent tracked weeks the lines diverged outright. Trentino-Alto Adige's GPL actually eased back from a €0.8452/L high in the week of 2026-11-02 to €0.8366/L the following week (-1.0%), while the national average kept climbing from €0.7994 to €0.828 (+3.6%) over that same stretch — the clearest cross-fuel divergence in this report."
       ]
     },
     {
       "fuel": "Metano",
-      "heading": "Metano's Rally Is the Biggest of All Four Fuels — and Toscana Just Fell Behind the Pack",
+      "heading": "Methane Keeps Rising — Up Roughly 39% Since Tracking Began, Now 18% Above the National Average",
       "paragraphs": [
-        "Metano self-service in Toscana is effectively flat today at €2.0990/L versus €2.1002 on Nov. 8, and now sits about 0.7% below the €2.1138 national average.",
-        "Metano has moved more than any other fuel this year: up 36.0% in Toscana and 40.9% nationally since the week of July 20. But the more interesting number is the crossover — back in July, Toscana's Metano traded at a 2.9% premium over the national average (€1.5437 vs €1.4999); today it sits at a 0.7% discount. Toscana's methane prices simply haven't kept pace with the national run-up, flipping the region from more expensive than average to cheaper than average in under four months."
+        "Self-service Metano priced at €2.499/L today in Trentino-Alto Adige, unchanged from yesterday, and now €0.3865 (+18.3%) above today's national self-service average of €2.1125/L — by far the widest regional premium of any fuel covered in this report. One oddity worth flagging: the region's self-service price (€2.499) currently sits above its own full-service price (€2.1947), an inversion of the usual self-service discount seen across the other three fuels here.",
+        "Zoomed out, Metano is the story of the entire tracked period: regional prices have climbed from €1.7993/L in the week of 2026-07-20 to €2.499/L by the week of 2026-11-09 — a 38.9% increase with no sustained pullback along the way. Nationally the climb has been even steeper in percentage terms, from €1.4999 to €2.1132 (+40.9%), albeit from a lower starting base. No other fuel in this report has moved anywhere close to this magnitude; Benzina and Gasolio have shifted by low single digits over the same four months."
       ]
     }
   ],
   "network_section": {
-    "heading": "9 in 10 Toscana Stations Are Reporting — Right in Line With the Rest of Italy",
+    "heading": "389 Registered Stations, 369 Reporting — A Tighter Network Than the National Average",
     "paragraphs": [
-      "Of Toscana's 1,654 registered stations, 1,492 reported a price today (90.2%), almost unchanged from the 1,493-of-1,654 (90.3%) that reported on Nov. 8. Nationally, 21,669 of 23,961 registered stations reported (90.4%) — so Toscana's reporting rate is tracking the national norm within a fraction of a point.",
-      "A reporting rate holding steady near 90% both regionally and nationally suggests the gap isn't data drop-out specific to Toscana — it more likely reflects a small, fairly constant slice of registered stations (temporary closures, outages, or stations that simply don't submit same-day prices) across the whole country."
+      "Trentino-Alto Adige currently counts 389 registered filling stations, of which 369 reported a price today — a 94.9% reporting rate. That compares with 21,666 of 23,960 stations reporting nationally, a 90.4% rate, meaning the region's network is, proportionally, more consistently represented in the daily data than Italy as a whole.",
+      "The registered count has been essentially flat across the tracked period: 390 stations on 2026-07-21, dipping as low as 387 in early November before recovering to 389 by mid-November. That pattern looks more like small administrative churn — stations briefly dropping off the registry and reappearing — than genuine openings or closures."
     ]
   },
   "methodology_section": {
-    "heading": "How This Report Gets Made: No Spreadsheet, No Human in the Loop",
+    "heading": "Built, Not Written: How This Report Updates Itself Every Day",
     "paragraphs": [
-      "Every part of this report — pulling the day's price and station data, computing the weekly regional and national averages, selecting today's spotlight region on a fixed rotation through Italy's 20 regions, and writing the analysis above — runs automatically, once a day, with no manual step in between.",
-      "That's a deliberate contrast with how this kind of tracking is usually done: a manually-maintained spreadsheet that someone has to open, paste new numbers into, and recalculate by hand every single day. This pipeline was built with Claude Code and simply runs itself."
+      "This entire report — the underlying price data, the weekly trend analysis above, the choice of Trentino-Alto Adige as today's spotlight region, and the prose itself — is generated automatically every day by an unattended pipeline built with Claude Code. Each morning the pipeline pulls the latest station and price data from Italy's MIMIT feed, rotates deterministically through the country's 20 regions so every region gets its turn, computes a week-by-week trend for all four tracked fuels against the national average, and writes up the findings without a human drafting a single sentence.",
+      "Contrast that with the alternative: a manually-maintained spreadsheet that someone has to remember to download, clean, and re-chart every day, with trend analysis limited to whatever a person has time to compute by hand. The pipeline behind this report does that work unattended, consistently, at a scale and regularity a manual process can't easily match."
     ]
   },
   "closing": {
-    "heading": "Explore Further on the Live Dashboard",
+    "heading": "Explore Beyond Trentino-Alto Adige",
     "paragraphs": [
-      "The live Fuel Dashboard opens by default on Agip Eni's brand-level view — switch to Region, Province, Municipality, or another Operator/Brand using the scope picker to dig into whichever slice of Italy's fuel market interests you."
+      "The live Fuel Dashboard opens by default on Agip Eni's brand-level view — but that's just the starting point. Use the scope picker to switch to Region, Province, Municipality, or another Operator/Brand entirely, and explore how today's numbers for Trentino-Alto Adige compare to wherever you're reading this from."
     ]
   },
-  "pull_quote": "Toscana's Metano has flipped from a 2.9% premium over the national average in July to a 0.7% discount today — even as it's up 36% since then.",
-  "caption": "Today's Fuel Dashboard spotlight: Toscana. The most interesting number this week isn't the price everyone watches (Benzina, basically flat since July) — it's Metano, which has flipped from a 2.9% premium over Italy's average in July to a 0.7% discount today, even after surging 36% region-wide since then.\n\nFuel Dashboard tracks Italy's daily fuel prices across 20 regions, 100+ provinces, thousands of municipalities and hundreds of brands and operators — fully interactive, rebuilt every day. Today's spotlight also flags GPL, which is climbing faster in Toscana (+11.1% since July) than nationally (+9.1%), a gap that keeps widening.\n\nThe dashboard, the daily regional report, and the trend analysis above are all generated automatically — no spreadsheet, no manual update. It's a live example of what's possible when you use AI tools like Claude Code to build a self-updating pipeline instead of maintaining data by hand in Excel: same job, a fraction of the effort, refreshed every single day without anyone touching it.\n\nExplore the live map, switch regions, or compare brands yourself: https://adeo-blip.github.io/fuel-price-italy/\n\n#FuelPrices #Italy #DataPipeline #ClaudeCode #AIAutomation #OpenData\n\nAdeo Patapo · adeopatapo@gmail.com"
+  "pull_quote": "Methane in Trentino-Alto Adige has risen roughly 39% since tracking began in July — now priced 18% above the national average, by far the widest gap of any fuel tracked.",
+  "caption": "Today's Fuel Dashboard spotlight region is Trentino-Alto Adige — and the number that stands out is methane. Regional Metano prices have climbed roughly 39% since tracking began in late July, and today sit about 18% above Italy's national average, by far the widest premium of any fuel in the dataset. Petrol and diesel, by contrast, are essentially flat to slightly down day over day.\n\nFuel Dashboard is a free, self-updating interactive dashboard that tracks petrol, diesel, LPG and methane prices across every region, province, municipality and operator in Italy, refreshed daily from the Ministry's own MIMIT feed. No one opens a spreadsheet to do this — a small unattended pipeline built with Claude Code pulls the data, rotates through Italy's 20 regions for a daily spotlight, computes the weekly trends, and writes the report you're reading right now, every single day without manual intervention.\n\nThat's the real pitch here: a few years ago this would have meant a manually-maintained Excel file, updated whenever someone remembered to. Today it's a live interactive site plus a fresh, data-grounded written report, generated end-to-end by AI tooling. Check out the dashboard at https://adeo-blip.github.io/fuel-price-italy/ and explore today's Trentino-Alto Adige numbers for yourself.\n\n#FuelPrices #Italy #DataPipeline #ClaudeCode #AITools #OpenData #EnergyMarkets\n\nAdeo Patapo · adeopatapo@gmail.com"
 }
