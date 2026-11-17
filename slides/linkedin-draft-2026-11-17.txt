@@ -1,0 +1,11 @@
+Today's Fuel Dashboard spotlight: Umbria.
+
+The headline isn't petrol or diesel — both have basically round-tripped back to where they started in July after a late-summer spike. It's Metano (natural gas) that stands out: prices in Umbria are up roughly 50% since tracking began in July, outpacing Italy's national 41% rise over the same period. Benzina sits at €1.98/L, Gasolio at €2.22/L, GPL at €0.86/L (served) and Metano at €2.12/L today, with Umbria's 439 reporting stations keeping a 90.9% reporting rate — just ahead of the national 90.4%.
+
+This entire report — the data pull, the region rotation, the weekly trend analysis, even this write-up — is generated automatically every day by Fuel Dashboard, a self-updating pipeline I built with Claude Code instead of maintaining a manual Excel sheet. No one re-types numbers or redraws charts; the agent pulls the day's MIMIT data, computes the real week-over-week comparisons, and writes the regional report from scratch, every single day. It's a small example of what's possible when you hand an AI coding agent the whole loop — ingestion, analysis, and publishing — rather than just asking it to write a script.
+
+Check out the live interactive dashboard at https://adeo-blip.github.io/fuel-price-italy/ — switch the scope picker to Region, Province, Municipality, or a specific Operator/Brand to explore any slice of Italy's fuel market yourself.
+
+#FuelPrices #Italy #DataPipeline #ClaudeCode #AI #Automation #EnergyMarkets
+
+Adeo Patapo · adeopatapo@gmail.com
