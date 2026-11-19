@@ -1,0 +1,9 @@
+Today's Fuel Dashboard spotlight: Veneto. The headline isn't the daily price moves — Benzina and Gasolio are both tracking the national average almost exactly, easing gently from their September peaks. It's Metano, natural gas for cars: Veneto drivers are now paying 15.4% more than the rest of Italy for it, up from just a 3.5% premium back in late July. That gap has roughly doubled since mid-October and is now the widest spread for any fuel tracked since this project started recording data on July 21.
+
+Fuel Dashboard tracks self-service and served prices for Benzina, Gasolio, GPL and Metano across every Italian region, province, municipality and fuel brand, pulling Italy's official MIMIT price feed every morning — no spreadsheet, no manual refresh. Take a look: https://adeo-blip.github.io/fuel-price-italy/
+
+I built this entirely with Claude Code: the data pull, the regional rotation, the weekly trend analysis, and even this write-up all run unattended, once a day. It's a concrete case for letting an AI agent own a tracking pipeline end to end instead of defaulting to "put it in Excel" — faster to build, and it keeps updating even on the days nobody has time to touch it.
+
+#FuelPrices #Italy #DataPipeline #ClaudeCode #AIAutomation #EnergyData #Veneto
+
+Adeo Patapo · adeopatapo@gmail.com
