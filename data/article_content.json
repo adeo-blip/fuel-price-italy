@@ -1,64 +1,64 @@
 {
-  "title": "Veneto's CNG Gap: Why Metano Now Costs 15% More Here Than the Rest of Italy",
-  "dek": "Petrol and diesel are tracking the national average almost exactly, but Veneto's natural-gas drivers are paying the widest regional premium tracked since July.",
+  "title": "Metano Prices in Abruzzo Have Surged 48% Since July — Even as Benzina and Gasolio Roll Over From Their September Peaks",
+  "dek": "Abruzzo's daily fuel snapshot for November 19 shows gasoline and diesel cooling off from their autumn highs, while LPG and natural gas keep climbing — with methane up nearly half since tracking began.",
   "executive_summary": [
-    "As of November 18 (the latest day in the feed), Veneto drivers pay €1.966/L for self-service Benzina, €2.229/L for Gasolio, €0.848/L for GPL, and €2.440/L for Metano. Three of those four numbers sit within a couple of cents of the national average — Benzina is effectively identical to the €1.966/L national figure, and Gasolio is a shade below the €2.233/L national average. 1,823 of Veneto's 1,982 registered stations reported a price that day, a 92.0% reporting rate, slightly ahead of the 90.4% national rate.",
-    "The outlier is Metano. Veneto's natural-gas price is €0.325/L above the €2.115/L national average — a 15.4% premium — and that gap hasn't appeared overnight. Back in the week of July 20, when this tracking series began, Veneto's Metano ran just 3.5% above the national price. That premium has since more than quadrupled, climbing through the high single digits over September and October before roughly doubling again to the mid-teens by early November, where it has now held for three straight weeks — the widest Veneto-vs-Italy gap for any fuel tracked since the data series started on July 21."
+    "As of November 19, 2026, self-service prices in Abruzzo stood at €1.965/L for Benzina, €2.234/L for Gasolio, €0.849/L for GPL, and €2.086/kg for Metano, across 608 of the region's 675 registered stations reporting that day. Benzina and GPL held flat to slightly lower versus the previous day, while Gasolio and Metano were essentially unchanged as well — a quiet day on the surface, with GPL running about 2.3% above the national self-service average and Metano running about 1.5% below it.",
+    "The real story is in the weekly data. Since Fuel Dashboard's tracking began on July 21, 2026, Benzina and Gasolio in Abruzzo have both rolled over from peaks reached in mid-to-late September — Benzina is down 8.8% and Gasolio down 5.6% from those highs — while GPL and Metano have shown no such turn, climbing in nearly every tracked week. Metano is the standout: its regional self-service average has risen 48.0% since late July, outpacing the 41.0% national increase over the same stretch, even though Abruzzo's methane pump price today still sits slightly below the Italian average."
   ],
   "fuel_sections": [
     {
       "fuel": "Benzina",
-      "heading": "Petrol Holds Steady, Right on the National Line",
+      "heading": "Gasoline Extends Its Slide From the September Peak",
       "paragraphs": [
-        "Veneto's self-service Benzina priced at €1.9661/L on November 18, down 0.4% (-€0.0083) from €1.9744/L two days earlier. That's essentially identical to the national self-service average the same day, €1.9657/L — a gap of just €0.0004, or 0.02%.",
-        "Zoomed out, Veneto's Benzina has barely moved net across the 17 tracked weeks: €1.9725/L in the week of July 20 to €1.9703/L in the week of November 16, a drop of 0.1%. Nationally the fuel fell slightly more over the same stretch, -0.3% (from €1.9756/L to €1.9692/L). Both region and country rode the same run-up to a September peak — Veneto topped €2.1671/L in the week of September 21 — before easing back about 9% into November, moving in near-lockstep with the rest of the country throughout."
+        "Abruzzo's self-service Benzina price stood at €1.965/L on November 19, down €0.003 (-0.16%) from €1.968/L the day before. That puts the region fractionally above the national self-service average of €1.963/L — a gap of less than a tenth of a cent, effectively a tie.",
+        "Zooming out, Benzina in Abruzzo has fallen 8.8% from its tracked peak of €2.160/L in the week of September 21 (2026-W39), and is now 0.25% below where it started on July 20 (2026-W30). Nationally, the decline from the same September peak has been slightly steeper, and the full-period change is -0.43% — meaning Abruzzo's pump price has held up marginally better than the rest of the country even as both have round-tripped lower over four months."
       ]
     },
     {
       "fuel": "Gasolio",
-      "heading": "Diesel Cools From Its September Peak, Tracking the National Pace Almost Exactly",
+      "heading": "Diesel Cools Off, But Abruzzo Still Outpaces the National Rise",
       "paragraphs": [
-        "Veneto's self-service Gasolio priced at €2.2294/L on November 18, down 0.15% (-€0.0034) from €2.2328/L two days earlier. That's €0.0034 below the national self-service average the same day, €2.2328/L — a 0.15% discount, essentially at parity.",
-        "Over the full tracked window, Veneto's Gasolio climbed from €2.1705/L in the week of July 20 to €2.2311/L in the week of November 16, up 2.8%. Nationally it rose by almost exactly the same amount — 2.8%, from €2.1747/L to €2.2347/L. Both peaked in the week of September 21 (Veneto hit €2.3681/L) before easing roughly 5.8-5.9% into mid-November, a decline that has moved in step with Benzina's post-peak pullback."
+        "Diesel self-service averaged €2.234/L in Abruzzo on November 19, down €0.001 (-0.06%) day over day, and €0.003 above the national self-service average of €2.231/L.",
+        "Like Benzina, Gasolio has pulled back from a September peak — €2.369/L in the week of September 21 — and sits 5.6% below that high. But over the full tracked period Abruzzo's diesel is still up 3.21% since July 20, outpacing the national full-period rise of 2.70%. In other words, Abruzzo's diesel climbed a bit further during the autumn run-up and has given back a bit less of it since."
       ]
     },
     {
       "fuel": "GPL",
-      "heading": "LPG Keeps Climbing — and Veneto Is Outpacing the Rest of the Country",
+      "heading": "LPG Keeps Climbing — and Abruzzo Now Pays a Premium",
       "paragraphs": [
-        "Veneto's self-service GPL priced at €0.8479/L on November 18, down slightly (-€0.0011, -0.1%) from €0.8490/L two days earlier. That's €0.0184 above the national self-service average the same day, €0.8295/L — a 2.2% regional premium.",
-        "The more telling number is the slope: Veneto's GPL has risen from €0.7631/L in the week of July 20 to €0.8484/L in the week of November 16, an 11.2% climb, outpacing the national rise of 9.1% (€0.7592/L to €0.8286/L) over the same 17 tracked weeks. The gap has widened gradually rather than in a single jump, and GPL is now the second-fastest-rising fuel in Veneto this autumn, behind only Metano."
+        "GPL self-service held steady at €0.849/L in Abruzzo on November 19, unchanged from the previous day, and running €0.019 (+2.34%) above the national self-service average of €0.830/L — the widest regional-to-national gap of any of the four fuels today.",
+        "Unlike Benzina and Gasolio, GPL in Abruzzo shows no peak-and-retreat pattern: it has risen in effectively every tracked week since July 20, up 6.59% over the full period to date. Nationally the rise has actually been sharper, at 9.18%, which means the national average has been catching up to Abruzzo's level rather than the other way around — explaining why the regional premium, while still real, has been narrowing from where it started the autumn."
       ]
     },
     {
       "fuel": "Metano",
-      "heading": "The Real Story: Veneto's CNG Premium Has Quadrupled Since July",
+      "heading": "Methane's Relentless Climb: Up Nearly Half Since July",
       "paragraphs": [
-        "Veneto's self-service Metano (natural gas for cars) priced at €2.4396/L on November 18, down 1.0% (-€0.025) from €2.4646/L two days earlier — but that small dip barely registers next to the gap with the rest of the country. The national self-service average the same day was €2.1146/L, meaning Veneto drivers are paying €0.325/L more: a 15.4% premium.",
-        "That premium has widened steadily since tracking began. In the week of July 20, Veneto's Metano averaged €1.5527/L against a national €1.4999/L — just a 3.5% premium. By the week of November 16, Veneto's price had climbed to €2.4521/L (+57.9% since July) while the national average rose to only €2.1142/L (+41.0% over the same stretch). The regional premium held in the high single digits through most of September and October (8.5% as of the week of October 12), then roughly doubled to around 16% by early November and has stayed there for three straight weeks — the widest Veneto-vs-Italy gap for any of the four fuels tracked since this data series started on July 21."
+        "Metano self-service in Abruzzo was €2.086/kg on November 19, unchanged day over day, and €0.031 (-1.46%) below the national self-service average of €2.117/kg — making it the one fuel today where Abruzzo residents are paying noticeably less than the Italian average.",
+        "That relative discount sits on top of the single most dramatic trend in the dataset: Metano in Abruzzo has risen 48.0% since the week of July 20, climbing in nearly every one of the 16 tracked weeks with no peak or pullback yet in sight. The national increase over the same stretch was 41.0% — seven points slower — meaning Abruzzo's methane price has been rising faster than the rest of the country even as it remains cheaper in absolute terms. If both trends continue, Abruzzo's methane discount to the national average could close within a matter of weeks."
       ]
     }
   ],
   "network_section": {
-    "heading": "92% of Veneto's Stations Reported Today — Above the National Average",
+    "heading": "608 of 675 Stations Reporting — In Line With the National Average",
     "paragraphs": [
-      "Veneto has 1,982 registered fuel stations in the MIMIT registry, of which 1,823 reported a price on November 18 — a 92.0% reporting rate. Nationally, 21,660 of 23,958 registered stations reported that day, a 90.4% rate. Veneto's network is reporting slightly more consistently than the national average, a sign the region's price feed is unusually complete day to day.",
-      "Veneto's registered count has drifted down slightly over the tracked period, from 1,995 in July to 1,982 today — a net loss of 13 stations, or 0.7% — while the reporting count has stayed roughly flat in absolute terms. That points to the shrinkage being mostly network consolidation (station closures or re-registrations) rather than stations going dark on reporting."
+      "Abruzzo had 675 registered fuel stations as of November 19, 2026, of which 608 reported at least one price that day — a 90.1% reporting rate. That is almost identical to the national reporting rate of 90.4% (21,675 of 23,968 registered stations), so Abruzzo's data coverage today is representative rather than an outlier in either direction.",
+      "The registered count itself has crept up slightly since tracking began, from 665 stations on July 21 to 675 today — a gain of 10 stations, or about 1.5%, over four months. A reporting rate consistently in the high 80s to low 90s is typical for MIMIT's daily feed, since not every station submits a same-day price update; it reflects normal day-to-day reporting lag rather than stations exiting the market."
     ]
   },
   "methodology_section": {
-    "heading": "Built and Run by an Unattended Pipeline, Not a Spreadsheet",
+    "heading": "Built to Run Itself, Every Day",
     "paragraphs": [
-      "Every part of this report — the daily pull from MIMIT's official price feed, the national and regional averages across all 20 Italian regions and four fuel types, the day's region pick on a fixed rotation, the weekly trend analysis, and the write-up itself — is generated automatically, once a day, with no person in the loop. It was built with Claude Code, an AI coding agent, which wrote and now runs the data pipeline, the report template, and the analysis logic end to end.",
-      "Contrast that with how this kind of tracking usually gets done: a manually maintained spreadsheet, updated when someone remembers to open it, with figures that go stale the week nobody has time to refresh them. This pipeline doesn't have that failure mode by design — it runs the same checks every day whether or not anyone is watching."
+      "This entire report — the price data behind it, the week-over-week trend analysis for all four fuels, the rotating choice of which of Italy's 20 regions to spotlight, and the prose you're reading right now — is produced automatically every day by an unattended pipeline built with Claude Code. A scheduled run pulls the latest MIMIT price and station-registry feeds (or a locally supplied same-day export when one is available), recomputes the region-of-day selection on a deterministic calendar rotation, regenerates the weekly aggregates behind every chart and figure in this report, and has an AI agent write up the day's findings directly from those numbers before publishing the dashboard update and this document.",
+      "That stands in contrast to the way a report like this is traditionally produced: a person manually downloading a CSV export each morning, pasting it into a spreadsheet, recalculating pivot tables and week-over-week formulas by hand, and writing a summary of what changed — a process that takes real time every single day and is easy to let slip. Here, the data refresh, the trend math, and the written analysis all happen without anyone opening a spreadsheet."
     ]
   },
   "closing": {
-    "heading": "Explore Further",
+    "heading": "Explore Beyond Agip Eni",
     "paragraphs": [
-      "The live dashboard opens on Agip Eni's brand-level view by default — use the scope picker to switch to Region, Province, Municipality, or another Operator/Brand and dig into any of Italy's 20 regions, hundreds of provinces and municipalities, or hundreds of tracked fuel brands."
+      "The live Fuel Dashboard opens by default on Agip Eni's brand-level view, but that's just the starting point — use the scope picker to switch to Region, Province, Municipality, or another Operator/Brand entirely and dig into whichever slice of Italy's fuel market you're curious about."
     ]
   },
-  "pull_quote": "Veneto's Metano premium over the rest of Italy has gone from 3.5% in July to roughly 16% today — the widest gap for any fuel tracked since the data series began.",
-  "caption": "Today's Fuel Dashboard spotlight: Veneto. The headline isn't the daily price moves — Benzina and Gasolio are both tracking the national average almost exactly, easing gently from their September peaks. It's Metano, natural gas for cars: Veneto drivers are now paying 15.4% more than the rest of Italy for it, up from just a 3.5% premium back in late July. That gap has roughly doubled since mid-October and is now the widest spread for any fuel tracked since this project started recording data on July 21.\n\nFuel Dashboard tracks self-service and served prices for Benzina, Gasolio, GPL and Metano across every Italian region, province, municipality and fuel brand, pulling Italy's official MIMIT price feed every morning — no spreadsheet, no manual refresh. Take a look: https://adeo-blip.github.io/fuel-price-italy/\n\nI built this entirely with Claude Code: the data pull, the regional rotation, the weekly trend analysis, and even this write-up all run unattended, once a day. It's a concrete case for letting an AI agent own a tracking pipeline end to end instead of defaulting to \"put it in Excel\" — faster to build, and it keeps updating even on the days nobody has time to touch it.\n\n#FuelPrices #Italy #DataPipeline #ClaudeCode #AIAutomation #EnergyData #Veneto\n\nAdeo Patapo · adeopatapo@gmail.com"
+  "pull_quote": "Metano in Abruzzo has climbed 48% since late July — seven points faster than the national rise — yet it's still the one fuel region residents are paying less for than the rest of Italy.",
+  "caption": "Today's Fuel Dashboard spotlight region is Abruzzo, and the standout story isn't the daily number — it's the trend underneath it. Since tracking began on July 21, Metano prices there have risen 48% while the national average rose 41%, even though Abruzzo methane still prices below the Italian average today. Meanwhile Benzina and Gasolio have both rolled over from their September peaks, down 8.8% and 5.6% respectively, while GPL and Metano just keep climbing with no turn in sight yet.\n\nFuel Dashboard is a live, self-updating site tracking Benzina, Gasolio, GPL and Metano prices across every Italian region, province, municipality, and fuel brand, refreshed daily straight from Italy's MIMIT price feed.\n\nWhat I find most interesting about this project isn't the fuel data itself — it's that the entire pipeline, from pulling the daily feed to computing the weekly trends to writing up findings like the ones above, runs unattended every day, built with Claude Code. No spreadsheet, no manual pivot tables, no person re-writing the summary each morning. That's a real argument for building tools like this with AI coding agents instead of maintaining them by hand: once it's built, it just keeps running and keeps writing.\n\nTake a look and explore your own region: https://adeo-blip.github.io/fuel-price-italy/\n\n#FuelPrices #Italy #DataVisualization #ClaudeCode #AIAgents #EnergyMarkets #Abruzzo\n\nAdeo Patapo · adeopatapo@gmail.com"
 }
