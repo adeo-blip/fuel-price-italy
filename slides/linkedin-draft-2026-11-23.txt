@@ -1,0 +1,11 @@
+Today's Fuel Dashboard spotlight: Campania. The region's self-service Metano price has quietly flipped from a small premium over the Italian average in July to running about 7% cheaper than the rest of the country today -- the sharpest shift in Campania's four months of tracked data. GPL tells a related story in reverse: Campania's LPG used to run 5.4% below the national average and has since closed most of that gap to just 1.5%, rising faster than Italy as a whole.
+
+Today's self-service prices in Campania: Benzina €1.9509/L, Gasolio €2.2212/L, GPL €0.8203/L, Metano €1.9554/L -- compared against national averages of €1.9565, €2.2267, €0.8329 and €2.1054 respectively, across 1,845 of 2,122 registered stations reporting.
+
+This report -- the data pull, the region rotation, the week-over-week trend analysis, and the writing itself -- is generated automatically every single day by an unattended pipeline I built with Claude Code. No spreadsheet, no manual re-download, no copy-pasting formulas each morning: just a dashboard and a report that update themselves. It's a small example of what's possible when you let AI tools own a repetitive daily workflow instead of a human doing it by hand.
+
+Full interactive dashboard: https://adeo-blip.github.io/fuel-price-italy/
+
+#FuelPrices #Italy #DataPipeline #ClaudeCode #AIAutomation #EnergyMarkets #Campania
+
+Adeo Patapo · adeopatapo@gmail.com
