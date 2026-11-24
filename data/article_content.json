@@ -1,64 +1,64 @@
 {
-  "title": "Campania Goes From Metano's Premium Region to Its Discount One",
-  "dek": "A look at today's fuel prices in Campania, and the four-month weekly trend showing LPG and natural gas moving in opposite directions relative to the rest of Italy.",
+  "title": "Emilia-Romagna's Pump Prices Cool Off While LPG and Natural Gas Keep Climbing",
+  "dek": "Benzina and Gasolio have given back most of their September spike in Emilia-Romagna, but GPL and Metano are still rising — and rising faster locally than nationally.",
   "executive_summary": [
-    "On November 22, 2026 (the most recent completed day), self-service Benzina in Campania averaged €1.9509/L, down 0.30% from two days earlier and essentially in line with Italy's €1.9565/L average. Gasolio slipped to €2.2212/L (-0.20%), also just under the €2.2267/L national mark. GPL ticked up to €0.8203/L (+0.34%), still running about 1.5% cheaper than the €0.8329/L national average. Metano held flat at €1.9554/L, a full 7.1% below Italy's €2.1054/L average -- the widest regional discount of the four fuels today. Across 2,122 registered stations, 1,845 (87.0%) reported a price today.",
-    "Zoom out to the 16 weeks of data tracked since July 21, 2026, though, and the real story is how much Campania's relative position has shifted -- in opposite directions for GPL and Metano. Campania's GPL started the summer running about 5.4% below the national average and has since closed most of that gap, now sitting only 1.5-1.6% under Italy; its Metano did the reverse, starting essentially at parity (even a touch above) the national price in July and ending up roughly 7% cheaper by November, the sharpest divergence of any fuel tracked for this region. Benzina and Gasolio, meanwhile, have largely tracked the national curve point-for-point, rising into a mid-September peak and easing back since."
+    "As of November 23, 2026, self-service Benzina in Emilia-Romagna averages €1.9608/L, Gasolio €2.2278/L, GPL €0.8375/L and Metano €2.1128/L — all four sitting fractionally above the national self-service averages of €1.9561/L, €2.2264/L, €0.8329/L and €2.1072/L. Day over day, the region barely moved: Benzina and Gasolio each eased by about a tenth of a cent, while GPL and Metano held exactly where they finished the day before, across 1,732 of the region's 1,882 registered stations reporting prices.",
+    "Zoom out to the eighteen weeks tracked since July 20, and a sharper story emerges. Benzina and Gasolio both round-tripped — climbing through late summer to a peak in the week of September 21 (Benzina €2.167/L, Gasolio €2.3691/L regionally), then sliding back to levels close to where they started. GPL and Metano, by contrast, have kept climbing: regional GPL is up 10.2% since tracking began and Metano has risen 43.1% over the same period — in both cases outpacing the national increase (9.7% and 40.5% respectively). Emilia-Romagna's heating-adjacent fuels are drifting upward faster than the rest of Italy even as its road fuels retrace most of their autumn run-up."
   ],
   "fuel_sections": [
     {
       "fuel": "Benzina",
-      "heading": "Benzina: Tracking the National Curve, Almost Tick for Tick",
+      "heading": "Benzina Settles Near Its Lowest Point in Months, Just Above the National Line",
       "paragraphs": [
-        "Self-service Benzina in Campania closed November 22 at €1.9509 per liter, down €0.0059 (-0.30%) from the November 20 reading and a touch below Italy's national average of €1.9565/L. Served-pump prices followed the same pattern, at €2.0458/L regionally versus €2.0983/L nationally.",
-        "Across the 16 tracked weeks, Campania's Benzina has moved almost in lockstep with the rest of the country: both climbed from the €1.97-1.98/L range in late July to a shared peak in the week of September 21 (Campania €2.1650/L, Italy €2.1669/L), then eased back by an almost identical -9.4% into the week of November 16 (Campania €1.9617/L, Italy €1.9635/L). The two series have stayed within a few tenths of a cent of each other for four months -- Benzina is the one fuel where this region's prices are basically a mirror of the national trend."
+        "Self-service Benzina in Emilia-Romagna closed November 23 at €1.9608/L, down a fraction of a cent from €1.961/L the day before. That puts the region 0.24% above the €1.9561/L national self-service average — a small premium that has held for the past few weeks.",
+        "The wider trend is a round trip. Regional Benzina opened the tracked period (week of July 20) at €1.9736/L, climbed through the summer to a peak of €2.167/L in the week of September 21 — a 9.8% rise — then gave almost all of it back, falling 9.5% from that peak to today's €1.9608/L. The national average followed the same arc (€1.9756/L to €2.1669/L to €1.9561/L) but fell slightly further from its peak (-9.7% vs Emilia-Romagna's -9.5%), which is why the region now sits marginally above the national line after moving in near lockstep all autumn."
       ]
     },
     {
       "fuel": "Gasolio",
-      "heading": "Gasolio: A Steeper Summer Climb, A Slightly Gentler Comedown",
+      "heading": "Gasolio Retreats From Its September Peak, Trading Within a Cent of Italy",
       "paragraphs": [
-        "Diesel in Campania eased to €2.2212/L self-service on November 22, down €0.0045 (-0.20%) day-over-day and just under Italy's €2.2267/L average. At the pump with service, the region averaged €2.3271/L against a €2.3789/L national figure.",
-        "Over the full tracked window, Campania's Gasolio rose 2.4% from the week of July 20 (€2.1774/L) to the week of November 16 (€2.2295/L), slightly less than Italy's 2.6% increase (€2.1747/L to €2.2312/L) over the same span. Both series peaked in the week of September 21 -- Campania at €2.3638/L, Italy at €2.3736/L -- and have since retreated, with Campania's pullback (-5.7%) a shade smaller than the national one (-6.0%). The net effect: Campania's diesel discount to the national average has stayed roughly constant all autumn, around half a cent to a cent per liter."
+        "Gasolio self-service averaged €2.2278/L in Emilia-Romagna on November 23, down slightly from €2.2281/L the previous day — just €0.0014/L, or 0.06%, above the €2.2264/L national average, one of the tightest regional-national gaps of the four fuels tracked.",
+        "Like Benzina, Gasolio spiked hard in September: the region hit €2.3691/L in the week of September 21, a 9.2% climb from its July 20 starting point of €2.1695/L, before retreating 6.0% to today's level. Nationally the peak-to-trough move was a slightly larger 6.2% decline, so Emilia-Romagna has given back a touch less of its September run-up than Italy overall — leaving it almost exactly on top of the national average rather than below it, where it sat for most of the summer."
       ]
     },
     {
       "fuel": "GPL",
-      "heading": "GPL: The Region That's Catching Up to the National Price",
+      "heading": "GPL Keeps Climbing, and Emilia-Romagna Is Outpacing the National Rise",
       "paragraphs": [
-        "GPL nudged up to €0.8203/L in Campania on November 22, a 0.34% day-over-day rise, and remains the one fuel where the region still undercuts the national average by a clear margin -- €0.8329/L nationally, a gap of about 1.5%.",
-        "That gap used to be much wider. In the week of July 20, Campania's GPL averaged €0.7179/L against a national €0.7592/L -- a 5.4% discount. By the week of November 16, Campania had risen to €0.8168/L against Italy's €0.8302/L, a gap of just 1.6%. In percentage terms, Campania's GPL climbed 13.8% over the 16 tracked weeks versus 9.4% nationally -- the region's LPG prices are rising faster than the rest of the country and steadily closing the gap, even though Campania remains the cheaper option for now."
+        "GPL self-service in Emilia-Romagna held at €0.8375/L for a second straight day, 0.55% above the €0.8329/L national average — one of the widest regional premiums among the four fuels today.",
+        "GPL spent the summer broadly flat in the region, drifting between €0.7475/L and €0.761/L through late September, before turning sharply upward: Emilia-Romagna's GPL rose 10.1% in the eight weeks from September 28 to today, almost identical to the 10.1% national rise over the same stretch. But looked at across the full tracking period since July 20, regional GPL is up 10.2% against 9.7% nationally — a modest, consistent premium in the pace of the increase, not just the price level, that has built up gradually rather than in a single recent jump."
       ]
     },
     {
       "fuel": "Metano",
-      "heading": "Metano: From a Small Premium to Campania's Biggest Discount",
+      "heading": "Metano's Rise Is the Story of the Season — Up 43% Regionally Since July",
       "paragraphs": [
-        "Metano was unchanged at €1.9554/L in Campania on November 22 -- the only fuel with zero day-over-day movement -- and that flat price already sits 7.1% below Italy's €2.1054/L national average, the widest gap of any of the four fuels tracked today.",
-        "This is the most dramatic trend shift in the region's data. In the week of July 20, Campania's Metano (€1.5129/L) was actually slightly above the national average (€1.4999/L) -- a small premium of about 0.9%. Nationally, Metano then climbed hard through the autumn gas-price run-up, rising 40.8% by the week of November 16 to €2.1114/L; Campania rose too, but by a smaller 29.3%, to €1.9554/L. That gap in growth rates flipped the region's position entirely -- from a price slightly above the national average in July to one running about 7% below it now -- by far the largest swing, in either direction, of any fuel in this region's four-month tracked history."
+        "Metano self-service in Emilia-Romagna was unchanged on the day at €2.1128/L, 0.27% above the €2.1072/L national average.",
+        "No fuel in this dataset has moved more. Regional Metano has climbed from €1.4763/L in the week of July 20 to €2.1128/L today — a 43.1% increase over roughly four months — compared with a 40.5% national increase over the same period (€1.4999/L to €2.1072/L). That 2.6-percentage-point gap is the largest regional-vs-national divergence of any fuel tracked here, meaning Emilia-Romagna motorists running on natural gas have seen their relative cost disadvantage against the rest of the country widen through the autumn rather than narrow."
       ]
     }
   ],
   "network_section": {
-    "heading": "Network Coverage: 1,845 of 2,122 Stations Reporting",
+    "heading": "1,732 of 1,882 Registered Stations Reported Today — a Stronger Showing Than the National Average",
     "paragraphs": [
-      "Campania's registry listed 2,122 stations as of today, with 1,845 (87.0%) submitting a price. That reporting rate is slightly below Italy's national average of 90.4% (21,679 of 23,977 stations), putting Campania in the lower-middle of the pack for data completeness.",
-      "The registered count has crept up steadily since tracking began -- from 2,117 stations in the week of July 20 to 2,122 today -- a net gain of 5 stations, mostly new registrations rather than closures. The reporting rate has held fairly steady around 86-87% for most of the period, which means the regional averages above are built on a consistent, representative slice of the network rather than a shifting subset, giving the week-over-week comparisons more weight."
+      "Emilia-Romagna has 1,882 registered fuel stations in the MIMIT registry, of which 1,732 reported prices on November 23 — a 92.0% reporting rate, unchanged from the day before.",
+      "That compares with a 90.4% reporting rate nationally (21,679 of 23,977 registered stations). A higher reporting rate generally means the regional averages in this report rest on a broader, more representative slice of the local market than the national figure draws from proportionally — though both rates are high enough that day-to-day price comparisons stay reliable."
     ]
   },
   "methodology_section": {
-    "heading": "How This Report Gets Made",
+    "heading": "How This Report Gets Made: No Spreadsheet, No Manual Update",
     "paragraphs": [
-      "Every part of this report -- pulling the day's price data, picking which of Italy's 20 regions to spotlight, computing the weekly trend comparisons, and writing the analysis above -- runs automatically each morning through an unattended pipeline built with Claude Code. The region rotation is deterministic and date-based (an alphabetical cycle through all 20 regions, self-correcting if a day is missed), not a human choosing what looks interesting; the prose is generated fresh from that day's actual numbers rather than reused or lightly edited from a prior report.",
-      "That's a different model from the spreadsheet most people reach for first: a manually-maintained Excel file needs someone to re-download the source data, re-paste it, recheck the formulas, and rewrite the commentary every single day -- and it usually doesn't happen on weekends or busy mornings. This pipeline runs daily regardless, publishes straight to a live dashboard, and produces a written report alongside it, which is the argument for building this kind of thing with AI tooling instead of maintaining it by hand."
+      "Every part of this report — pulling the day's price and station data from Italy's MIMIT registry, selecting today's featured region on a self-correcting alphabetical rotation, computing the week-over-week trend lines for all four fuels against the national average, and writing the prose above — runs automatically each morning through an unattended pipeline built with Claude Code.",
+      "Contrast that with the alternative: a manually maintained spreadsheet that someone has to open, re-download data into, recalculate, and write up by hand — a process that rarely scales past a handful of regions and tends to lapse the first time the person maintaining it is busy or on holiday. This pipeline updates twenty regions' worth of history every day without anyone touching a spreadsheet."
     ]
   },
   "closing": {
-    "heading": "Explore Beyond Campania",
+    "heading": "Explore Further on the Live Dashboard",
     "paragraphs": [
-      "This report defaults to Agip Eni's brand-level view on the live dashboard, but that's just the starting point. Switch the scope picker to Region, Province, Municipality, or another Operator/Brand to dig into any slice of Italy's fuel market that interests you -- from a single town's pump prices to a nationwide brand comparison."
+      "The live dashboard linked below opens by default on Agip Eni's brand-level view — but that's just the starting point. Use the scope picker to switch to Region, Province, Municipality, or another Operator/Brand and dig into the numbers that matter to you."
     ]
   },
-  "pull_quote": "Campania's Metano started July priced slightly above the rest of Italy -- it now sits 7% below the national average, the biggest swing of any fuel tracked in the region's four-month history.",
-  "caption": "Today's Fuel Dashboard spotlight: Campania. The region's self-service Metano price has quietly flipped from a small premium over the Italian average in July to running about 7% cheaper than the rest of the country today -- the sharpest shift in Campania's four months of tracked data. GPL tells a related story in reverse: Campania's LPG used to run 5.4% below the national average and has since closed most of that gap to just 1.5%, rising faster than Italy as a whole.\n\nToday's self-service prices in Campania: Benzina €1.9509/L, Gasolio €2.2212/L, GPL €0.8203/L, Metano €1.9554/L -- compared against national averages of €1.9565, €2.2267, €0.8329 and €2.1054 respectively, across 1,845 of 2,122 registered stations reporting.\n\nThis report -- the data pull, the region rotation, the week-over-week trend analysis, and the writing itself -- is generated automatically every single day by an unattended pipeline I built with Claude Code. No spreadsheet, no manual re-download, no copy-pasting formulas each morning: just a dashboard and a report that update themselves. It's a small example of what's possible when you let AI tools own a repetitive daily workflow instead of a human doing it by hand.\n\nFull interactive dashboard: https://adeo-blip.github.io/fuel-price-italy/\n\n#FuelPrices #Italy #DataPipeline #ClaudeCode #AIAutomation #EnergyMarkets #Campania\n\nAdeo Patapo · adeopatapo@gmail.com"
+  "pull_quote": "Emilia-Romagna's Metano price has risen 43.1% since tracking began in July — outpacing Italy's 40.5% national increase, the widest regional-vs-national gap of any fuel today.",
+  "caption": "Today's Fuel Dashboard spotlight: Emilia-Romagna.\n\nThe standout number isn't at the pump today — it's in the trend. Emilia-Romagna's Metano (natural gas) price has climbed 43.1% since late July, outpacing the 40.5% rise nationally, while regional GPL is up 10.2% against Italy's 9.7% over the same stretch. Both fuels keep drifting upward faster locally than nationally, even as Benzina and Gasolio have given back most of their September spike and settled back near summer levels.\n\nFuel Dashboard is a fully automated project: it pulls Italy's daily MIMIT fuel-price registry, spotlights a new region every day on a fixed rotation, computes the weekly trend for every fuel against the national average, and writes up a report like this one — all without a human touching a spreadsheet. It's a live demonstration of what's possible when you use an AI coding tool like Claude Code to build and maintain a real data pipeline instead of a manually updated Excel file: it runs every single day, scales to every region and every fuel, and never falls behind because someone was busy.\n\nExplore the interactive dashboard yourself: https://adeo-blip.github.io/fuel-price-italy/\n\n#FuelPrices #Italy #DataPipeline #ClaudeCode #AITools #EnergyMarkets #OpenData\n\nAdeo Patapo · adeopatapo@gmail.com"
 }

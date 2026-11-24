@@ -1,0 +1,11 @@
+Today's Fuel Dashboard spotlight: Emilia-Romagna.
+
+The standout number isn't at the pump today — it's in the trend. Emilia-Romagna's Metano (natural gas) price has climbed 43.1% since late July, outpacing the 40.5% rise nationally, while regional GPL is up 10.2% against Italy's 9.7% over the same stretch. Both fuels keep drifting upward faster locally than nationally, even as Benzina and Gasolio have given back most of their September spike and settled back near summer levels.
+
+Fuel Dashboard is a fully automated project: it pulls Italy's daily MIMIT fuel-price registry, spotlights a new region every day on a fixed rotation, computes the weekly trend for every fuel against the national average, and writes up a report like this one — all without a human touching a spreadsheet. It's a live demonstration of what's possible when you use an AI coding tool like Claude Code to build and maintain a real data pipeline instead of a manually updated Excel file: it runs every single day, scales to every region and every fuel, and never falls behind because someone was busy.
+
+Explore the interactive dashboard yourself: https://adeo-blip.github.io/fuel-price-italy/
+
+#FuelPrices #Italy #DataPipeline #ClaudeCode #AITools #EnergyMarkets #OpenData
+
+Adeo Patapo · adeopatapo@gmail.com
