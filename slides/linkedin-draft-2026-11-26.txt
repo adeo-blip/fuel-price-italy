@@ -1,0 +1,9 @@
+Today's Fuel Dashboard spotlight: Lazio. Self-service Benzina is down to €1.9468/L and Gasolio to €2.2084/L, both a touch cheaper than the Italian average — but Metano is the real story. Lazio's Metano price has jumped nearly 34% since late July, and while that's actually a slower climb than the 41% rise seen nationwide, it still leaves the region about 1.8% above the rest of Italy on Metano today.
+
+Fuel Dashboard tracks self-service and full-service prices for Benzina, Gasolio, GPL and Metano across all 20 Italian regions, every province, every municipality, and 300+ brands, using Italy's MIMIT daily price feed. The dashboard, the daily regional spotlight report, and even the words you're reading right now are generated automatically, every single day, by an unattended pipeline built with Claude Code — no spreadsheet, no manual update, no one copying numbers into Excel every morning.
+
+That's the real pitch here: a self-updating, interactive dashboard with real trend analysis beats a static spreadsheet not because it looks nicer, but because it never goes stale and never needs someone to maintain it. If you're curious what that looks like for Italian fuel prices, or want to compare any region, province or brand yourself, visit the live dashboard: https://adeo-blip.github.io/fuel-price-italy/
+
+#FuelPrices #Italy #DataPipeline #ClaudeCode #AIAutomation #OpenData
+
+Adeo Patapo · adeopatapo@gmail.com
