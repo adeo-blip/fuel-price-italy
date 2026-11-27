@@ -1,0 +1,13 @@
+Today's Fuel Dashboard spotlight: Liguria.
+
+The standout number: methane (Metano) prices in Liguria have climbed 51% since tracking began in July, outpacing the 41% rise seen nationally, and flipping the region from trading below the national average in midsummer to a consistent premium since late September. Petrol and diesel, by contrast, have moved almost in lockstep with the rest of Italy all year.
+
+Fuel Dashboard is a live, interactive site that tracks petrol, diesel, LPG and methane prices across all 20 Italian regions, every province, municipality and major brand, updated every morning. Each day it also rotates through a different region and publishes a full written report like this one, grounded in that day's real numbers.
+
+Here's the part I think is actually interesting: none of this is run by a person updating a spreadsheet. The entire pipeline, fetching the data, picking the region, computing the weekly trends, writing the report, and publishing the site, runs unattended every morning, built with Claude Code. No analyst, no spreadsheet, no manual chart-making. It is a live demonstration of what is possible when an AI agent owns an entire daily workflow end to end, instead of just speeding up one step of a manual process.
+
+Check out today's Liguria numbers and explore any region, province or brand yourself: https://adeo-blip.github.io/fuel-price-italy/
+
+#FuelPrices #Italy #DataPipeline #ClaudeCode #AIAutomation #EnergyMarkets
+
+Adeo Patapo · adeopatapo@gmail.com
