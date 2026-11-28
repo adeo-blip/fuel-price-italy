@@ -1,0 +1,11 @@
+Today's Fuel Dashboard spotlight: Lombardia. The region holds a discount on every fuel versus the rest of Italy, but the most interesting number isn't today's price — it's how fast that gap is moving. Lombardia's Metano price has climbed 5.44% in just the last three tracked weeks, nearly three times the national rate, closing its discount from almost 10% to under 7% in that span. GPL shows the same pattern over the full four months tracked: Lombardia's price rose 14.66% since July versus 9.81% nationally, nearly erasing what was a 6% regional discount.
+
+Fuel Dashboard is a free, self-updating site that tracks fuel prices across all 20 Italian regions, every province and municipality, and by individual operator/brand, refreshed daily from Italy's official MIMIT feed. Every piece of it, from the data pull to the regional rotation to the trend write-up behind today's report, runs automatically. No one opens Excel each morning to update a chart.
+
+That's the real point: this dashboard and its ~10-page regional report were built with Claude Code instead of a manually-maintained spreadsheet. A tool like this used to mean someone's recurring daily chore. Now it's a pipeline that runs itself, which is exactly the kind of thing AI coding tools are good for: turning a daily manual task into a one-time build.
+
+Explore the live dashboard, switch regions, provinces, or operators, and see where your area stands: https://adeo-blip.github.io/fuel-price-italy/
+
+#FuelPrices #Italy #DataPipeline #AIAutomation #ClaudeCode #EnergyData
+
+Adeo Patapo · adeopatapo@gmail.com
